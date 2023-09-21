@@ -1,0 +1,88 @@
+/* Скидання стилів */
+@import url("reset.css");
+
+* {
+    /* color: red; */
+}
+
+h1 {
+    color: goldenrod;
+}
+
+a {
+    color: teal;
+}
+
+li {
+    color: rebeccapurple;
+}
+
+.text {
+    color: khaki;
+}
+
+div.subtitle {
+    color: green;
+}
+
+.list li {
+    color: hotpink;
+}
+
+.text p {
+    color: yellowgreen;
+}
+
+#some-p-id {
+    color: orange;
+}
+
+.page__text.text {
+    color: orchid;
+}
+
+.text-2,
+.text-3 {
+    color: burlywood;
+}
+
+.text ~ .subtitle {
+    color: brown;
+}
+
+.box > p {
+    color: blue;
+}
+
+.subtitle {
+    color: cadetblue;
+}
+
+.subtitle ~ div {
+    color: darkgreen;
+}
+
+.block  p {
+    color: red;
+}
+
+.block  + .block-1 {
+    color: aqua;
+}
+
+.address {
+    color: violet;
+}
+
+.link {
+    color: khaki; !important
+}
+
+.text-box > span {
+    color: blue;
+}
+
+footer > .text-box >  span  + span {
+    color: yellow;
+}
+
