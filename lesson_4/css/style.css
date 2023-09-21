@@ -74,8 +74,8 @@ div.subtitle {
     color: violet;
 }
 
-.link {
-    color: khaki; !important
+#list > li > .link {
+    color: khaki;
 }
 
 .text-box > span {
