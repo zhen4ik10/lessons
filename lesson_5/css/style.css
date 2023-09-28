@@ -85,7 +85,7 @@ h5 {
     color: #1228ef;
 }
 
-.block-text-1 > p + p {
+.block-text-1>p+p {
     color: red;
     font-weight: 400;
     text-transform: capitalize;
