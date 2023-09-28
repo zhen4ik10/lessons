@@ -1,0 +1,102 @@
+/* Підключення шрифтів */
+@import url("fonts.css");
+
+/* Скидання стилів */
+@import url("reset.css");
+
+body {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #7D7D7D;
+}
+
+.title {
+    font-family: "Sofia+Sans", sans-serif;
+    font-size: 60px;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    color: goldenrod;
+    text-shadow: 5px 5px 5px #d35902, 6px 6px 6px #7c7a77;
+    line-height: 1.1;
+}
+
+h5 {
+    font-style: italic;
+    font-weight: 500;
+    line-height: 1.2;
+    text-decoration: line-through;
+    font-size: 20px;
+    color: orange;
+    text-align: right;
+}
+
+.subtitle,
+.subtitle-custom,
+.fancy {
+    font-family: "Poppins", sans-serif;
+}
+
+.subtitle {
+    font-size: 40px;
+    font-weight: 700;
+    color: #37393F;
+    text-transform: capitalize;
+    line-height: 1.2;
+    letter-spacing: 10px;
+}
+
+.subtitle-custom,
+.fancy {
+    font-weight: 600;
+}
+
+.subtitle-custom {
+    font-size: 30px;
+    color: #37393F;
+    text-transform: capitalize;
+}
+
+.fancy {
+    color: #6B77E5;
+    font-size: 20px;
+    word-spacing: 15px;
+}
+
+.block-text,
+.block-text-1 {
+    text-align: justify;
+    line-height: 1.3;
+    text-indent: 30px;
+}
+
+.block-text {
+    font-family: "Causten", sans-serif;
+    font-size: 14px;
+    color: #262729;
+    letter-spacing: 5px;
+}
+
+.block-text-1 {
+    font-family: "ComicSansMS", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #1228ef;
+}
+
+.block-text-1>p+p {
+    color: red;
+    font-weight: 400;
+    text-transform: capitalize;
+    white-space: nowrap;
+}
+
+.text {
+    line-height: 1.47;
+}
+
+.list {
+    line-height: 1.47;
+    font-weight: 500;
+}
