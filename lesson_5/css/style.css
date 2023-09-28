@@ -74,7 +74,7 @@ h5 {
 .block-text {
     font-family: "Causten", sans-serif;
     font-size: 14px;
-    color: #262729;
+    color: green;
     letter-spacing: 5px;
 }
 
@@ -85,7 +85,7 @@ h5 {
     color: #1228ef;
 }
 
-.block-text-1>p+p {
+.block-text-1 > p + p {
     color: red;
     font-weight: 400;
     text-transform: capitalize;
