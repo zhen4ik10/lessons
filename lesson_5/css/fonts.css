@@ -5,7 +5,7 @@
 @import url("https://fonts.googleapis.com/css?family=Sofia+Sans:900&display=swap");
 
 @font-face {
-    font-family: "Causten", sans-serif;
+    font-family: "Causten";
     src: url(../fonts/Causten-Regular.woff2) format(woff2),
         url(../fonts/Causten-Regular.woff) format(woff);
     font-weight: normal;
@@ -14,7 +14,7 @@
 }
 
 @font-face {
-    font-family: "Causten", sans-serif;
+    font-family: "Causten";
     src: url(../fonts//Causten-Bold.woff2) format(woff2),
         url(../fonts/Causten-Bold.woff) format(woff);
     font-weight: 700;
@@ -23,7 +23,7 @@
 }
 
 @font-face {
-    font-family: "ComicSansMS", sans-serif;
+    font-family: "ComicSansMS";
     src: url(../fonts/ComicSansMS.woff2) format(woff2),
         url(../fonts/ComicSansMS.woff) format(woff);
     font-weight: 400;
@@ -32,7 +32,7 @@
 }
 
 @font-face {
-    font-family: "ComicSansMS", sans-serif;
+    font-family: "ComicSansMS";
     src: url(../fonts/ComicSansMS-Bold.woff2) format(woff2),
         url(../fonts/ComicSansMS-Bold.woff) format(woff);
     font-weight: 700;

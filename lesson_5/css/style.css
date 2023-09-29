@@ -6,13 +6,12 @@
 
 body {
     font-family: "Inter", sans-serif;
-    font-weight: 400;
     font-size: 18px;
     color: #7D7D7D;
 }
 
 .title {
-    font-family: "Sofia+Sans", sans-serif;
+    font-family: "Sofia Sans", sans-serif;
     font-size: 60px;
     font-weight: 900;
     text-transform: uppercase;
@@ -87,7 +86,6 @@ h5 {
 
 .block-text-1>p+p {
     color: red;
-    font-weight: 400;
     text-transform: capitalize;
     white-space: nowrap;
 }
