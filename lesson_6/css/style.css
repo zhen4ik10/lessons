@@ -1,0 +1,221 @@
+/* Підключення шрифтів */
+@import url("fonts.css");
+/* Скидання стилів */
+@import url("reset.css");
+
+body {
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    color: #7D7D7D;
+}
+
+#to-up {
+    font-family: "Poppins", sans-serif;
+    font-size: 40px;
+    line-height: 1.2;
+    text-align: center;
+    /* color: #7644a5; */
+    color: blue;
+    text-shadow: 5px 5px 6px yellow, 6px 6px 7px #a3a0a0;
+}
+
+.header {
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+.consulting-page {
+    max-width: 692px;
+    margin: 0 auto;
+}
+
+.consulting-img {
+    max-width: 100%;
+    margin-bottom: 37px;
+}
+
+.title {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    color: #37393F;
+    line-height: 1.27;
+}
+
+.consulting-title {
+    font-size: 30px;
+    margin-bottom: 3px;
+    text-transform: capitalize;
+}
+
+.text {
+    line-height: 1.46;
+    margin-bottom: 42px;
+}
+
+.title-custom {
+    font-size: 20px;
+    color: #6B77E5;
+    margin-bottom: 12px;
+}
+
+.text-mb {
+    margin-bottom: 40px;
+}
+
+.block-img {
+    vertical-align: top;
+}
+
+.block-content {
+    display: inline-block;
+    max-width: 332px;
+    margin-left: 13px;
+}
+
+.block-title {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.block-subtitle {
+    color: #40DDB6;
+    font-size: 20px;
+    margin-bottom: 21px;
+}
+
+.block-list li {
+    margin-bottom: 35px;
+}
+
+.jewellery-page {
+    padding: 140px 0;
+    max-width: 1169px;
+    margin: 0 auto;
+}
+
+.jewellery-content {
+    display: inline-block;
+    max-width: 563px;
+    padding: 21px 0;
+}
+
+.jewellery-subtitle {
+    font-size: 28px;
+    color: #D06B00;
+    margin-bottom: 13px;
+    text-transform: uppercase;
+}
+
+.jewellery-title {
+    font-family: "DM Serif Text", serif;
+    font-size: 59px;
+    line-height: 1.46;
+    color: #0E333D;
+    margin-bottom: 25px;
+    max-width: 526px;
+}
+
+.jewellery-text {
+    font-size: 20px;
+    line-height: 1.8;
+    color: #474747;
+}
+
+
+/* ----------------------------------------------------------------------------------------- */
+
+/* Практика */
+
+.box {
+    max-width: 1000px;
+    margin: 0 auto 50px;
+    color: #000;
+}
+
+.block-1 {
+    background-color: #77608d;
+}
+
+.inline {
+    background-color: #7A956B;
+}
+
+.inline-block {
+    background-color: #794f45;
+}
+
+/* Відступи padding і margin */
+
+.block-1 {
+    padding: 25px 15px 10px;
+    margin-bottom: 30px;
+}
+
+.block-1 p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.inline-block {
+    padding: 5px 10px 15px 20px;
+}
+
+/* Ефект схлопування */
+
+.block-1 {
+    /* margin-bottom: 20px; */
+}
+
+.block-2 {
+    /* padding: 25px 15px 10px;
+    margin: 40px 0 20px;
+    background-color: #be891f; */
+}
+
+/* Використання від'ємних значень у margin  */
+
+.block-1 {
+    /* margin: 0 -100px; */
+}
+
+.block-2 {
+    /* margin-top: -100px;
+    background-color: #be891f; */
+}
+
+/* width, height, overflow, box-sizing, display  */
+
+.inline-block {
+    /* width: 100%; */
+}
+
+.block-2 {
+    /* background-color: #be891f;
+    width: 50%;
+    height: 100px;
+    overflow: hidden;
+    margin-bottom: 20px; */
+}
+
+.block-3 {
+    /* background-color: green;
+    width: 600px;
+    padding: 20px;
+    max-height: 150px;
+    overflow: auto;
+    margin-bottom: 20px;
+    box-sizing: content-box; */
+}
+
+.footer {
+    max-width: 100%;
+    padding: 20px 15px;
+    text-align: right;
+}
+
+.to-up {
+    display: inline-block;
+    color: green;
+    font-size: 24px;
+    text-transform: uppercase;
+}
