@@ -49,8 +49,11 @@ body {
 }
 
 .text {
-    line-height: 1.46;
     margin-bottom: 42px;
+}
+
+.text p {
+    line-height: 1.46;
 }
 
 .title-custom {
@@ -62,7 +65,6 @@ body {
 .text-mb {
     margin-bottom: 40px;
 }
-
 
 .block-content {
     display: inline-block;
