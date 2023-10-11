@@ -311,6 +311,10 @@ ol.project-list li {
     margin-bottom: -19px;
 }
 
+.main {
+    margin-bottom: 50px;
+}
+
 footer {
     padding: 50px;
 }
@@ -377,7 +381,7 @@ footer {
 
 .inline-block {
     max-width: 100%;
-    margin: 100px 50px;
+    margin: 100px 50px 10px;
     border-radius: 5px;
     box-shadow: 8px 8px 30px 3px #000;
 }
