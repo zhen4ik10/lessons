@@ -10,8 +10,8 @@ body {
 }
 
 .header {
-    padding: 25px 10px 5px;
-    margin-bottom: 150.5px;
+    padding: 25px 10px 25px;
+    margin-bottom: 50px;
 }
 
 .header-list {
@@ -35,7 +35,7 @@ body {
 }
 
 .licencing-block {
-    padding: 0 10px 150.5px;
+    padding: 50px 10px 150.5px;
     max-width: 1238px;
     margin: 0 auto 50px;
 }
@@ -148,12 +148,13 @@ body {
 }
 
 .project-list {
+    padding-left: 45px;
     margin-bottom: 35px;
 }
 
 .project-list li {
     margin-bottom: 35px;
-    margin-left: 45px;
+    /* margin-left: 45px; */
     font-weight: 500;
 }
 
