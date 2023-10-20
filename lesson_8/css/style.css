@@ -14,7 +14,7 @@ body {
     margin-bottom: 50px;
 }
 
-.header-list {
+.menu-list {
     max-width: 1200px;
     padding: 5px;
     margin: 0 auto;
@@ -22,12 +22,12 @@ body {
     color: #000;
 }
 
-.header-list li {
+.menu-list li {
     display: inline-block;
     margin-right: 10px;
 }
 
-.header-list li a {
+.menu-list li a {
     font-family: "Poppins", sans-serif;
     padding: 10px;
     font-size: 24px;
@@ -166,7 +166,7 @@ body {
 
 .block-15 {
     max-width: 100%;
-    background: url('../img/consulting/Photo.jpg') no-repeat,
+    background: url('../img/consulting/photo.jpg') no-repeat,
         linear-gradient(84deg, rgba(90, 16, 122, 1) 0%, rgba(126, 77, 217, 1) 45%, rgba(64, 51, 224, 1) 100%) 0 0 / 80% no-repeat,
         green;
 }
@@ -190,7 +190,7 @@ body {
 .other-text {
     display: inline-block;
     padding-left: 18px;
-    background: url('../img/consulting/Rect.png') 0 3px / 12px 12px no-repeat;
+    background: url('../img/consulting/rect.png') 0 3px / 12px 12px no-repeat;
 }
 
 .plan-title,
@@ -229,7 +229,7 @@ body {
     line-height: 1.65;
     margin-bottom: 23px;
     padding-left: 35px;
-    background: url('../img/consulting/li.svg') 0 3px no-repeat;
+    background: url('../img/consulting/li.svg') 0 3px / 27px 27px no-repeat;
 }
 
 .plan-items {
@@ -330,27 +330,27 @@ body {
 }
 
 .project-img-1 {
-    background-image: url('../img/consulting/Image-1.jpg');
+    background-image: url('../img/consulting/image-1.jpg');
 }
 
 .project-img-2 {
-    background-image: url('../img/consulting/Image-2.jpg');
+    background-image: url('../img/consulting/image-2.jpg');
 }
 
 .project-img-3 {
-    background-image: url('../img/consulting/Image-3.jpg');
+    background-image: url('../img/consulting/image-3.jpg');
 }
 
 .project-img-4 {
-    background-image: url('../img/consulting/Image-4.jpg');
+    background-image: url('../img/consulting/image-4.jpg');
 }
 
 .project-img-5 {
-    background-image: url('../img/consulting/Image-5.jpg');
+    background-image: url('../img/consulting/image-5.jpg');
 }
 
 .project-img-6 {
-    background-image: url('../img/consulting/Image-6.jpg');
+    background-image: url('../img/consulting/image-6.jpg');
 }
 
 .project-info__title {
@@ -366,7 +366,7 @@ body {
     font-size: 14px;
     line-height: 1.46;
     padding-left: 35px;
-    background: url('../img/consulting/icon-date.png') no-repeat;
+    background: url('../img/consulting/icon-date.png') 0 0 / 22px 22px no-repeat;
     margin-bottom: 10px;
 }
 
@@ -388,7 +388,7 @@ body {
     line-height: 1.2;
     letter-spacing: 0.56px;
     color: #3C4242;
-    margin-left: -21px;
+    /* margin-left: -21px; */
     padding-left: 21px;
     background: url('../img/euphoria/icon-21.png') 0 0 / 6px 28px no-repeat;
 }
@@ -489,7 +489,6 @@ body {
     padding: 12px 44px;
     font-size: 18px;
     font-weight: 600;
-    font-size: 18px;
     line-height: 1.2;
     background-color: #fff;
     border-radius: 8px;
@@ -501,15 +500,15 @@ body {
     background-color: #7A956B;
 }
 
-.footer-list {
+.footer__menu-list {
     max-width: 1200px;
 }
 
-.footer-list li {
+.footer__menu-list li {
     margin-bottom: 10px;
 }
 
-.footer-list li a {
+.footer__menu-list li a {
     font-size: 18px;
     border-bottom: 2px solid;
     border-radius: 10px;
