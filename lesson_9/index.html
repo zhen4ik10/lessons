@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 9</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="header"></header>
+    <main class="main">
+        <div class="practice">
+            <h1 class="title">Practice</h1>
+            <h2 class="practice__subtitle">
+                Застосування псевдокласів
+            </h2>
+            <div class="practice__wrapper">
+                <div class="practice__item">
+                    <h3 class="practice__title">
+                        <mark>
+                            При наведенні миші на текст
+                        </mark>, спрацює :hover ефект, тобто добавиться фон в текста
+                    </h3>
+                    <a href="#" class="practice__link">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim excepturi impedit beatae
+                            aperiam
+                            ab laboriosam sed mollitia vero similique vel. Neque ab blanditiis, laboriosam voluptatem
+                            reprehenderit ducimus repellat totam excepturi!
+                        </p>
+                    </a>
+                </div>
+                <div class="practice__item">
+                    <h3 class="practice__title">
+                        <mark>
+                            При наведенні миші на червоне коло
+                        </mark>, спрацює :hover ефект і покажеться блок з
+                        текстом
+                    </h3>
+                    <div class="box-red"></div>
+                    <a class="text-cls" href="#">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim excepturi impedit beatae aperiam
+                        ab laboriosam sed mollitia vero similique vel. Neque ab blanditiis, laboriosam voluptatem
+                        reprehenderit ducimus repellat totam excepturi!
+                    </a>
+                </div>
+
+
+                <!-- <div id="game" class="game__wrapper">
+                    <h2 class="game__title">
+                        Гра "Дійти до кінця"
+                    </h2>
+                    <a href="#start-game" class="link-game">Почати гру</a>
+                    <div id="start-game" class="block-game">
+                        <h2 class="block-title">Старт</h2>
+                        <div class="block_1"></div>
+                        <div class="block-2"></div>
+                        <div class="block-3"></div>
+                        <div class="block-4"></div>
+                        <div class="block-5"></div>
+                        <div class="block-6"></div>
+                        <div class="block-7"></div>
+                        <div class="block-8"></div>
+                        <div class="block-9"></div>
+                        <div class="block-10"></div>
+                        <h4 class="finish">Молодець!!!</h4>
+                    </div>
+                </div> -->
+                <div class="practice__item">
+                    <h3 class="practice__title">
+                        <mark>
+                            При натиснутій клавіші миші на текст
+                        </mark>, застосовується псевдоклас :active, текст
+                        фарбується в червоний
+                        колір
+                    </h3>
+                    <a class="text-active" href="#">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim excepturi impedit beatae aperiam
+                        ab laboriosam sed mollitia vero similique vel. Neque ab blanditiis, laboriosam voluptatem
+                        reprehenderit ducimus repellat totam excepturi!
+                    </a>
+                </div>
+                <div class="practice__item">
+                    <h3 class="practice__title">
+                        <mark>
+                            При відвіданому посиланню
+                        </mark>, застосовується псевдоклас :visited, посилання
+                        фарбується в червоний колір
+                    </h3>
+                    <ul class="practice__list">
+                        <li>
+                            <a href="https://www.google.com.ua/">Google</a>
+                        </li>
+                        <li>
+                            <a href="https://caninclude.glitch.me/">Caninclude</a>
+                        </li>
+                        <li>
+                            <a href="https://fonts.google.com/">Google Fonts</a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/">Instagram</a>
+                        </li>
+                        <li>
+                            <a href="https://www.google.ue/">Google</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="practice__item">
+                    <h3 class="practice__title">
+                        <mark>
+                            Звернення до елемента у стані "фокусу"
+                        </mark>, застосовується псевдоклас :focus
+                    </h3>
+                    <ul class="practice__list-focus text-focus">
+                        <li>
+                            <a href="https://www.google.com.ua/">Google</a>
+                        </li>
+                        <li>
+                            <a href="https://caninclude.glitch.me/">Caninclude</a>
+                        </li>
+                        <li>
+                            <a href="https://fonts.google.com/">Google Fonts</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="practice__item">
+                    <h3 class="practice__title">
+                        <mark>
+                            Звернення до елемента у стані "ефекту від посилання з іншого об'єкту"
+                        </mark>
+                    </h3>
+                    <a class="open" href="#open-text-1">
+                        Відкрити блок 1
+                    </a>
+                    <a class="open" href="#open-text-2">
+                        Відкрити блок 2
+                    </a>
+                    <a class="open" href="#open-text-3">
+                        Відкрити блок 3
+                    </a>
+                    <div class="practice__text">
+
+                        <p id="open-text-1">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem similique eveniet
+                            eligendi enim laudantium totam. Veniam at necessitatibus et consequatur tempora, excepturi
+                            ad reiciendis, nostrum quas ipsam tenetur dicta corporis?
+                        </p>
+                        <p id="open-text-2">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem similique eveniet
+                            eligendi enim laudantium totam. Veniam at necessitatibus et consequatur tempora, excepturi
+                            ad reiciendis, nostrum quas ipsam tenetur dicta corporis?
+                        </p>
+                        <p id="open-text-3">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem similique eveniet
+                            eligendi enim laudantium totam. Veniam at necessitatibus et consequatur tempora, excepturi
+                            ad reiciendis, nostrum quas ipsam tenetur dicta corporis?
+                        </p>
+                    </div>
+                </div>
+                <h2 class="practice__subtitle">
+                    Застосування псевдокласів положення в коді
+                </h2>
+                <div class="practice__item">
+                    <h3 class="practice__title">
+                        <mark>
+                            Звернення до першого елементу в коді
+                        </mark>
+                    </h3>
+                    <div class="practice__text text-first">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem similique eveniet
+                            eligendi enim laudantium totam. Veniam at necessitatibus et consequatur tempora, excepturi
+                            ad reiciendis, nostrum quas ipsam tenetur dicta corporis?
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem similique eveniet
+                            eligendi enim laudantium totam. Veniam at necessitatibus et consequatur tempora, excepturi
+                            ad reiciendis, nostrum quas ipsam tenetur dicta corporis?
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem similique eveniet
+                            eligendi enim laudantium totam. Veniam at necessitatibus et consequatur tempora, excepturi
+                            ad reiciendis, nostrum quas ipsam tenetur dicta corporis?
+                        </p>
+                    </div>
+                </div>
+                <div class="practice__item">
+                    <h3 class="practice__title">
+                        <mark>
+                            Звернення до першого вказаного об'єкту в коді
+                        </mark>
+                    </h3>
+                    <div class="practice__text text-first">
+                        <span>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem, quia!
+                        </span>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem similique eveniet
+                            eligendi enim laudantium totam. Veniam at necessitatibus et consequatur tempora, excepturi
+                            ad reiciendis, nostrum quas ipsam tenetur dicta corporis?
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem similique eveniet
+                            eligendi enim laudantium totam. Veniam at necessitatibus et consequatur tempora, excepturi
+                            ad reiciendis, nostrum quas ipsam tenetur dicta corporis?
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem similique eveniet
+                            eligendi enim laudantium totam. Veniam at necessitatibus et consequatur tempora, excepturi
+                            ad reiciendis, nostrum quas ipsam tenetur dicta corporis?
+                        </p>
+                    </div>
+                </div>
+                <div class="practice__item">
+                    <h3 class="practice__title">
+                        <mark>
+                            Звернення до останього вказаного об'єкту в коді
+                        </mark>
+                    </h3>
+                    <div class="practice__text text-last">
+                        <span>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem, quia!
+                        </span>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem similique eveniet
+                            eligendi enim laudantium totam. Veniam at necessitatibus et consequatur tempora, excepturi
+                            ad reiciendis, nostrum quas ipsam tenetur dicta corporis?
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem similique eveniet
+                            eligendi enim laudantium totam. Veniam at necessitatibus et consequatur tempora, excepturi
+                            ad reiciendis, nostrum quas ipsam tenetur dicta corporis?
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem similique eveniet
+                            eligendi enim laudantium totam. Veniam at necessitatibus et consequatur tempora, excepturi
+                            ad reiciendis, nostrum quas ipsam tenetur dicta corporis?
+                        </p>
+                    </div>
+                </div>
+                <div class="practice__item">
+                    <h3 class="practice__title">
+                        <mark>
+                            Звернення до останього елементу в коді
+                        </mark>
+                    </h3>
+                    <div class="practice__text text-last">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem similique eveniet
+                            eligendi enim laudantium totam. Veniam at necessitatibus et consequatur tempora, excepturi
+                            ad reiciendis, nostrum quas ipsam tenetur dicta corporis?
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem similique eveniet
+                            eligendi enim laudantium totam. Veniam at necessitatibus et consequatur tempora, excepturi
+                            ad reiciendis, nostrum quas ipsam tenetur dicta corporis?
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem similique eveniet
+                            eligendi enim laudantium totam. Veniam at necessitatibus et consequatur tempora, excepturi
+                            ad reiciendis, nostrum quas ipsam tenetur dicta corporis?
+                        </p>
+                    </div>
+                </div>
+                <div class="practice__item">
+                    <h3 class="practice__title">
+                        <mark>
+                            Звернення до конкретного елементу в коді
+                        </mark>
+                    </h3>
+                    <div class="practice__text text-nth">
+                        <p>
+                            1 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem similique eveniet
+                            eligendi enim laudantium totam. Veniam at necessitatibus et consequatur tempora, excepturi
+                            ad reiciendis, nostrum quas ipsam tenetur dicta corporis?
+                        </p>
+                        <p>
+                            2 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem similique eveniet
+                            eligendi enim laudantium totam. Veniam at necessitatibus et consequatur tempora, excepturi
+                            ad reiciendis, nostrum quas ipsam tenetur dicta corporis?
+                        </p>
+                        <p>
+                            3 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem similique eveniet
+                            eligendi enim laudantium totam. Veniam at necessitatibus et consequatur tempora, excepturi
+                            ad reiciendis, nostrum quas ipsam tenetur dicta corporis?
+                        </p>
+                        <p>
+                            4 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem similique eveniet
+                            eligendi enim laudantium totam. Veniam at necessitatibus et consequatur tempora, excepturi
+                            ad reiciendis, nostrum quas ipsam tenetur dicta corporis?
+                        </p>
+                        <p>
+                            5 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem similique eveniet
+                            eligendi enim laudantium totam. Veniam at necessitatibus et consequatur tempora, excepturi
+                            ad reiciendis, nostrum quas ipsam tenetur dicta corporis?
+                        </p>
+                    </div>
+                </div>
+                <div class="practice__item">
+                    <h3 class="practice__title">
+                        <mark>
+                            Звернення до конкретного елементу в коді
+                        </mark>,
+                        застосовуємо властивість :nth-child (3n+1, 3n+2, 3n+3)
+                    </h3>
+                    <div class="practice__text text-dec">
+                        <p>
+                            1 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem similique eveniet
+                            eligendi enim laudantium totam. Veniam at necessitatibus et consequatur tempora, excepturi
+                            ad reiciendis, nostrum quas ipsam tenetur dicta corporis?
+                        </p>
+                        <p>
+                            2 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem similique eveniet
+                            eligendi enim laudantium totam. Veniam at necessitatibus et consequatur tempora, excepturi
+                            ad reiciendis, nostrum quas ipsam tenetur dicta corporis?
+                        </p>
+                        <p>
+                            3 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem similique eveniet
+                            eligendi enim laudantium totam. Veniam at necessitatibus et consequatur tempora, excepturi
+                            ad reiciendis, nostrum quas ipsam tenetur dicta corporis?
+                        </p>
+                        <p>
+                            4 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem similique eveniet
+                            eligendi enim laudantium totam. Veniam at necessitatibus et consequatur tempora, excepturi
+                            ad reiciendis, nostrum quas ipsam tenetur dicta corporis?
+                        </p>
+                        <p>
+                            5 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem similique eveniet
+                            eligendi enim laudantium totam. Veniam at necessitatibus et consequatur tempora, excepturi
+                            ad reiciendis, nostrum quas ipsam tenetur dicta corporis?
+                        </p>
+                        <p>
+                            6 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem similique eveniet
+                            eligendi enim laudantium totam. Veniam at necessitatibus et consequatur tempora, excepturi
+                            ad reiciendis, nostrum quas ipsam tenetur dicta corporis?
+                        </p>
+                        <p>
+                            7 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem similique eveniet
+                            eligendi enim laudantium totam. Veniam at necessitatibus et consequatur tempora, excepturi
+                            ad reiciendis, nostrum quas ipsam tenetur dicta corporis?
+                        </p>
+                        <p>
+                            8 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem similique eveniet
+                            eligendi enim laudantium totam. Veniam at necessitatibus et consequatur tempora, excepturi
+                            ad reiciendis, nostrum quas ipsam tenetur dicta corporis?
+                        </p>
+                        <p>
+                            9 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem similique eveniet
+                            eligendi enim laudantium totam. Veniam at necessitatibus et consequatur tempora, excepturi
+                            ad reiciendis, nostrum quas ipsam tenetur dicta corporis?
+                        </p>
+                    </div>
+                </div>
+                <div class="practice__item">
+                    <h3 class="practice__title">
+                        <mark>
+                            Звернення до конкретного елементу в коді
+                        </mark>,
+                        застосовуємо властивість :nth-child (odd and even)
+                    </h3>
+                    <div class="practice__text text-odd">
+                        <p>
+                            1 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem similique eveniet
+                            eligendi enim laudantium totam. Veniam at necessitatibus et consequatur tempora, excepturi
+                            ad reiciendis, nostrum quas ipsam tenetur dicta corporis?
+                        </p>
+                        <p>
+                            2 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem similique eveniet
+                            eligendi enim laudantium totam. Veniam at necessitatibus et consequatur tempora, excepturi
+                            ad reiciendis, nostrum quas ipsam tenetur dicta corporis?
+                        </p>
+                        <p>
+                            3 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem similique eveniet
+                            eligendi enim laudantium totam. Veniam at necessitatibus et consequatur tempora, excepturi
+                            ad reiciendis, nostrum quas ipsam tenetur dicta corporis?
+                        </p>
+                        <p>
+                            4 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem similique eveniet
+                            eligendi enim laudantium totam. Veniam at necessitatibus et consequatur tempora, excepturi
+                            ad reiciendis, nostrum quas ipsam tenetur dicta corporis?
+                        </p>
+                        <p>
+                            5 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem similique eveniet
+                            eligendi enim laudantium totam. Veniam at necessitatibus et consequatur tempora, excepturi
+                            ad reiciendis, nostrum quas ipsam tenetur dicta corporis?
+                        </p>
+                        <p>
+                            6 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem similique eveniet
+                            eligendi enim laudantium totam. Veniam at necessitatibus et consequatur tempora, excepturi
+                            ad reiciendis, nostrum quas ipsam tenetur dicta corporis?
+                        </p>
+                        <p>
+                            7 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem similique eveniet
+                            eligendi enim laudantium totam. Veniam at necessitatibus et consequatur tempora, excepturi
+                            ad reiciendis, nostrum quas ipsam tenetur dicta corporis?
+                        </p>
+                        <p>
+                            8 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem similique eveniet
+                            eligendi enim laudantium totam. Veniam at necessitatibus et consequatur tempora, excepturi
+                            ad reiciendis, nostrum quas ipsam tenetur dicta corporis?
+                        </p>
+                        <p>
+                            9 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem similique eveniet
+                            eligendi enim laudantium totam. Veniam at necessitatibus et consequatur tempora, excepturi
+                            ad reiciendis, nostrum quas ipsam tenetur dicta corporis?
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="benefits">
+            <h2 class="benefits__title">
+                Why Us For International Business Management Consulting!
+            </h2>
+            <div class="benefits__text">
+                <p>
+                    Completely synergized resourced taxings relationships premiers markets ultivate one-to-one customer
+                    service with robust ideas dynamically innovated resources leveling customer service for state of the
+                    art customer service innovate product for reliable supply engage web services cutting-edge
+                    deliverables.
+                </p>
+            </div>
+            <h4 class="benefits__subtitle">
+                Proactively envisioned multimedia based expertise media growth superior collaboration.
+            </h4>
+            <div class="benefits__text">
+                <p>
+                    One-to-one customer service with robust ideas dynamically innovated resources for reliable supply
+                    engage web services cutting-edge deliverables.
+                </p>
+            </div>
+            <div class="benefits__block">
+                <div class="benefits__img"></div>
+                <div class="benefits__content">
+                    <h3 class="benefits__block-title">
+                        Our benefits
+                    </h3>
+                    <h4 class="benefits__subtitle title-color">
+                        Incubate standards compliant channels benefits.
+                    </h4>
+                    <ul class="list">
+                        <li>
+                            Credibly reintermediate backend
+                        </li>
+                        <li>
+                            Holistically foster superior
+                        </li>
+                        <li>
+                            Distinctively exploit optimal
+                        </li>
+                    </ul>
+
+
+                </div>
+            </div>
+            <h2 class="benefits__title">
+                Frequently Asked Questions
+            </h2>
+            <div class="benefits__text">
+                <p>
+                    Leveling customer service for state of the art customer service innovate product for reliable supply
+                    engage web services cutting-edge deliverables.
+                </p>
+            </div>
+        </div>
+
+        <div class="business">
+            <h5 class="deco-title">
+                Welcome Whitecollar
+            </h5>
+            <h2 class="business__title">
+                We Care About Your Business Plan.
+            </h2>
+            <div class="business__text">
+                <p>
+                    Leverage agile frameworks to provide a robust synopsis for high level overviews.Iterative approaches
+                    to corporate strategy foster collaborative thinking to further the overal.
+                </p>
+                <p>
+                    Leverage agile frameworks to provide a robust synopsis for high level overviews.Iterative approaches
+                    to corporate strategy
+                </p>
+            </div>
+            <ul class="business__list">
+                <li class="business__item">
+
+                    Our Vision
+                    <div class="business__list-text">
+                        <p>
+                            Capitalize on low hanging fruit to identify a ballpark value added activity to beta
+                            clickthroughs.
+                        </p>
+                    </div>
+
+                </li>
+                <li class="business__item">
+                    Our Mision
+                    <div class="business__list-text">
+                        <p>
+                            Podcasting operational change management inside of workflows to establish a framework.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+            <a href class="business__btn">More About Us</a>
+        </div>
+
+        <div class="work">
+            <h5 class="deco-title">
+                Work Process
+            </h5>
+            <h2 class="work__title">
+                How We Work
+            </h2>
+            <div class="work__wrapper">
+                <div class="work__item item-1">
+                    <h5 class="work__item-title">
+                        Make Appointment
+                    </h5>
+                    <div class="work__text">
+                        <p>
+                            Leverage agile frameworks provide synopsishigh level overviews value proposition.
+                        </p>
+                    </div>
+                    <a href class="work__link">
+                        Testimonials
+                    </a>
+                </div>
+                <div class="work__item item-2">
+                    <h5 class="work__item-title">Consultation</h5>
+                    <div class="work__text">
+                        <p>
+                            Leverage agile frameworks provide synopsishigh level overviews value proposition.
+                        </p>
+                    </div>
+                    <a href class="work__link">
+                        Testimonials
+                    </a>
+                </div>
+                <div class="work__item item-3">
+                    <h5 class="work__item-title">
+                        Enjoy the Service
+                    </h5>
+                    <div class="work__text">
+                        <p>
+                            Leverage agile frameworks provide synopsishigh level overviews value proposition.
+                        </p>
+                    </div>
+                    <a href class="work__link">
+                        Testimonials
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="jewel">
+            <div class="jewel__wrapper">
+                <h3 class="jewel__title">
+                    We Develop Create Custom Jewels.
+                </h3>
+                <div class="jewel__block block-1">
+                    <div class="jewel__block-img">
+                        <img src="img/jewely/img-1.jpg" alt="img-1">
+                    </div>
+                    <h6 class="jewel__block-subtitle">
+                        Embossed hoop earrings
+                    </h6>
+                    <span>$144.00</span>
+                </div>
+                <div class="jewel__block">
+                    <h3 class="jewel__block-title">
+                        #02 <br>
+                        new jewellery collection
+                    </h3>
+                    <div class="jewel__block-img">
+                        <img src="img/jewely/img-2.jpg" alt="img-2">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+    <footer class="footer"></footer>
+
+</body>
+
+</html>

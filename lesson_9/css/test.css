@@ -1,0 +1,352 @@
+/* Підключення шрифтів */
+@import url("fonts.css");
+/* Скидання стилів */
+@import url("reset.css");
+
+body {
+    font-family: "Inter", sans-serif;
+    padding: 30px;
+}
+
+.link {
+    color: green;
+    font-size: 30px;
+}
+
+/* ==================== Псевдокласи ============================ */
+
+/* Анатомія псевдокласів */
+
+/* 
+селектор:псевдоклас {
+    
+}
+селектор:псевдоклас селектор  {
+
+}
+*/
+
+/* Псевдокласи стану */
+
+/*
+:hover
+Звернення до елемента у стані "при наведенні миші"
+Застосовується до будь-якого елемента
+*/
+
+/* 
+.link:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+.main:hover .link {
+    color: blue;
+}
+*/
+
+/*  
+.hover-expl__block {
+    width: 300px;
+    height: 300px;
+    background-color: green;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .8s;
+}
+
+.hover-expl:hover .hover-expl__block {
+    visibility: visible;
+    opacity: 1;
+}
+*/
+
+/*
+:active
+Звернення до елемента у стані "при натиснутій клавіші миші"
+*/
+/* .link:active {
+    color: blue;
+} */
+
+/*
+:visited
+Звернення до елемента у стані "відвіданого посилання"
+обмежена кількість властивостей
+*/
+/* .link:visited {
+    color: gray;
+} */
+
+/*
+:focus
+Звернення до елемента у стані "фокусу"
+*/
+/* .link:focus {
+    outline: 3px dotted red;
+    color: yellow;
+} */
+/*
+:target
+Звернення до елемента у стані "ефекту від посилання з іншого об'єкту"
+*/
+/* 
+.open-box {
+    font-size: 20px;
+}
+
+.box {
+    width: 300px;
+    height: 300px;
+    background-color: #794f45;
+    visibility: hidden;
+}
+
+.box:target {
+    visibility: visible;
+} */
+
+/* Псевдокласи положення в коді */
+
+.text {
+    background-color: #7A956B;
+    padding: 20px;
+}
+
+.text p {
+    font-size: 20px;
+    line-height: 130%;
+}
+
+/* 1 variant */
+/* .text *:last-child {
+    margin-bottom: 0;
+} */
+
+/* 
+:first-child
+Звернення до першого елементу в коді
+*/
+/* .text p:first-child {
+    background-color: #7A956B;
+} */
+
+/* .text *:first-child {
+    background-color: #7A956B;
+} */
+
+/* 
+:first-of-type
+Звернення до першого вказаного об'єкту в коді
+*/
+/* .text p:first-of-type {
+    background-color: #7A956B;
+} */
+
+/* 
+:last-child
+Звернення до останього елементу в коді
+*/
+/* .text p:last-child {
+    text-transform: uppercase;
+} */
+/* .text p:last-of-type {
+    text-transform: uppercase;
+} */
+
+/* :nth-child(порядковий номер елементу / значення / алгоритм )
+Звернення до конкретного елементу в коді
+
+odd - через один не парні
+even - через один парні
+
+
+*/
+
+/* .text p:nth-child(2) {
+    background-color: #7A956B;
+} */
+
+/* .text p:nth-child(odd) {
+    background-color: #7A956B;
+} */
+
+/* Алгоритм "кожен-через" */
+/* кожен(n) + починаючи з */
+/* 
+.text p:nth-child(3n+1) {
+    background-color: #7A956B;
+}
+
+.text p:nth-child(3n+2) {
+    background-color: #794f45;
+}
+
+.text p:nth-child(3n+3) {
+    background-color: #77608d;
+} */
+
+/* ------------------------- */
+
+
+/* 
+:not(селектор)
+Псевдоклас виключення
+*/
+
+.text p:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+
+
+
+/* ------------------------- */
+/* Додатково */
+/* :has, :is */
+
+
+/* Гарна Практика */
+
+.block {
+    background-color: #77608d;
+    padding: 25px;
+}
+
+/* ============================================= */
+/* якщо margin однакові */
+/* тут написано, усі об'єкти першого рівня вкладеності, тобто безпосередньо вкладені в об'єкт блок, усі крім останього отримають margin-bottom: 20px;  */
+/* .block>*:not(:last-child) {
+    margin-bottom: 20px;
+} */
+/* ============================================= */
+
+
+
+
+
+/* ============================================= */
+/* якщо margin НЕ однакові */
+/* .block>*:last-child {
+    margin-bottom: 0;
+} */
+
+/* ============================================= */
+
+
+
+
+/* ============================================= */
+/* Універсальний варіант */
+/* .block>* { */
+/* Відступ за замовченням */
+/* margin-bottom: 20px; */
+/* } */
+
+/* і в кінці стилів блоку потрібно дописати 
+.block>*:last-child {
+    margin-bottom: 0;
+}
+
+*/
+
+/* ============================================= */
+
+
+
+
+
+.block__title {
+    font-weight: 700;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.block__text {
+    line-height: 140%;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.block__link {
+    font-size: 20px;
+    color: yellow;
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
+
+.block__link:hover {
+    text-decoration: none;
+}
+
+
+/* Псевдокласи мають більший пріоритет(уточнення) */
+
+/* ==================== Псевдоелементи ============================ */
+
+/* Анатомія псевдоелементів */
+
+/* 
+селектор::псевдоелемент {
+}
+Псевдоелементи не можна додавати до
+одинарних тегів (наприклад img,br),
+тому що ці теги не можуть містити в собі контенту.
+*/
+
+/* 
+::before {}
+
+::after {}
+
+ ! ! ! ! ! Псевдоелементи  -  РЯДКОВІ ! ! ! ! ! ! ! !
+Властивість content: ""; - Обов'язкова!
+ */
+
+/* .section {
+    outline: 5px solid red;
+}
+
+.section::before {
+    content: "Привіт!";
+}
+
+.section::after {
+    content: "Пока!";
+} */
+
+.deco-title {
+    font-weight: 700;
+    font-size: 28px;
+}
+
+.deco-title::before {
+    content: "";
+    background-color: #8a33fd;
+    width: 6px;
+    height: 28px;
+    border-radius: 10px;
+    margin-right: 15px;
+    margin-bottom: -3px;
+}
+
+.list {}
+
+
+.list__item::before {
+    content: "";
+    background: url('../img/consulting/li.svg') 0 0 no-repeat;
+    width: 30px;
+    height: 30px;
+    opacity: .2;
+}
+
+.list__item:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+/* Взаємодія псевдокласа ти псевдоелемента */
+
+.list__item:hover::before {
+    opacity: 1;
+}
