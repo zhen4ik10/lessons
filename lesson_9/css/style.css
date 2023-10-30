@@ -9,16 +9,45 @@ body {
     color: #7D7D7D;
 }
 
-/* .header {}
 
-.main {} */
+/* ---------------- HEADER ---------------- */
+.header {
+    max-width: 620px;
+    padding: 0 10px;
+    margin: 0 auto 50px;
+}
+
+.list {
+    background-color: #41D3BD;
+    text-align: center;
+    border-radius: 0 0 8px 8px;
+}
+
+.list li:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.list li a {
+    color: #613F75;
+    font-size: 36px;
+    font-weight: 600;
+    padding: 10px;
+}
+
+.list li a:hover {
+    background-color: #DE6449;
+}
+
+/* ---------------- MAIN ---------------- */
+.main {
+    margin-bottom: 100px;
+}
 
 /* ------------------- PRACTICE ---------------------------- */
 .practice {
     max-width: 1120px;
     padding: 10px;
-    margin: 0 auto 150px;
-    color: #000;
+    margin: 0 auto 50px;
 }
 
 .title,
@@ -28,11 +57,11 @@ body {
     line-height: 1.2;
     font-weight: 700;
     text-align: center;
-    margin-bottom: 30px;
 }
 
 .title {
     color: #613F75;
+    margin-bottom: 30px;
 }
 
 .practice__subtitle {
@@ -41,9 +70,15 @@ body {
     color: #EF798A;
 }
 
+.practice__item,
+.game__wrapper,
+.game-link,
+.game-block {
+    border-radius: 8px;
+}
+
 .practice__item {
     padding: 10px;
-    border-radius: 8px;
     background-color: #7CDEDC;
     color: #474954;
 }
@@ -60,7 +95,6 @@ body {
     line-height: 1.2;
 }
 
-
 .practice__link {
     padding: 5px;
 }
@@ -76,7 +110,6 @@ body {
     border-radius: 50%;
     background-color: #fa6363;
     margin-bottom: 10px;
-    cursor: pointer;
 }
 
 .box-red:hover {
@@ -110,13 +143,12 @@ body {
 .practice__list a,
 .practice__list-focus li {
     font-weight: 600;
-    font-size: 18px;
     color: #4a58d5;
     padding: 5px;
 }
 
 .practice__list a:hover,
-.text-focus a:hover,
+.practice__list-focus a:hover,
 .open:hover {
     background-color: #A9B3CE;
 }
@@ -129,7 +161,7 @@ body {
     color: #EF798A;
 }
 
-.text-focus li a:focus {
+.practice__list-focus li a:focus {
     outline: 3px dotted #613F75;
     color: yellow;
 }
@@ -141,7 +173,7 @@ body {
     margin-bottom: 20px;
 }
 
-.open:not(:last-child) {
+.open:not(:last-of-type) {
     margin-right: 20px;
 }
 
@@ -214,13 +246,36 @@ body {
     background-color: #80CFA9;
 }
 
+.title-decor {
+    color: #407899;
+    text-align: center;
+}
+
+.title-decor::before,
+.title-decor::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    box-shadow: 3px 3px 5px #000;
+}
+
+.title-decor::before {
+    background-color: blue;
+}
+
+.title-decor::after {
+    background-color: yellow;
+}
+
 /* ------ GAME ------- */
 
+
 .game__wrapper {
+    max-width: 1120px;
+    margin: 0 auto 100px;
     background-color: #7CDEDC;
-    border-radius: 8px;
-    padding: 20px;
-    margin-bottom: 30px;
+    padding: 10px;
 }
 
 .game__title {
@@ -232,8 +287,7 @@ body {
     color: #fff;
 }
 
-.link-game {
-    display: inline-block;
+.game-link {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: 700;
     background-color: #13906d;
@@ -244,12 +298,11 @@ body {
 
 
 
-.block-game {
+.game-block {
     max-width: 800px;
     margin: 0 auto;
     padding: 10px;
     outline: 2px solid;
-    border-radius: 8px;
     display: none;
 }
 
@@ -274,15 +327,15 @@ body {
 .block-9,
 .block-10 {
     cursor: pointer;
-    /* background-color: #9E788F; */
+    background-color: #9E788F;
     visibility: hidden;
 }
 
 
-/* .block_1 {
+.block_1 {
     max-width: 80px;
     min-height: 50px;
-} */
+}
 
 .block-2 {
     min-height: 60px;
@@ -384,7 +437,11 @@ body {
     visibility: visible;
 }
 
-.block-game:target {
+.game-block:target {
+    display: block;
+}
+
+.game__wrapper:target {
     display: block;
 }
 
@@ -397,9 +454,10 @@ body {
 /* ----------------- BENEFITS ---------------------------- */
 .benefits {
     max-width: 712px;
-    margin: 24px auto 150px;
+    margin: 0 auto 100px;
     padding: 10px;
 }
+
 
 .benefits>*:last-child {
     margin-bottom: 0;
@@ -427,11 +485,10 @@ body {
     margin-bottom: 42px;
 }
 
-/* .business__text p {
-    
-} */
+
+.benefits__text p:not(:last-child),
 .business__text p:not(:last-child),
-.benefits__text p:not(:last-child) {
+.business__list-text p:not(:last-child) {
     margin-bottom: 16px;
 }
 
@@ -475,26 +532,25 @@ body {
     margin-bottom: 21px;
 }
 
-.list {
+.benefits__list {
     margin-bottom: 16px;
 }
 
-.list li {
+.benefits__list li {
     min-height: 27px;
     font-size: 18px;
 }
 
-.list li::before {
+.benefits__list li::before {
     content: "";
     width: 27px;
     height: 27px;
     background: url('../img/consulting/li.svg') center / 27px 27px no-repeat;
     margin-right: 8px;
     vertical-align: middle;
-    /* line-height: 1.27; */
 }
 
-.list li:not(:last-child) {
+.benefits__list li:not(:last-child) {
     margin-bottom: 30px;
 }
 
@@ -503,7 +559,11 @@ body {
 .business {
     max-width: 695px;
     padding: 10px;
-    margin: 0 auto 150px;
+    margin: 0 auto 100px;
+}
+
+.business>*:last-child {
+    margin-bottom: 0;
 }
 
 .deco-title {
@@ -576,6 +636,7 @@ body {
     text-transform: capitalize;
     color: #fff;
     background-color: #6B77E5;
+    margin-bottom: 20px;
 }
 
 .business__btn:hover {
@@ -587,8 +648,9 @@ body {
 .work {
     max-width: 1240px;
     padding: 10px;
-    margin: 0 auto 160px;
+    margin: 0 auto 100px;
 }
+
 
 .work .deco-title {
     text-align: center;
@@ -613,6 +675,7 @@ body {
 
 .work__item:not(:last-child) {
     margin-right: 30px;
+    margin-bottom: 60px;
 }
 
 .work__item>*:last-child {
@@ -673,10 +736,11 @@ body {
 .jewel {
     max-width: 1620px;
     padding: 10px;
-    margin: 0 auto;
+    margin: 0 auto 100px;
     font-family: "Cormorant Infant", serif;
     color: #000;
 }
+
 
 .jewel__wrapper {
     font-size: 0;
@@ -716,7 +780,6 @@ body {
 .jewel__block-img {
     max-width: 334px;
     max-height: 381px;
-    width: 100%;
     border: 1px solid #000;
     margin-bottom: 34px;
 }
@@ -746,5 +809,15 @@ body {
 
 
 
+/* ------------------ FOOTER ------------------- */
+.footer .list {
+    padding: 25px 10px 20px;
+}
 
-/* .footer {} */
+.footer li {
+    display: inline-block;
+}
+
+.footer li:not(:last-child) {
+    margin-right: 10px;
+}
