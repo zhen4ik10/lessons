@@ -784,6 +784,20 @@ body {
     margin-bottom: 34px;
 }
 
+.jewely__block-link:hover .jewel__block-img {
+    border: none;
+    opacity: .75;
+}
+
+.jewely__block-link:hover img {
+    box-shadow: 3px 3px 10px #000;
+}
+
+.jewely__block-link:hover .jewel__block-subtitle,
+.jewely__block-link:hover span {
+    text-decoration: underline;
+}
+
 .jewel__block-img img {
     margin-top: 9px;
     margin-left: 10px;
@@ -792,7 +806,6 @@ body {
 
 
 .jewel__block-title {
-    display: inline-block;
     max-width: 339px;
     line-height: 1.13;
     margin-bottom: 31px;

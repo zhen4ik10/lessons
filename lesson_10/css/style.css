@@ -1,0 +1,21 @@
+/* Підключення шрифтів */
+@import url("fonts.css");
+/* Скидання стилів */
+@import url("reset.css");
+
+body {
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    /* background-color: #282727; */
+    background-color: #77608d;
+    color: #fff;
+    padding: 10px;
+}
+
+p:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+p img {
+    vertical-align: middle;
+}
