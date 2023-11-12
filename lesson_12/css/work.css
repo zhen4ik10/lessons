@@ -1,0 +1,291 @@
+@import url('fonts.css');
+@import url('reset.css');
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    line-height: 1.2;
+}
+
+[class*="__container"] {
+    max-width: 1155px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0 auto;
+}
+
+.header,
+.footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+    background-color: #2EB5A4;
+}
+
+.page--margin {
+    padding-top: 30px;
+    margin-bottom: 50px;
+}
+
+.title {
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.title--margin {
+    margin-bottom: 30px;
+}
+
+.link {
+    position: fixed;
+    padding: 10px;
+    bottom: 100px;
+    right: 20px;
+    font-size: 26px;
+    font-weight: 600;
+    color: #fff;
+    background-color: red;
+}
+
+
+.page__text {
+    max-width: 1020px;
+    margin: 0 auto 30px;
+    padding: 40px 10px 10px;
+    border: 1px solid #ECE89D;
+    background-color: #eee;
+    position: relative;
+}
+
+.page__text::before,
+.page__text::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    box-shadow: 3px 3px 5px #000;
+}
+
+.page__text::before {
+    left: 10px;
+}
+
+.page__text::after {
+    right: 10px;
+}
+
+.page__text p {
+    margin-bottom: 25px;
+}
+
+.page__text *:last-child {
+    margin-bottom: 0;
+}
+
+.page__text span {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.page__text .text--red {
+    color: red;
+}
+
+.page__text p.text--margin {
+    margin-bottom: 10px;
+}
+
+.page__list {
+    margin-bottom: 25px;
+}
+
+.page__list li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.text {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.text a {
+    color: #2EB5A4;
+    text-decoration: underline;
+}
+
+.text a:hover {
+    text-decoration: none;
+}
+
+.text--margin {
+    margin-bottom: 30px;
+}
+
+.block--margin {
+    margin-bottom: 120px;
+}
+
+.head-block {
+    font-size: 0;
+}
+
+.head-block__link {
+    padding: 13px 23px;
+    text-align: center;
+    border: 1px solid #ECE89D;
+    vertical-align: top;
+    background-color: #5E5373;
+    color: #fff;
+}
+
+.head-block__link:nth-child(4),
+.head-block__link:nth-child(6) {
+    padding-top: 3px;
+    padding-bottom: 4px;
+}
+
+.head-block__link:nth-child(7) {
+    padding-top: 22px;
+    padding-bottom: 23px;
+}
+
+.head-block__link:hover {
+    background-color: #ECE89D;
+    color: #000;
+}
+
+.head-block__title {
+    font-size: 20px;
+    font-weight: 600;
+
+}
+
+.head-block__title+span {
+    font-size: 16px;
+}
+
+.body-block {
+    padding-top: 30px;
+    padding-bottom: 15px;
+    border: 2px solid #ECE89D;
+    height: 450px;
+    overflow: auto;
+}
+
+.body-block--margin {
+    margin: 0 auto;
+}
+
+.body-block__item:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.main-block {
+    background-color: #eee;
+    max-width: 700px;
+    text-align: center;
+    min-height: 800px;
+}
+
+.main-block--margin {
+    margin: 0 auto;
+}
+
+.block-1,
+.block-2,
+.block-3 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.block-1 {
+    background-color: #ECE89D;
+}
+
+.block-2 {
+    background-color: #5E5373;
+}
+
+.block-3 {
+    background-color: #2EB5A4;
+}
+
+.body-block__item--static,
+.body-block__item--relative,
+.body-block__item--relative-1,
+.body-block__item--absolute,
+.body-block__item--absolute-1,
+.body-block__item--fixed,
+.body-block__item--sticky {
+    display: none;
+}
+
+.body-block__item--static:target,
+.body-block__item--relative:target,
+.body-block__item--relative-1:target,
+.body-block__item--absolute:target,
+.body-block__item--absolute-1:target,
+.body-block__item--fixed:target,
+.body-block__item--sticky:target {
+    display: block;
+}
+
+.body-block__item--static * {
+    position: static;
+}
+
+.body-block__item--relative .block-2 {
+    position: relative;
+    top: 30px;
+    left: 20px;
+}
+
+.body-block__item--relative-1 .block-2 {
+    position: relative;
+    top: 30px;
+    left: 20px;
+}
+
+.body-block__item--relative-1 .block-3 {
+    position: relative;
+    z-index: 2;
+}
+
+.body-block__item--absolute .main-block {
+    position: relative;
+}
+
+.body-block__item--absolute .block-2 {
+    position: absolute;
+    top: 30px;
+    left: 20px;
+}
+
+.body-block__item--absolute-1 .block-2 {
+    position: absolute;
+    top: 30px;
+    left: 20px;
+}
+
+.body-block__item--fixed .block-2 {
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+}
+
+.body-block__item--sticky .block-2 {
+    position: sticky;
+    top: 0px;
+}

@@ -1,0 +1,305 @@
+/* Підключення шрифтів */
+@import url("fonts.css");
+/* Скидання стилів */
+@import url("reset.css");
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    line-height: 1.2;
+}
+
+.wrapper {
+    min-height: 100%;
+    overflow: clip;
+}
+
+[class*="__container"] {
+    max-width: 1251px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0 auto;
+}
+
+/* ---- HEADER ------ */
+
+.header {
+    background-color: #174c33;
+    color: #fff;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    width: 100%;
+}
+
+.header--margin {
+    position: fixed;
+}
+
+
+.menu__item {
+    position: relative;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+.menu__item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.menu__link {
+    padding: 10px 15px;
+    box-shadow: 1px 1px 2px #000;
+    border-radius: 4px;
+}
+
+
+.menu__item:hover .menu__link {
+    background-color: #0a2b14;
+    color: gold;
+}
+
+.menu__item:hover .sub-menu {
+    visibility: visible;
+}
+
+.sub-menu {
+    padding-top: 5px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    visibility: hidden;
+}
+
+.sub-menu__item {
+    width: 145px;
+    position: relative;
+}
+
+.sub-menu__link {
+    display: block;
+    background-color: rgb(14, 24, 99);
+    font-size: 16px;
+    padding: 15px;
+}
+
+
+.sub-menu__item:hover .sub-menu__link {
+    color: gold;
+    background-color: rgb(6, 15, 83);
+}
+
+.sub-menu__item:hover .lvl-menu {
+    visibility: visible;
+}
+
+.lvl-menu {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    visibility: hidden;
+    padding-left: 5px;
+}
+
+.lvl-menu__item {
+    width: 145px;
+}
+
+.lvl-menu__link {
+    display: block;
+    background-color: rgb(162, 0, 255);
+    padding: 15px;
+}
+
+.lvl-menu__item:hover .lvl-menu__link {
+    color: gold;
+    background-color: rgb(96, 7, 147);
+}
+
+/* ---- MAIN ------ */
+
+.main--margin {
+    padding-top: 100px;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.main--margin *:last-child {
+    margin-bottom: 0;
+}
+
+.title {
+    font-size: 48px;
+    font-weight: 900;
+    text-align: center;
+}
+
+.title--margin {
+    margin-bottom: 30px;
+}
+
+.practice-link {
+    padding: 10px;
+    font-size: 20px;
+    background-color: #5E5373;
+    color: #fff;
+}
+
+
+.practice-link:hover {
+    background-color: #ECE89D;
+    color: #000;
+}
+
+.practice-link--margin {
+    margin-bottom: 30px;
+}
+
+.section--margin {
+    margin-bottom: 70px;
+}
+
+.section__item-1,
+.section__item-2,
+.section__item-3,
+.section__item-4 {
+    position: sticky;
+    top: 100px;
+    left: 0;
+    margin-bottom: 30px;
+    background-color: #fff;
+}
+
+.section__title {
+    font-weight: 700;
+    font-size: 36px;
+    padding: 10px;
+    color: #fff;
+}
+
+
+.section__item-1 .section__title {
+    background-color: red;
+    margin-bottom: 20px;
+}
+
+.section__item-2 .section__title {
+    background-color: blue;
+    margin-bottom: 20px;
+}
+
+.section__item-3 .section__title {
+    background-color: brown;
+    margin-bottom: 20px;
+}
+
+.section__item-4 .section__title {
+    background-color: orange;
+    margin-bottom: 20px;
+}
+
+
+.section__text {
+    line-height: 1.4;
+}
+
+.section__text p:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+
+.card {
+    font-size: 0;
+}
+
+.card--margin {
+    margin-bottom: 20px;
+}
+
+.card__item {
+    display: inline-block;
+    position: relative;
+    max-width: 386px;
+}
+
+
+.card__item:not(:last-child) {
+    margin-right: 31px;
+    margin-bottom: 31px;
+}
+
+.card__item:nth-child(3) {
+    margin-right: 5px;
+}
+
+.card__social {
+    position: absolute;
+    top: 240px;
+    left: 107px;
+    visibility: hidden;
+}
+
+.card__social a:not(:last-child) {
+    margin-right: 10px;
+}
+
+.card__img {
+    position: relative;
+}
+
+.card__img::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #6B77E5;
+    opacity: .7;
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+.card__item:hover .card__social,
+.card__item:hover .card__img::before {
+    visibility: visible;
+}
+
+.card__social a:hover {
+    box-shadow: 5px 2px 10px #000;
+    border-radius: 50%;
+
+}
+
+.card__content {
+    width: 341px;
+    position: absolute;
+    left: 22px;
+    bottom: 22px;
+    background-color: #fff;
+    padding: 24px;
+    text-align: center;
+}
+
+.content-block__title {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.content-block__sub-title {
+    font-size: 18px;
+    line-height: 1.35;
+    color: #7D7D7D;
+}
+
+.footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+    background-color: #174c33;
+}

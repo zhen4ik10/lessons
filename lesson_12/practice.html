@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/work.css">
+    <title>Practice</title>
+</head>
+
+<body>
+    <header class="header">
+        Header
+    </header>
+    <main id="back" class="page page--margin">
+        <div class="page__container">
+            <h1 class="title title--margin">
+                CSS позиціонування
+            </h1>
+            <a href="index.html" class="link">На головну</a>
+            <div class="page__text">
+                <p>
+                    Різне CSS позиціонування дуже часто
+                    використовується при верстці сучасних макетів
+                    і відкриває для нас нові цікаві можливості
+                    розташування елементів у потоці.
+                    Але треба бути обережним та вміти поводитися
+                    з цими можливостями грамотно
+                </p>
+                <p>
+                    Модуль позиціонування <br>
+                    Основна властивість - <span class="text--red">position</span>,
+                    а також властивості розташування
+                    <span>top</span>,
+                    <span>left</span>,
+                    <span>right</span>,
+                    <span>bottom</span>,
+                    а також <span>z-index</span>
+                </p>
+
+                <p class="text--margin">
+                    Значення властивості <span class="text--red">position:</span>
+                </p>
+                <ul class="page__list">
+                    <li>
+                        <span>static</span> - (за замовченням) статичне позиціонування
+                    </li>
+                    <li>
+                        <span>relative</span> - відносне позиціонування
+                    </li>
+                    <li>
+                        <span>absolute</span> - абсолютне позиціонування
+                    </li>
+                    <li>
+                        <span>fixed</span> - фіксоване позиціонування
+                    </li>
+                    <li>
+                        <span>sticky</span> - липке позиціонування
+                        (гібридне поєднання значень <span>static</span> та <span>fixed</span>)
+                    </li>
+                </ul>
+
+                <p>
+                    (!) Властивості <span>top</span>, <span>left</span>, <span>right</span>, <span>bottom</span> а також
+                    <span>z-index</span>
+                    працюють тільки зі значеннями <span class="text--red">position</span>
+                    відмінним від <span>static</span>
+                </p>
+
+
+
+                <p>
+                    <span>z-index</span> - управляє положенням об'єкту <span>по осі Z</span>
+                    (значення auto за замовченням) ближчим буде об'єкт який нижче по коду число від 0 до 9999 -
+                    порядковий номер
+                    <span>на осі Z</span>.
+                    Не впливає на позиціонування батьківського об'єкту у якого <span class="text--red">position</span>
+                    відмінний від
+                    <span>static</span>
+                </p>
+
+                <p>
+                    При позиціонуванні елементу вказавши значення для <span>top</span>,
+                    <span>bottom</span>, перестає працювати.
+                    Так само це працює з <span>left</span> та <span>right</span>. При цьому,
+                    якщо таки ж вказати обидві властивості то
+                    пріоритетними будуть:
+                    <span>по Y top</span>, а <span>по X left</span>.
+                    Гарною практикою є вказання значень лише для однієї властивості на вісь.
+                </p>
+
+
+                <p>
+                    <span>relative</span> - відносне позиціонування
+                    Об'єкт позиціонується відносно свого
+                    поточного місця положення.
+                    (відносно свого положення в коді)
+                </p>
+
+                <p>
+                    Для позиціонування об'єкту (з <span>position: relative;</span>)
+                    по вертикалі використовуючи відсотки неможливо
+                    без чіткої вказаної висоти для батьківського елементу
+                    <span>Наприклад: top: 10%</span> не спрацює
+                    без вказання висоти для батьківського елементу
+                </p>
+                <p class="text--margin">
+                    <span>absolute</span> - абсолютне (безумовне) позиціювання.
+                </p>
+                <ul class="page__list">
+                    <li>
+                        1 Разом з <span>position: absolute;</span> обов'язково використовуйте
+                        властивості для позиціонування (<span>left</span> або <span>right</span>, <span>top</span> або
+                        <span>bottom</span>)
+                    </li>
+                    <li>
+                        2 Об'єкт позиціонується відносно першого батьківського елементу, <span
+                            class="text--red">position</span>
+                        якого
+                        відмінний від
+                        <span>static</span>.
+                    </li>
+                    <li>
+                        3 Об'єкт втрачає свою блочну сутність. Також втрачає своє положення в коді, та простір який він
+                        займає
+                    </li>
+                    <li>
+                        4 Не може вказувати для БЕМ-блоків
+
+                    </li>
+                    <li>
+                        Для позиціювання об'єкту (<span>position: absolute;</span>)
+                        по вертикалі, використовуючи відсотки, відсоток
+                        буде братись від висоти батьківського елементу
+                    </li>
+                </ul>
+                <p class="text--margin">
+                    <span>fixed</span> - фіксоване позиціонування.
+                </p>
+                <ul class="page__list">
+                    <li>
+                        1 Разом з <span>position: absolute;</span> обов'язково використовуйте властивості для
+                        позиціонування (<span>left</span> або <span>right</span>, <span>top</span> або
+                        <span>bottom</span>)
+                    </li>
+                    <li>
+                        2 Об'єкт втрачає свою блочну сутність. Також втрачає своє положення в коді, та простір який він
+                        займає
+                    </li>
+                    <li>
+                        3 Завжди позиціонується відносно вікна браузера (в'юпорт).
+                    </li>
+                    <li>
+                        4 Не приймає участі у скролі
+                    </li>
+                    <li>
+                        5 Не може вказувати для БЕМ-блоків
+                    </li>
+                </ul>
+                <p>
+                    <sapn>sticky</sapn> - це гібридне поєднання значень <span>static</span> та <span>fixed</span>
+                    Спочатку елемент веде себе як <span>static</span> але після того
+                    як скролл доходить до його кордону він стає <span>fixed</span>
+                    та прилипає до зазначеної позиції <span>top</span> або <span>bottom</span>
+                </p>
+
+                <p>
+                    ! ! ! Не працює,
+                    якщо у батьківськог об'єктах присутній <span>overflow: hidden;</span>
+                </p>
+            </div>
+
+            <div class="text text--margin">
+                Тут я спробував повторити майданчик для практики, як у Жеки в
+                <a href="https://fls.guru/cssposition.html" target="_blank">шпаргалкі</a>:)
+            </div>
+
+            <div class="block block--margin">
+                <div class="head-block">
+                    <a href="#block-static" class="head-block__link">
+                        <h3 class="head-block__title">
+                            Static
+                        </h3>
+                        <span>
+                            За замовченням
+                        </span>
+                    </a>
+                    <a href="#block-relative" class="head-block__link">
+                        <h3 class="head-block__title">
+                            Relative
+                        </h3>
+                        <span>
+                            +top,left
+                        </span>
+                    </a>
+                    <a href="#block-relative-1" class="head-block__link">
+                        <h3 class="head-block__title">
+                            Relative
+                        </h3>
+                        <span>
+                            +z-index
+                        </span>
+                    </a>
+                    <a href="#block-absolute" class="head-block__link">
+                        <h3 class="head-block__title">
+                            Absolute
+                        </h3>
+                        <span>
+                            + position: relative; у родителя
+                            <br>
+                            +top,left
+                        </span>
+                    </a>
+                    <a href="#block-absolute-1" class="head-block__link">
+                        <h3 class="head-block__title">
+                            Absolute
+                        </h3>
+                        <span>
+                            +top,left
+                        </span>
+                    </a>
+                    <a href="#block-fixed" class="head-block__link">
+                        <h3 class="head-block__title">
+                            Fixed
+                        </h3>
+                        <span>
+                            +width: 100%;
+                            <br>
+                            +top,left
+                        </span>
+                    </a>
+                    <a href="#block-sticky" class="head-block__link">
+                        <h3 class="head-block__title">
+                            Sticky*
+                        </h3>
+                    </a>
+                </div>
+                <div class="body-block body-block--margin">
+                    <div id="block-static" class="body-block__item body-block__item--static">
+                        <div class="main-block main-block--margin">
+                            <div class="block-1">block-1</div>
+                            <div class="block-2">block-2</div>
+                            <div class="block-3">block-3</div>
+                            <img src="img/home_work/static-1.webp" alt="position: static">
+                        </div>
+                    </div>
+                    <div id="block-relative" class="body-block__item body-block__item--relative">
+                        <div class="main-block main-block--margin">
+                            <div class="block-1">block-1</div>
+                            <div class="block-2">block-2</div>
+                            <div class="block-3">block-3</div>
+                            <img src="img/home_work/relative-2.webp" alt="position: relative">
+                        </div>
+                    </div>
+                    <div id="block-relative-1" class="body-block__item body-block__item--relative-1">
+                        <div class="main-block main-block--margin">
+                            <div class="block-1">block-1</div>
+                            <div class="block-2">block-2</div>
+                            <div class="block-3">block-3</div>
+                            <img src="/img/home_work/relative-3.webp" alt="position: relative decor">
+                        </div>
+                    </div>
+                    <div id="block-absolute" class="body-block__item body-block__item--absolute">
+                        <div class="main-block main-block--margin">
+                            <div class="block-1">block-1</div>
+                            <div class="block-2">block-2</div>
+                            <div class="block-3">block-3</div>
+                            <img src="img/home_work/absolute-4.webp" alt="position: absolute">
+                        </div>
+                    </div>
+                    <div id="block-absolute-1" class="body-block__item body-block__item--absolute-1">
+                        <div class="main-block main-block--margin">
+                            <div class="block-1">block-1</div>
+                            <div class="block-2">block-2</div>
+                            <div class="block-3">block-3</div>
+                            <img src="img/home_work/absolute-5.webp" alt="position: absolute decor">
+                        </div>
+                    </div>
+                    <div id="block-fixed" class="body-block__item body-block__item--fixed">
+                        <div class="main-block main-block--margin">
+                            <div class="block-1">block-1</div>
+                            <div class="block-2">block-2</div>
+                            <div class="block-3">block-3</div>
+                            <img src="img/home_work/fixed-6.webp" alt="position: fixed">
+                        </div>
+                    </div>
+                    <div id="block-sticky" class="body-block__item body-block__item--sticky">
+                        <div class="main-block main-block--margin">
+                            <div class="block-1">block-1</div>
+                            <div class="block-2">block-2</div>
+                            <div class="block-3">block-3</div>
+                            <img src="img/home_work/sticky-7.webp" alt="position: sticky">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        Footer
+    </footer>
+</body>
+
+</html>
