@@ -2,3 +2,7 @@
 @import url("fonts.css");
 /* Скидання стилів */
 @import url("reset.css");
+
+body {
+    color: #2A2F2F;
+}
