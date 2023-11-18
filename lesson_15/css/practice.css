@@ -25,6 +25,11 @@ body {
     margin: 0 auto;
 }
 
+.header {
+    position: fixed;
+    width: 100%;
+}
+
 .header,
 .footer {
     font-size: 30px;
