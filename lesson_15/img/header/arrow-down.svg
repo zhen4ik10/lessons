@@ -1,0 +1,24 @@
+<svg width="10" height="5" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="10" height="5" fill="#EDEDED"/>
+<g id="Sign In Page" clip-path="url(#clip0_0_1)">
+<rect width="1440" height="1067" transform="translate(-938 -56)" fill="white"/>
+<g id="Frame 509">
+<g id="Rectangle 14">
+<mask id="path-1-inside-1_0_1" fill="white">
+<path d="M-938 -56H502V55H-938V-56Z"/>
+</mask>
+<path d="M502 54H-938V56H502V54Z" fill="#BEBCBD" mask="url(#path-1-inside-1_0_1)"/>
+</g>
+<g id="Frame 508">
+<g id="select langauge">
+<path id="Vector" d="M0 0L5 5L10 0H0Z" fill="#333333"/>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_0_1">
+<rect width="1440" height="1067" fill="white" transform="translate(-938 -56)"/>
+</clipPath>
+</defs>
+</svg>
