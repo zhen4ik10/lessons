@@ -104,6 +104,11 @@ body {
 
 .page__list {
     margin-bottom: 25px;
+    padding-left: 20px;
+}
+
+.page__list li {
+    list-style-type: decimal;
 }
 
 .page__list li:not(:last-child) {
