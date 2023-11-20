@@ -50,16 +50,15 @@ body {
     margin-top: 100px;
 }
 
+.page__title {
+    margin-bottom: 70px;
+}
+
 .title {
     font-size: 60px;
     font-weight: 700;
-    margin-bottom: 70px;
     text-align: center;
 }
-
-.block {}
-
-.block__item {}
 
 .block__title {
     font-size: 28px;
@@ -76,20 +75,23 @@ body {
 .body-block__item {
     display: flex;
     align-items: center;
-    flex: 1 1 45%;
+    flex: 1 1 600px;
     margin-bottom: 100px;
     box-shadow: 4px 4px 10px #ccc;
     margin-right: 20px;
     padding: 10px;
+    flex-wrap: wrap;
 }
 
 .body-block__sub-title {
     font-size: 26px;
     margin-right: 50px;
+    margin-bottom: 10px;
     font-weight: 700;
     display: flex;
     align-items: center;
 }
+
 
 .body-block__sub-title::after {
     content: "";
@@ -97,11 +99,11 @@ body {
     height: 32px;
     background: url('../img/practice/icon-right-arrow.png') center no-repeat;
     margin-left: 20px;
-
 }
 
+
 .body-block__row {
-    flex-basis: 500px;
+    flex: 1 0 100%;
 }
 
 .body-block__row,
@@ -111,9 +113,11 @@ body {
     margin-bottom: 20px;
     background: rgba(43, 205, 43, 0.694);
     padding: 10px;
+
 }
 
-.body-block__row img:not(:last-child) {
+.body-block__row img:not(:last-child),
+.body-block__row-reverse img:not(:first-child) {
     margin-right: 20px;
 }
 
@@ -121,15 +125,12 @@ body {
     flex-direction: row-reverse;
 }
 
-.body-block__row-reverse img:not(:first-child) {
-    margin-right: 20px;
-}
-
 .body-block__column {
     flex-direction: column;
 }
 
-.body-block__column img:not(:last-child) {
+.body-block__column img:not(:last-child),
+.body-block__column-reverse img:not(:first-child) {
     margin: 10px;
 }
 
@@ -137,9 +138,6 @@ body {
     flex-direction: column-reverse;
 }
 
-.body-block__column-reverse img:not(:first-child) {
-    margin: 10px;
-}
 
 .body-block__row--flex-start {
     justify-content: flex-start;
@@ -161,7 +159,8 @@ body {
     justify-content: space-around;
 }
 
-.body-block__row--space-around img {
+.body-block__row--space-around img,
+.body-block__row--space-evenly img {
     border: 2px solid red;
 }
 
@@ -169,9 +168,6 @@ body {
     justify-content: space-evenly;
 }
 
-.body-block__row--space-evenly img {
-    border: 2px solid red;
-}
 
 .row-align {
     gap: 20px;
