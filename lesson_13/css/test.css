@@ -1,0 +1,257 @@
+/* Основний блок машини */
+.car {
+    width: 300px;
+    /* Ширина машини */
+    height: 150px;
+    /* Висота машини */
+    background-color: #000;
+    /* Колір кузова */
+    position: relative;
+    border-radius: 10px;
+    /* Додаємо закруглення кузову */
+}
+
+/* Вікна */
+.car::before,
+.car::after {
+    content: '';
+    position: absolute;
+    top: 30px;
+    /* Розміщення вікон */
+    width: 60px;
+    /* Ширина вікон */
+    height: 60px;
+    /* Висота вікон */
+    background-color: #ddd;
+    /* Колір вікон */
+    border-radius: 10px;
+    /* Закруглення вікон */
+}
+
+.car::before {
+    left: 20px;
+    /* Розміщення лівого вікна */
+}
+
+.car::after {
+    right: 20px;
+    /* Розміщення правого вікна */
+}
+
+/* Колеса */
+.wheel {
+    position: absolute;
+    bottom: 0;
+    width: 50px;
+    /* Діаметр колеса */
+    height: 50px;
+    /* Діаметр колеса */
+    background-color: #333;
+    /* Колір колеса */
+    border-radius: 50%;
+    /* Закруглення колеса */
+}
+
+/* Позиціонування колес */
+.wheel.left {
+    left: 30px;
+    /* Розміщення лівого колеса */
+}
+
+.wheel.right {
+    right: 30px;
+    /* Розміщення правого колеса */
+}
+
+/* Капот машини */
+.car::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    /* Розміщення капоту */
+    width: 200px;
+    /* Ширина капоту */
+    height: 40px;
+    /* Висота капоту */
+    background-color: #000;
+    /* Колір капоту */
+    border-radius: 50px 50px 0 0;
+    /* Форма капоту */
+}
+
+/* Переднє скло */
+.car::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    /* Розміщення переднього скла */
+    width: 220px;
+    /* Ширина переднього скла */
+    height: 30px;
+    /* Висота переднього скла */
+    background-color: #ccc;
+    /* Колір переднього скла */
+    border-radius: 15px;
+    /* Закруглення переднього скла */
+}
+
+/* Бампер */
+.bumper {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Ширина бампера */
+    height: 20px;
+    /* Висота бампера */
+    background-color: #333;
+    /* Колір бампера */
+    border-radius: 0 0 10px 10px;
+    /* Форма бампера */
+}
+
+/* Вихлопна труба */
+.exhaust {
+    position: absolute;
+    bottom: 0;
+    width: 30px;
+    /* Ширина вихлопної труби */
+    height: 10px;
+    /* Висота вихлопної труби */
+    background-color: #444;
+    /* Колір вихлопної труби */
+    border-radius: 0 0 5px 5px;
+    /* Форма вихлопної труби */
+    left: 50%;
+    /* Положення вихлопної труби */
+    transform: translateX(-50%);
+    /* Центрування вихлопної труби */
+}
+
+/* Переднє колесо */
+.front-wheel {
+    left: 25px;
+    /* Положення переднього колеса */
+}
+
+/* Заднє колесо */
+.back-wheel {
+    right: 25px;
+    /* Положення заднього колеса */
+}
+
+/* Логотип */
+.logo {
+    position: absolute;
+    top: 5px;
+    /* Розміщення логотипу */
+    left: 50%;
+    /* Центрування логотипу */
+    transform: translateX(-50%);
+    /* Центрування логотипу */
+    width: 50px;
+    /* Ширина логотипу */
+    height: 30px;
+    /* Висота логотипу */
+    background-color: #fff;
+    /* Колір логотипу */
+    /* В цьому місці можна також додати зображення логотипу за допомогою властивості 'background-image' */
+}
+
+/* Фари */
+.headlights {
+    position: absolute;
+    top: 30px;
+    /* Розміщення фар */
+    width: 20px;
+    /* Ширина фар */
+    height: 20px;
+    /* Висота фар */
+    background-color: #f9c700;
+    /* Колір фар */
+    border-radius: 50%;
+    /* Закруглення фар */
+}
+
+.headlights.left {
+    left: 10px;
+    /* Розміщення лівої фари */
+}
+
+.headlights.right {
+    right: 10px;
+    /* Розміщення правої фари */
+}
+
+/* Дзеркала */
+.mirrors {
+    position: absolute;
+    top: 40px;
+    /* Розміщення дзеркал */
+    width: 30px;
+    /* Ширина дзеркал */
+    height: 10px;
+    /* Висота дзеркал */
+    background-color: #aaa;
+    /* Колір дзеркал */
+    transform: rotate(-45deg);
+    /* Обертання дзеркал */
+}
+
+.mirrors.left {
+    left: 15px;
+    /* Розміщення лівого дзеркала */
+}
+
+.mirrors.right {
+    right: 15px;
+    /* Розміщення правого дзеркала */
+}
+
+/* Вітрове скло */
+.windshield {
+    position: absolute;
+    top: 20px;
+    /* Розміщення вітрового скла */
+    width: 200px;
+    /* Ширина вітрового скла */
+    height: 40px;
+    /* Висота вітрового скла */
+    background-color: #f2f2f2;
+    /* Колір вітрового скла */
+    border-radius: 20px;
+    /* Закруглення вітрового скла */
+}
+
+/* Заднє скло */
+.rear-window {
+    position: absolute;
+    top: 30px;
+    /* Розміщення заднього скла */
+    width: 200px;
+    /* Ширина заднього скла */
+    height: 50px;
+    /* Висота заднього скла */
+    background-color: #f2f2f2;
+    /* Колір заднього скла */
+    border-radius: 0 0 30px 30px;
+    /* Закруглення заднього скла */
+}
+
+/* Антена */
+.antenna {
+    position: absolute;
+    top: -15px;
+    /* Розміщення антени */
+    left: 50%;
+    /* Центрування антени */
+    transform: translateX(-50%);
+    /* Центрування антени */
+    width: 2px;
+    /* Ширина антени */
+    height: 15px;
+    /* Висота антени */
+    background-color: #444;
+    /* Колір антени */
+    border-radius: 50%;
+    /* Закруглення антени */
+}
