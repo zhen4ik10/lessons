@@ -40,7 +40,7 @@ body {
     align-items: center;
     flex-wrap: wrap;
     padding: 34px 0px 31px;
-    row-gap: 20px;
+    gap: 20px;
 }
 
 .logo__link img {
