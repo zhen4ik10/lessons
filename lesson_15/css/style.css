@@ -220,8 +220,6 @@ body {
     overflow: hidden;
     transition: all 1s;
     border-radius: 10px;
-    flex-shrink: 1;
-    flex-shrink: 1;
     max-width: 270px;
 }
 
