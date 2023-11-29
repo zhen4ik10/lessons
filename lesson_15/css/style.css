@@ -476,7 +476,7 @@ body {
 }
 
 .head-order {
-    padding: 27px 48px;
+    padding: 28px 48px;
     border-radius: 8px;
     background: #F6F6F6;
 }
@@ -491,14 +491,7 @@ body {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-}
-
-.head-order__text>*:not(:last-child) {
-    margin-bottom: 20px;
-}
-
-.head-order__date {
-    margin-right: 10px;
+    gap: 20px;
 }
 
 .head-order__date,
