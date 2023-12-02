@@ -133,7 +133,7 @@
                                 State*
                             </label>
                             <select required name="state" id="state" class="form__select">
-                                <option value="state" class="form__option">
+                                <option value="state#1" class="form__option">
                                     State
                                 </option>
                                 <option value="state#2" class="form__option">
@@ -161,7 +161,7 @@
                             <label for="delivery" class="form__label">
                                 Delivery Instruction
                             </label>
-                            <textarea required name="" id="delivery" class="form__textarea"
+                            <textarea required name="message-delivery" id="delivery" class="form__textarea"
                                 placeholder="Delivery Instruction"></textarea>
                         </div>
 
@@ -365,22 +365,30 @@
                                         <div class="payment__item">
                                             <input placeholder="Card number" id="card-number" name="card-number"
                                                 class="payment__input" type="number">
-                                            <label for="card-number"></label>
+                                            <label for="card-number">
+                                                Card number
+                                            </label>
                                         </div>
                                         <div class="payment__item">
                                             <input placeholder="Name of card" id="card-name" name="name"
                                                 class="payment__input" type="text">
-                                            <label for="card-name"></label>
+                                            <label for="card-name">
+                                                Name of card
+                                            </label>
                                         </div>
                                         <div class="payment__item">
                                             <input placeholder="Expiration date (MM/YY)" id="card-date" name="data"
                                                 class="payment__input" type="datetime">
-                                            <label for="card-date"></label>
+                                            <label for="card-date">
+                                                Expiration date (MM/YY)
+                                            </label>
                                         </div>
                                         <div class="payment__item payment__item--pass">
                                             <input placeholder="Security Code" id="card-cvd" name="code"
                                                 class="payment__input peyment__input--eye" type="password">
-                                            <label for="card-cvd"></label>
+                                            <label for="card-cvd">
+                                                Security Code
+                                            </label>
                                         </div>
                                     </div>
                                 </label>
