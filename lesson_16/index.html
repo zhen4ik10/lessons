@@ -78,12 +78,12 @@
                     <h3 class="page__label label">
                         Add Address
                     </h3>
-                    <form action="https://jsonplaceholder.typicode.com/posts" class="form" id="#" method="GET">
+                    <form action="https://jsonplaceholder.typicode.com/posts" class="form" id="info-form" method="GET">
                         <div class="form__item">
                             <label for="first-name" class="form__label">
                                 First Name*
                             </label>
-                            <input name="First Name" required id="first-name" type="text" class="form__input"
+                            <input name="First Name" required id="firs-name" type="text" class="form__input"
                                 placeholder="First Name">
                         </div>
                         <div class="form__item">
@@ -132,14 +132,14 @@
                             <label for="state" class="form__label">
                                 State*
                             </label>
-                            <select required name="" id="state" class="form__select">
-                                <option value="State" class="form__option">
+                            <select required name="state" id="state" class="form__select">
+                                <option value="state" class="form__option">
                                     State
                                 </option>
-                                <option value="State#2" class="form__option">
+                                <option value="state#2" class="form__option">
                                     State#2
                                 </option>
-                                <option value="State#3" class="form__option">
+                                <option value="state#3" class="form__option">
                                     State#3
                                 </option>
                             </select>
@@ -199,62 +199,62 @@
                     <h3 class="page__label label">
                         Billing Details
                     </h3>
-                    <form action="https://jsonplaceholder.typicode.com/posts" class="form" id="#" method="GET">
+                    <form action="https://jsonplaceholder.typicode.com/posts" class="form" id="check-out" method="GET">
                         <div class="form__item">
-                            <label for="first-name" class="form__label">
+                            <label for="name-first" class="form__label">
                                 First Name*
                             </label>
-                            <input name="First Name" required id="first-name" type="text" class="form__input"
+                            <input name="First Name" required id="name-first" type="text" class="form__input"
                                 placeholder="First Name">
                         </div>
                         <div class="form__item">
-                            <label for="last-name" class="form__label">
+                            <label for="name-last" class="form__label">
                                 Last Name*
                             </label>
-                            <input name="Last Name" required id="last-name" type="text" class="form__input"
+                            <input name="Last Name" required id="name-last" type="text" class="form__input"
                                 placeholder="Last Name">
                         </div>
                         <div class="form__item">
-                            <label for="country" class="form__label">
+                            <label for="country-region" class="form__label">
                                 Country / Region*
                             </label>
-                            <input name="Country" required id="country" type="text" class="form__input"
+                            <input name="Country" required id="country-region" type="text" class="form__input"
                                 placeholder="Country / Region">
                         </div>
                         <div class="form__item">
                             <label for="company" class="form__label">
                                 Company Name
                             </label>
-                            <input name="Company" required id="company" type="text" class="form__input"
+                            <input name="Company" required id="company-optimal" type="text" class="form__input"
                                 placeholder="Company (optional)">
                         </div>
                         <div class="form__item">
-                            <label for="adrress" class="form__label">
+                            <label for="adrress-name" class="form__label">
                                 Street Address*
                             </label>
-                            <input name="address" required id="adrress" type="text" class="form__input"
+                            <input name="address" required id="adrress-name" type="text" class="form__input"
                                 placeholder="House number and street name">
                         </div>
                         <div class="form__item">
-                            <label for="apt" class="form__label">
+                            <label for="apartment" class="form__label">
                                 Apt, suite, unit
                             </label>
-                            <input name="apartment" required id="apt" type="text" class="form__input"
+                            <input name="apartment" required id="apartment" type="text" class="form__input"
                                 placeholder="apartment, suite, unit, etc. (optional)">
                         </div>
                         <div class="form__block">
                             <div class="form__item">
-                                <label for="city" class="form__label">
+                                <label for="city-town" class="form__label">
                                     City*
                                 </label>
-                                <input name="City" required id="city" type="text" class="form__input"
+                                <input name="City" required id="city-town" type="text" class="form__input"
                                     placeholder="Town / City">
                             </div>
                             <div class="form__item">
-                                <label for="state" class="form__label">
+                                <label for="state-me" class="form__label">
                                     State*
                                 </label>
-                                <select required name="" id="state" class="form__select">
+                                <select required name="state" id="state-me" class="form__select">
                                     <option value="State" class="form__option">
                                         State
                                     </option>
@@ -267,18 +267,18 @@
                                 </select>
                             </div>
                             <div class="form__item">
-                                <label for="post-code" class="form__label">
+                                <label for="postal-code" class="form__label">
                                     Postal Code*
                                 </label>
-                                <input name="post-code" required id="post-code" type="text" class="form__input"
+                                <input name="post-code" required id="postal-code" type="text" class="form__input"
                                     placeholder="Postal Code">
                             </div>
                         </div>
                         <div class="form__item form__item--wrap">
-                            <label for="tel" class="form__label">
+                            <label for="phone" class="form__label">
                                 Phone*
                             </label>
-                            <input name="tel" required id="tel" type="text" class="form__input" placeholder="Phone">
+                            <input name="tel" required id="phone" type="text" class="form__input" placeholder="Phone">
                         </div>
                         <div class="form__item form__item--wrap">
                             <button class="form__btn form__btn--continue" type="submit">
@@ -349,37 +349,38 @@
                                     </span>
                                     <div class="payment__image">
                                         <a href="#" class="payment__link">
-                                            <img src="img/payment/g-pay.svg" alt="">
+                                            <img src="img/payment/g-pay.svg" alt="g-pay">
                                         </a>
-                                        <a class="payment__link">
-
-                                            <img src="img/payment/visa.svg" alt="">
+                                        <a href="#" class="payment__link">
+                                            <img src="img/payment/visa.svg" alt="visa">
                                         </a>
-                                        <a class="payment__link">
-
-                                            <img src="img/payment/paypal.svg" alt="">
+                                        <a href="#" class="payment__link">
+                                            <img src="img/payment/paypal.svg" alt="paypal">
                                         </a>
-                                        <a class="payment__link">
-
-                                            <img src="img/payment/paypass.svg" alt="">
+                                        <a href="#" class="payment__link">
+                                            <img src="img/payment/paypass.svg" alt="paypass">
                                         </a>
                                     </div>
                                     <div class="payment__card">
                                         <div class="payment__item">
-                                            <input placeholder="Card number" name="card-number" class="payment__input"
-                                                type="number">
+                                            <input placeholder="Card number" id="card-number" name="card-number"
+                                                class="payment__input" type="number">
+                                            <label for="card-number"></label>
                                         </div>
                                         <div class="payment__item">
-                                            <input placeholder="Name of card" name="name" class="payment__input"
-                                                type="text">
+                                            <input placeholder="Name of card" id="card-name" name="name"
+                                                class="payment__input" type="text">
+                                            <label for="card-name"></label>
                                         </div>
                                         <div class="payment__item">
-                                            <input placeholder="Expiration date (MM/YY)" name="data"
+                                            <input placeholder="Expiration date (MM/YY)" id="card-date" name="data"
                                                 class="payment__input" type="datetime">
+                                            <label for="card-date"></label>
                                         </div>
                                         <div class="payment__item payment__item--pass">
-                                            <input placeholder="Security Code" name="code"
+                                            <input placeholder="Security Code" id="card-cvd" name="code"
                                                 class="payment__input peyment__input--eye" type="password">
+                                            <label for="card-cvd"></label>
                                         </div>
                                     </div>
                                 </label>
