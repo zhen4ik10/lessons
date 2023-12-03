@@ -580,7 +580,10 @@ body {
         sans-serif;
     border-radius: 8px;
     border: 1px solid #3C4242;
+}
 
+.payment__input+label {
+    display: none;
 }
 
 .payment__input::placeholder {
