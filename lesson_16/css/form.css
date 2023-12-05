@@ -1,0 +1,116 @@
+/* Підключення шрифтів */
+@import url("fonts.css");
+/* Скидання стилів */
+@import url("reset.css");
+
+body {
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    color: #d5922e;
+    background-color: rgb(104, 104, 104);
+}
+
+.wrapper {
+    min-height: 100%;
+    overflow: clip;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper>main {
+    flex-grow: 1;
+}
+
+[class*="__container"] {
+    max-width: 1270px;
+    padding: 0px 15px;
+    margin: 0 auto;
+}
+
+.header,
+.footer {
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 15px;
+    background-color: rgb(70, 70, 70);
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.page {
+    /* padding: 20px 0; */
+}
+
+.page--margin {
+    margin-top: 60px;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px 0;
+    margin: 0 -25px;
+
+}
+
+.products__column {
+    flex: 0 0 25%;
+    margin-bottom: 50px;
+}
+
+.products__item {}
+
+.item-product {
+    padding: 0 25px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.item-product__img {
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.item-product__img:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.item-product__body {
+    display: flex;
+    flex-grow: 1;
+}
+
+.item-product__content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.item-product__title {
+    flex: 1;
+}
+
+.item-product__title:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.item-product__link-title {}
+
+.item-product__text {
+    font-size: 14px;
+}
+
+.item-product__link {
+    align-self: flex-start;
+    min-height: 18px;
+    flex: 0 0 18px;
+    background: url('../img/products/arrow-right.svg') center no-repeat;
+}

@@ -333,14 +333,75 @@
                             </div>
                         </div>
 
-                        <div class="form__item radio radio--border-none">
+                        <div class="form__item radio-form">
                             <h3 class="label radio__title">
                                 Payment Method
                             </h3>
                             <h4 class="sub-title radio__sub-title">
                                 All transactions are secure and encrypted.
                             </h4>
-                            <div class="radio__item payment">
+                            <div class="radio-form__inner">
+                                <div class="radio-form__item">
+                                    <input id="credit" name="payment" type="radio" class="radio-form__input">
+                                    <label for="credit" class="radio-form__label">
+                                        Credit Card
+                                    </label>
+
+                                    <h6 class="radio-form__text">
+                                        We accept all major credit cards
+                                    </h6>
+                                    <fieldset class="radio-form__payment payment">
+                                        <legend class="payment__icon-pay">
+                                            <a href="#" class="payment__link">
+                                                <img src="img/payment/g-pay.svg" alt="g-pay">
+                                            </a>
+                                            <a href="#" class="payment__link">
+                                                <img src="img/payment/visa.svg" alt="g-pay">
+                                            </a>
+                                            <a href="#" class="payment__link">
+                                                <img src="img/payment/paypal.svg" alt="paypal">
+                                            </a>
+                                            <a href="#" class="payment__link">
+                                                <img src="img/payment/paypass.svg" alt="paypass">
+                                            </a>
+                                        </legend>
+                                        <div class="payment__card">
+                                            <div class="payment__item">
+                                                <input type="number" class="payment__input" placeholder="Card number">
+                                            </div>
+                                            <div class="payment__item">
+                                                <input type="text" class="payment__input" placeholder="Name of card">
+                                            </div>
+                                            <div class="payment__item">
+                                                <input type="text" class="payment__input"
+                                                    placeholder="Expiration date (MM/YY)">
+                                            </div>
+                                            <div class="payment__item payment__item--eye">
+                                                <input type="password" class="payment__input"
+                                                    placeholder="Security Code">
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+
+                                <div class="radio-form__item">
+                                    <input id="cash" name="payment" type="radio" class="radio-form__input">
+                                    <label for="cash" class="radio-form__label">
+                                        Cash on delivery
+                                    </label>
+
+                                    <h6 class="radio-form__text">
+                                        Pay with cash upon delivery.
+                                    </h6>
+                                </div>
+                                <div class="radio-form__item">
+                                    <input id="paypal" name="payment" type="radio" class="radio-form__input">
+                                    <label for="paypal" class="radio-form__label">
+                                        Paypol
+                                    </label>
+                                </div>
+                            </div>
+                            <!-- <div class="radio__item payment">
                                 <input name="peyment" checked id="peyment-card" type="radio" class="radio__input">
                                 <label for="peyment-card" class="radio__label payment__label">
                                     Same as Billing address
@@ -403,9 +464,12 @@
                                 <label for="paypal" class="radio__label">
                                     Paypal
                                 </label>
-                            </div>
+                            </div> -->
+                            <!-- <div class="radio__item payment">
+
+                            </div> -->
                         </div>
-                        <button class="form__btn form__btn--submit" type="submit">
+                        <button class="form__btn form__btn--pay" type="submit">
                             Save
                         </button>
                     </form>
