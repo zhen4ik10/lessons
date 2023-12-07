@@ -81,6 +81,7 @@ body {
         serif;
     font-size: 58px;
     margin-bottom: 27px;
+    text-transform: uppercase;
 }
 
 .gold__title {
@@ -97,6 +98,8 @@ body {
 .sub-title {
     font-size: 30px;
     color: #818181;
+    text-transform: uppercase;
+
 }
 
 .gold__sub-title {
@@ -193,6 +196,7 @@ body {
 
 .pretty__sub-title {
     text-align: left;
+    text-transform: uppercase;
 }
 
 .pretty__sub-title {
