@@ -48,7 +48,6 @@ body {
 .page__title {
     font-family: "Ubuntu", sans-serif;
     font-size: 62px;
-    text-align: center;
     margin-bottom: 50px;
 }
 
@@ -66,6 +65,7 @@ body {
     flex-direction: column;
     align-items: center;
 }
+
 
 .page__gold {
     margin-bottom: 20px;
@@ -128,6 +128,7 @@ body {
 
 .block__image {
     margin-bottom: 17px;
+    overflow: hidden;
 }
 
 .block__image img {
@@ -135,8 +136,8 @@ body {
     height: 100%;
     aspect-ratio: 271 / 270;
     object-fit: cover;
+    transition: all .3s ease-in-out;
 }
-
 
 .block__label,
 .block__price {
@@ -149,12 +150,13 @@ body {
 }
 
 
-.block__btn {
+.gold__btn {
     padding: 12px 42px;
     font-family: "Ubuntu", sans-serif;
     line-height: 1.8;
     color: #fff;
     background-color: #FF7A49;
+    transition: all .3s ease-in-out;
 }
 
 /* ---- PAGE BEAUTY ----- */
@@ -239,11 +241,17 @@ body {
     min-height: 100%;
 }
 
+.slider__image {
+    overflow: hidden;
+}
+
 .slider__image img {
     width: 100%;
     height: 100%;
     aspect-ratio: 357 / 240;
     object-fit: contain;
+    transition: all .3s ease-in-out;
+
 }
 
 .slider__image:not(:last-child),
@@ -264,6 +272,7 @@ body {
     font-size: 24px;
     line-height: 1.2;
     color: #000;
+    transition: all .3s ease-in-out;
 }
 
 .slider__text {
@@ -288,10 +297,14 @@ body {
         sans-serif;
     font-weight: 800;
     color: #F55529;
+    transition: all .3s ease-in-out;
+
 }
 
 .slider__link-arrow {
     min-height: 24px;
+    transition: all .3s ease-in-out;
+
 }
 
 @media (min-width: 1600px) {
@@ -383,5 +396,30 @@ body {
 
     .slider__column {
         flex: 1 0 100%;
+    }
+}
+
+@media (any-hover: hover) {
+
+    .block__image:hover img,
+    .slider__image:hover img {
+        transform: scale(1.1);
+    }
+
+    .block__label:hover>.block__link-label,
+    .slider__title:hover>.slider__link-title {
+        text-decoration: underline;
+    }
+
+    .gold__btn:hover {
+        background-color: #ce613a;
+    }
+
+    .slider__link:hover {
+        text-decoration: underline;
+    }
+
+    .slider__link-arrow:hover {
+        transform: scale(1.1);
     }
 }
