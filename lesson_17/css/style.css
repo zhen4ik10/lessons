@@ -1,0 +1,346 @@
+/* Підключення шрифтів */
+@import url("fonts.css");
+/* Скидання стилів */
+@import url("reset.css");
+
+body {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+}
+
+.wrapper {
+    min-height: 100%;
+    overflow: clip;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper>main {
+    flex-grow: 1;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+}
+
+.header,
+.footer {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    text-align: center;
+    font-size: 24px;
+    padding: 20px;
+    background-color: #a7a7a7;
+    color: #fff;
+}
+
+[class*="__container"] {
+    max-width: 1203px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+
+.page__title {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 62px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.page {
+    padding-top: 20px;
+}
+
+.page--margin {
+    margin-top: 60px;
+}
+
+
+.gold {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page__gold {
+    margin-bottom: 20px;
+}
+
+.gold__title,
+.sub-title {
+    text-align: center;
+}
+
+.title {
+    font-family: "DMSerifText",
+        serif;
+    font-size: 58px;
+    margin-bottom: 27px;
+}
+
+.gold__title {
+    color: #291403;
+}
+
+.sub-title,
+.gold__link-label,
+.beauty__title {
+    font-family: "CormorantInfant", serif;
+    line-height: 1.4;
+}
+
+.sub-title {
+    font-size: 30px;
+    color: #818181;
+}
+
+.gold__sub-title {
+    margin-bottom: 62px;
+}
+
+.block {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 50px;
+    margin: 0 -15px;
+    margin-bottom: 76px;
+}
+
+.block__column {
+    flex: 0 0 25%;
+    padding: 0 15px;
+    min-height: 100%;
+}
+
+.block__item {
+    display: flex;
+    flex-direction: column;
+}
+
+.block__item>*:last-child {
+    margin-bottom: 0px;
+}
+
+.block__image {
+    margin-bottom: 17px;
+}
+
+.block__image img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 271 / 270;
+    object-fit: cover;
+}
+
+
+.block__label,
+.block__price {
+    font-size: 24px;
+    margin-bottom: 4px;
+}
+
+.block__price {
+    margin-bottom: 10px;
+}
+
+
+.block__btn {
+    padding: 12px 42px;
+    font-family: "Ubuntu", sans-serif;
+    line-height: 1.8;
+    color: #fff;
+    background-color: #FF7A49;
+}
+
+/* ---- PAGE BEAUTY ----- */
+
+.beauty {
+    padding: 120px 0;
+    background-color: #FEFBF7;
+}
+
+.beauty__title,
+.beauty__sub-title {
+    text-align: center;
+}
+
+.beauty__title {
+    font-size: 64px;
+    margin-bottom: 21px;
+}
+
+.beauty__sub-title {
+    margin-bottom: 84px;
+}
+
+/* ---- PAGE PRETTY ----- */
+
+.pretty {
+    padding-bottom: 114px;
+    background-color: #FEFAF4;
+}
+
+.pretty__container--small {
+    max-width: 1197px;
+}
+
+.pretty__sub-title {
+    text-align: left;
+}
+
+.pretty__sub-title {
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    line-height: 1.8;
+    color: #606060;
+    margin-bottom: 53px;
+}
+
+.slider {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 50px;
+    margin: 0 -24px;
+}
+
+.slider__column {
+    flex: 0 0 33.333%;
+    padding: 0 24px;
+}
+
+.slider__item {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.slider__image img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 357 / 240;
+    object-fit: contain;
+}
+
+.slider__image:not(:last-child),
+.slider__link:not(:last-child),
+.slider__title:not(:last-child) {
+    margin-bottom: 16px;
+}
+
+.slider__content {
+    flex-grow: 1;
+    flex-shrink: 0;
+    margin-bottom: 8px;
+}
+
+.slider__title {
+    font-family: "DMSerifText",
+        serif;
+    font-size: 24px;
+    line-height: 1.2;
+    color: #000;
+}
+
+.slider__text {
+    font-family: "Inter",
+        sans-serif;
+    line-height: 1.6;
+    margin-bottom: -8px;
+    opacity: .7;
+}
+
+.slider__text p:not(:last-child) {
+    margin-bottom: 12px;
+}
+
+.slider__more {
+    display: flex;
+    line-height: 1.5;
+}
+
+.slider__link {
+    flex-grow: 1;
+    font-family: "Inter",
+        sans-serif;
+    font-weight: 800;
+    color: #F55529;
+}
+
+.slider__link-arrow {
+    min-height: 24px;
+}
+
+@media (max-width: 867px) {
+    .block__column {
+        flex: 0 0 33.333%;
+    }
+
+    .block__label,
+    .block__price {
+        font-size: 20px;
+        margin-bottom: 4px;
+    }
+
+    .beauty {
+        padding: 60px;
+        background-color: #FEFBF7;
+    }
+
+    .slider__column {
+        flex: 0 0 50%;
+    }
+}
+
+@media (max-width: 650px) {
+    .page__title {
+        font-size: 52px;
+        margin-bottom: 35px;
+    }
+
+    .title {
+        font-size: 40px;
+        margin-bottom: 15px;
+    }
+
+    .beauty__title {
+        font-size: 40px;
+    }
+
+    .sub-title {
+        font-size: 24px;
+        margin-bottom: 32px;
+    }
+
+    .block__column {
+        flex: 1 0 50%;
+    }
+
+    .block__item {
+        align-items: center;
+    }
+
+    .block {
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 455px) {
+    .block__column {
+        flex: 1 0 100%;
+        margin: 0 -15px;
+    }
+
+    .sub-title {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .slider__column {
+        flex: 1 0 100%;
+    }
+}
