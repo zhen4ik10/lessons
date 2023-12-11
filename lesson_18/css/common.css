@@ -1,0 +1,12 @@
+.block-header {}
+
+.block-header__label {
+    font-family: "Cormorant Infant";
+    font-weight: 700;
+    color: #D58417;
+}
+
+
+.block-header__title {}
+
+.block-header__text {}
