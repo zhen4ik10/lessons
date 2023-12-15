@@ -255,6 +255,8 @@ body {
             &:hover {
                 @media (any-hover: hover) {
                     >.sub-menu__link {
+                        text-decoration: none;
+
                         &::after {
                             transform: scale(1) translateX(0);
                         }
@@ -269,17 +271,18 @@ body {
     &__link {
         font-size: 18px;
 
-        // &:hover {
-        //     @media (any-hover: hover) {
-        //         text-decoration: underline;
-        //     }
-        // }
+        &:hover {
+            @media (any-hover: hover) {
+                text-decoration: underline;
+            }
+        }
 
         @media (max-width: 992px) {
             font-size: 24px;
             color: rgba(0, 0, 0, 0.7);
             position: relative;
             padding-bottom: 8px;
+            text-decoration: none;
 
             &::after {
                 content: "";
@@ -291,7 +294,7 @@ body {
                 height: 2px;
                 transform: scale(0) translateX(50%);
                 background-color: #D58417;
-                transition: all 1s ease-in-out;
+                transition: all .35s ease-in-out;
             }
         }
     }
@@ -329,34 +332,40 @@ body {
 }
 
 .icon-menu {
-    flex: 0 0 30px;
-    width: 30px;
-    height: 18px;
-    position: relative;
+    display: none;
 
-    &::before,
-    &::after,
-    span {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        background-color: #000;
-        transition: all .3s ease-in-out;
+    @media (max-width: 992px) {
+        flex: 0 0 30px;
+        width: 30px;
+        height: 18px;
+        position: relative;
+        display: block;
+
+        &::before,
+        &::after,
+        span {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: #000;
+            transition: all .3s ease-in-out;
+        }
+
+        &::before {
+            top: 0;
+        }
+
+        &::after {
+            bottom: 0;
+        }
+
+        span {
+            top: 50%;
+            margin-top: -1px;
+        }
     }
 
-    &::before {
-        top: 0;
-    }
-
-    &::after {
-        bottom: 0;
-    }
-
-    span {
-        top: 50%;
-        margin-top: -1px;
-    }
 }
 
 .open-menu {
