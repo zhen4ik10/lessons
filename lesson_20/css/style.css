@@ -492,6 +492,9 @@ body {
   font-family: "Cormorant Infant", serif;
   color: #fff;
 }
+.hero__bg-left, .hero__bg-right {
+  display: none;
+}
 .hero__container {
   padding: 200px 15px 55px;
   display: -webkit-box;

@@ -445,6 +445,16 @@ body {
     color: #fff;
     // .hero__container
 
+    // .hero__bg-left
+
+    &__bg-left,
+    &__bg-right {
+        display: none;
+    }
+
+    // .hero__bg-right
+
+
     &__container {
         padding: 200px 15px 55px;
         display: flex;
@@ -592,6 +602,8 @@ body {
         padding-top: 76px;
         padding-left: 23px;
     }
+
+
 }
 
 .content-hero {
