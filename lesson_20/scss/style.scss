@@ -429,13 +429,38 @@ body {
     // .page__hero
 
     &__hero {
-        background: url("../img/decor-right.svg") 125% 60% / 470px 374px no-repeat,
-            url("../img/decor-left.svg") -250px 30px / 470px 374px no-repeat,
-            #502203;
+        background-color: #502203;
+        position: relative;
 
-        @media (max-width: 992px) {
-            background: #502203;
+        &::before,
+        &::after {
+            position: absolute;
+            content: "";
+            width: 474px;
+            height: 374px;
         }
+
+        &::before {
+            top: 50px;
+            left: -250px;
+            background: url('../img/decor-left.svg') center / 470px 374px no-repeat;
+        }
+
+        &::after {
+            top: 325px;
+            right: -220px;
+            background: url('../img/decor-left.svg') center / 470px 374px no-repeat;
+            transform: rotate(-25deg);
+        }
+
+        @media (max-width: 475px) {
+
+            &::before,
+            &::after {
+                display: none;
+            }
+        }
+
     }
 }
 
@@ -487,11 +512,11 @@ body {
                 position: absolute;
                 display: block;
                 bottom: 55px;
-                right: -280px;
+                right: -300px;
                 border: 1px solid #fff;
                 border-radius: 215px;
                 padding: 17px 12px;
-
+                z-index: 1;
             }
         }
 
@@ -568,6 +593,7 @@ body {
             border-radius: 4px;
             background: rgba(255, 255, 255, 0.06);
             transition: all .3s ease-in-out;
+            z-index: 2;
         }
 
         &:hover {
@@ -585,6 +611,7 @@ body {
     &__image {
         flex-shrink: 0;
         flex-basis: 36.75%;
+        z-index: 1;
 
         img {
             border-radius: 215px;

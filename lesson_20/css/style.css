@@ -480,11 +480,31 @@ body {
 }
 
 .page__hero {
-  background: url("../img/decor-right.svg") 125% 60%/470px 374px no-repeat, url("../img/decor-left.svg") -250px 30px/470px 374px no-repeat, #502203;
+  background-color: #502203;
+  position: relative;
 }
-@media (max-width: 992px) {
-  .page__hero {
-    background: #502203;
+.page__hero::before, .page__hero::after {
+  position: absolute;
+  content: "";
+  width: 474px;
+  height: 374px;
+}
+.page__hero::before {
+  top: 50px;
+  left: -250px;
+  background: url("../img/decor-left.svg") center/470px 374px no-repeat;
+}
+.page__hero::after {
+  top: 325px;
+  right: -220px;
+  background: url("../img/decor-left.svg") center/470px 374px no-repeat;
+  -webkit-transform: rotate(-25deg);
+      -ms-transform: rotate(-25deg);
+          transform: rotate(-25deg);
+}
+@media (max-width: 475px) {
+  .page__hero::before, .page__hero::after {
+    display: none;
   }
 }
 
@@ -536,10 +556,11 @@ body {
     position: absolute;
     display: block;
     bottom: 55px;
-    right: -280px;
+    right: -300px;
     border: 1px solid #fff;
     border-radius: 215px;
     padding: 17px 12px;
+    z-index: 1;
   }
 }
 .hero__body {
@@ -609,6 +630,7 @@ body {
   background: rgba(255, 255, 255, 0.06);
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  z-index: 2;
 }
 @media (any-hover: hover) {
   .hero__btn:hover::after {
@@ -621,6 +643,7 @@ body {
       flex-shrink: 0;
   -ms-flex-preferred-size: 36.75%;
       flex-basis: 36.75%;
+  z-index: 1;
 }
 .hero__image img {
   border-radius: 215px;
