@@ -236,8 +236,9 @@ body {
 
 .card__social {
     position: absolute;
-    top: 240px;
-    left: 107px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     visibility: hidden;
 }
 
