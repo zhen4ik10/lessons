@@ -373,7 +373,7 @@ body {
 }
 
 /* ---- FORM Check-out */
-.check__form {}
+
 
 .check__form>* {
     margin-bottom: 28px;
@@ -626,11 +626,6 @@ body {
     margin-bottom: 30px;
 }
 
-/* 
-.payment__link:not(:last-child) {
-    margin-right: 20px;
-    margin-bottom: 15px;
-} */
 
 .payment__link {
     transition: all .3s;
@@ -683,14 +678,19 @@ body {
     background: url('../img/eye.svg') center / cover no-repeat;
 }
 
-.form__btn--pay {
+.radio-form__btn {
+    font-family: "Causten",
+        sans-serif;
+    font-weight: 600;
+    font-size: 20px;
     padding: 16px 20px;
+    border-radius: 8px;
     color: #fff;
     background-color: #8A33FD;
     transition: all .3s ease-in-out;
 }
 
-.form__btn--pay:hover {
+.radio-form__btn:hover {
     color: #807D7E;
     background-color: #F6F6F6;
 }
