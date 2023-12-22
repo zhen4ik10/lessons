@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -113,7 +113,7 @@
                                 <label for="company" class="form__label">
                                     Company Name
                                 </label>
-                                <input name="Company" required id="company" type="text" class="form__input"
+                                <input name="Company" id="company" type="text" class="form__input"
                                     placeholder="Company (optional)">
                             </div>
                         </div>
@@ -131,7 +131,7 @@
                                 <label for="apt" class="form__label">
                                     Apt, suite, unit
                                 </label>
-                                <input name="apartment" required id="apt" type="text" class="form__input"
+                                <input name="apartment" id="apt" type="text" class="form__input"
                                     placeholder="apartment, suite, unit, etc. (optional)">
                             </div>
                         </div>
@@ -167,7 +167,7 @@
                                 <label for="tel" class="form__label">
                                     Phone*
                                 </label>
-                                <input name="tel" required id="tel" type="text" class="form__input" placeholder="Phone">
+                                <input name="tel" required id="tel" type="tel" class="form__input" placeholder="Phone">
                             </div>
                         </div>
                         <div class="form__column">
@@ -175,7 +175,7 @@
                                 <label for="post-code" class="form__label">
                                     Postal Code*
                                 </label>
-                                <input name="post-code" required id="post-code" type="text" class="form__input"
+                                <input name="post-code" required id="post-code" type="number" class="form__input"
                                     placeholder="Postal Code">
                             </div>
                         </div>
@@ -184,11 +184,11 @@
                                 <label for="delivery" class="form__label">
                                     Delivery Instruction
                                 </label>
-                                <textarea required name="message-delivery" id="delivery" class="form__textarea"
+                                <textarea name="message-delivery" id="delivery" class="form__textarea"
                                     placeholder="Delivery Instruction"></textarea>
                             </div>
                         </div>
-                        <div class="form__column checkbox">
+                        <div class="form__column form__column--margin checkbox">
                             <div class="form__item checkbox__item">
                                 <div class="checkbox__block">
                                     <input name="shipping-address" id="shipping" class="checkbox__input"
@@ -261,7 +261,7 @@
                                 <label for="company" class="form__label">
                                     Company Name
                                 </label>
-                                <input name="Company" required id="company-optimal" type="text" class="form__input"
+                                <input name="Company" id="company-optimal" type="text" class="form__input"
                                     placeholder="Company (optional)">
                             </div>
                         </div>
@@ -279,7 +279,7 @@
                                 <label for="apartment" class="form__label">
                                     Apt, suite, unit
                                 </label>
-                                <input name="apartment" required id="apartment" type="text" class="form__input"
+                                <input name="apartment" id="apartment" type="text" class="form__input"
                                     placeholder="apartment, suite, unit, etc. (optional)">
                             </div>
                         </div>
@@ -311,7 +311,7 @@
                                 <label for="postal-code" class="form__label">
                                     Postal Code*
                                 </label>
-                                <input name="post-code" required id="postal-code" type="text" class="form__input"
+                                <input name="post-code" required id="postal-code" type="tel" class="form__input"
                                     placeholder="Postal Code">
                             </div>
                         </div>
@@ -320,7 +320,7 @@
                                 <label for="phone-form" class="form__label">
                                     Phone*
                                 </label>
-                                <input name="tel" required id="phone-form" type="text" class="form__input"
+                                <input name="tel" required id="phone-form" type="tel" class="form__input"
                                     placeholder="Phone">
                             </div>
                         </div>
@@ -350,7 +350,7 @@
                                     Select the address that matches your card or payment method.
                                 </h4>
                                 <div class="radio__item">
-                                    <input name="address" checked id="some-billing" type="radio" class="radio__input">
+                                    <input name="address" id="some-billing" type="radio" class="radio__input">
                                     <label for="some-billing" class="radio__label r">
                                         Same as Billing address
                                     </label>
@@ -424,25 +424,25 @@
                                             <div class="payment__card">
                                                 <div class="payment__column">
                                                     <div class="payment__item">
-                                                        <input type="number" class="payment__input"
+                                                        <input required type="number" class="payment__input"
                                                             placeholder="Card number">
                                                     </div>
                                                 </div>
                                                 <div class="payment__column">
                                                     <div class="payment__item">
-                                                        <input type="text" class="payment__input"
+                                                        <input required type="text" class="payment__input"
                                                             placeholder="Name of card">
                                                     </div>
                                                 </div>
                                                 <div class="payment__column">
                                                     <div class="payment__item">
-                                                        <input type="text" class="payment__input"
+                                                        <input required type="text" class="payment__input"
                                                             placeholder="Expiration date (MM/YY)">
                                                     </div>
                                                 </div>
                                                 <div class="payment__column">
                                                     <div class="payment__item payment__item--eye">
-                                                        <input type="password" class="payment__input"
+                                                        <input required type="password" class="payment__input"
                                                             placeholder="Security Code">
                                                     </div>
                                                 </div>
@@ -481,7 +481,9 @@
         </main>
         <footer class="footer">
             <div class="footer__container">
-                Footer
+                <a href="" class="link">
+                    Перейти на іншу сторінку ДЗ (Pretty)
+                </a>
             </div>
         </footer>
     </div>

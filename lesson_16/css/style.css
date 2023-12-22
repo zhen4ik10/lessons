@@ -69,7 +69,6 @@ body {
 }
 
 .call-back__decor {
-    font-family: "Inter", sans-serif;
     font-weight: 500;
     margin-bottom: 16px;
     text-transform: uppercase;
@@ -111,7 +110,6 @@ body {
     position: absolute;
     top: 22px;
     left: 40px;
-    letter-spacing: normal;
     opacity: 0;
 }
 
@@ -164,6 +162,7 @@ body {
     background-color: #6B77E5;
 }
 
+
 /* --------- INFO FORM */
 
 .page__info {
@@ -208,12 +207,11 @@ body {
 .form {
     display: flex;
     flex-wrap: wrap;
-    row-gap: 31px;
     margin: 0 -21px;
 }
 
-.form>*:last-child {
-    margin-bottom: 0px;
+.form>* {
+    margin-bottom: 31px;
 }
 
 .form__column {
@@ -221,8 +219,19 @@ body {
     padding: 0 21px;
 }
 
+.form__column--margin {
+    margin-bottom: 50px;
+}
+
+.form>*:last-child {
+    margin-bottom: 0;
+}
+
+
+
+
 .form__label {
-    display: block;
+    display: inline-block;
     font-family: "Causten", sans-serif;
     font-weight: 600;
     letter-spacing: 0.36px;
@@ -319,6 +328,16 @@ body {
     transition: all .3s ease-in-out;
 }
 
+.checkbox__label:hover {
+    cursor: pointer;
+}
+
+.form__button {
+    display: inline-flex;
+    column-gap: 30px;
+    row-gap: 10px;
+}
+
 .form__btn {
     font-family: "Causten",
         sans-serif;
@@ -327,13 +346,11 @@ body {
     padding: 12px 40px;
     border-radius: 8px;
     transition: all .3s ease-in-out;
-    margin-top: 22px;
 }
 
 .form__btn--submit {
     color: #fff;
     background-color: #8A33FD;
-    margin-right: 30px;
 }
 
 .form__btn--submit:hover {
@@ -353,6 +370,10 @@ body {
 
 /* ---- FORM Check-out */
 
+.check__form>* {
+    margin-bottom: 28px;
+}
+
 .check__container--small {
     max-width: 870px;
     margin: 0 auto;
@@ -362,7 +383,7 @@ body {
 .form__column--flex-hide {
     flex: 1 0 100%;
     display: flex;
-    margin: 0 -16px;
+    margin: 0 -16px 28px;
 }
 
 .form__column--flex-hide>.form__item {
@@ -505,10 +526,15 @@ body {
 .method__top {
     display: flex;
     margin-bottom: 8px;
+    column-gap: 25px;
 }
 
 .method__title {
     flex-grow: 1;
+}
+
+.method__price {
+    align-self: flex-end;
 }
 
 .radio-form__inner {
@@ -580,14 +606,22 @@ body {
     padding-right: 34px;
 }
 
+.payment__icon-pay {
+    display: flex;
+    column-gap: 20px;
+    flex-wrap: wrap;
+    row-gap: 10px;
+}
+
 .payment__icon-pay:not(:last-child) {
     margin-bottom: 30px;
 }
 
+/* 
 .payment__link:not(:last-child) {
     margin-right: 20px;
     margin-bottom: 15px;
-}
+} */
 
 .payment__link {
     transition: all .3s;
@@ -650,4 +684,8 @@ body {
 .form__btn--pay:hover {
     color: #807D7E;
     background-color: #F6F6F6;
+}
+
+.check__form>*:last-child {
+    margin-bottom: 0;
 }
