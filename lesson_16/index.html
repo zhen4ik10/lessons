@@ -81,140 +81,142 @@
                     </h3>
                     <form class="info__form form" id="form-info" method="POST"
                         action="https://jsonplaceholder.typicode.com/posts">
-                        <div class="form__column">
-                            <div class="form__item">
-                                <label for="first-name" class="form__label">
-                                    First Name*
-                                </label>
-                                <input name="First Name" required id="first-name" type="text" class="form__input"
-                                    placeholder="First Name">
-                            </div>
-                        </div>
-                        <div class="form__column">
-                            <div class="form__item">
-                                <label for="last-name" class="form__label">
-                                    Last Name*
-                                </label>
-                                <input name="Last Name" required id="last-name" type="text" class="form__input"
-                                    placeholder="Last Name">
-                            </div>
-                        </div>
-                        <div class="form__column">
-                            <div class="form__item">
-                                <label for="country" class="form__label">
-                                    Country / Region*
-                                </label>
-                                <input name="Country" required id="country" type="text" class="form__input"
-                                    placeholder="Country / Region">
-                            </div>
-                        </div>
-                        <div class="form__column">
-                            <div class="form__item">
-                                <label for="company" class="form__label">
-                                    Company Name
-                                </label>
-                                <input name="Company" id="company" type="text" class="form__input"
-                                    placeholder="Company (optional)">
-                            </div>
-                        </div>
-                        <div class="form__column">
-                            <div class="form__item">
-                                <label for="adrress" class="form__label">
-                                    Street Address*
-                                </label>
-                                <input name="address" required id="adrress" type="text" class="form__input"
-                                    placeholder="House number and street name">
-                            </div>
-                        </div>
-                        <div class="form__column">
-                            <div class="form__item">
-                                <label for="apt" class="form__label">
-                                    Apt, suite, unit
-                                </label>
-                                <input name="apartment" id="apt" type="text" class="form__input"
-                                    placeholder="apartment, suite, unit, etc. (optional)">
-                            </div>
-                        </div>
-                        <div class="form__column">
-                            <div class="form__item">
-                                <label for="city" class="form__label">
-                                    City*
-                                </label>
-                                <input name="City" required id="city" type="text" class="form__input"
-                                    placeholder="Town / City">
-                            </div>
-                        </div>
-                        <div class="form__column">
-                            <div class="form__item">
-                                <label for="state" class="form__label">
-                                    State*
-                                </label>
-                                <select required name="state-name" id="state" class="form__select">
-                                    <option value="" class="form__option">
-                                        State
-                                    </option>
-                                    <option value="state#!2" class="form__option">
-                                        State#!2
-                                    </option>
-                                    <option value="state#!3" class="form__option">
-                                        State#!3
-                                    </option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form__column">
-                            <div class="form__item">
-                                <label for="tel" class="form__label">
-                                    Phone*
-                                </label>
-                                <input name="tel" required id="tel" type="tel" class="form__input" placeholder="Phone">
-                            </div>
-                        </div>
-                        <div class="form__column">
-                            <div class="form__item">
-                                <label for="post-code" class="form__label">
-                                    Postal Code*
-                                </label>
-                                <input name="post-code" required id="post-code" type="number" class="form__input"
-                                    placeholder="Postal Code">
-                            </div>
-                        </div>
-                        <div class="form__column form__column--textarea">
-                            <div class="form__item">
-                                <label for="delivery" class="form__label">
-                                    Delivery Instruction
-                                </label>
-                                <textarea name="message-delivery" id="delivery" class="form__textarea"
-                                    placeholder="Delivery Instruction"></textarea>
-                            </div>
-                        </div>
-                        <div class="form__column form__column--margin checkbox">
-                            <div class="form__item checkbox__item">
-                                <div class="checkbox__block">
-                                    <input name="shipping-address" id="shipping" class="checkbox__input"
-                                        type="checkbox">
-                                    <label for="shipping" class="checkbox__label">
-                                        Set as default shipping address
+                        <div class="form__frame">
+
+                            <div class="form__column">
+                                <div class="form__item">
+                                    <label for="first-name" class="form__label">
+                                        First Name*
                                     </label>
+                                    <input name="First Name" required id="first-name" type="text" class="form__input"
+                                        placeholder="First Name">
                                 </div>
-                                <div class="checkbox__block">
-                                    <input name="billing-address" id="billing" class="checkbox__input" type="checkbox">
-                                    <label for="billing" class="checkbox__label">
-                                        Set as default billing address
+                            </div>
+                            <div class="form__column">
+                                <div class="form__item">
+                                    <label for="last-name" class="form__label">
+                                        Last Name*
                                     </label>
+                                    <input name="Last Name" required id="last-name" type="text" class="form__input"
+                                        placeholder="Last Name">
+                                </div>
+                            </div>
+                            <div class="form__column">
+                                <div class="form__item">
+                                    <label for="country" class="form__label">
+                                        Country / Region*
+                                    </label>
+                                    <input name="Country" required id="country" type="text" class="form__input"
+                                        placeholder="Country / Region">
+                                </div>
+                            </div>
+                            <div class="form__column">
+                                <div class="form__item">
+                                    <label for="company" class="form__label">
+                                        Company Name
+                                    </label>
+                                    <input name="Company" id="company" type="text" class="form__input"
+                                        placeholder="Company (optional)">
+                                </div>
+                            </div>
+                            <div class="form__column">
+                                <div class="form__item">
+                                    <label for="adrress" class="form__label">
+                                        Street Address*
+                                    </label>
+                                    <input name="address" required id="adrress" type="text" class="form__input"
+                                        placeholder="House number and street name">
+                                </div>
+                            </div>
+                            <div class="form__column">
+                                <div class="form__item">
+                                    <label for="apt" class="form__label">
+                                        Apt, suite, unit
+                                    </label>
+                                    <input name="apartment" id="apt" type="text" class="form__input"
+                                        placeholder="apartment, suite, unit, etc. (optional)">
+                                </div>
+                            </div>
+                            <div class="form__column">
+                                <div class="form__item">
+                                    <label for="city" class="form__label">
+                                        City*
+                                    </label>
+                                    <input name="City" required id="city" type="text" class="form__input"
+                                        placeholder="Town / City">
+                                </div>
+                            </div>
+                            <div class="form__column">
+                                <div class="form__item">
+                                    <label for="state" class="form__label">
+                                        State*
+                                    </label>
+                                    <select required name="state-name" id="state" class="form__select">
+                                        <option value="" class="form__option">
+                                            State
+                                        </option>
+                                        <option value="state#!2" class="form__option">
+                                            State#!2
+                                        </option>
+                                        <option value="state#!3" class="form__option">
+                                            State#!3
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form__column">
+                                <div class="form__item">
+                                    <label for="tel" class="form__label">
+                                        Phone*
+                                    </label>
+                                    <input name="tel" required id="tel" type="tel" class="form__input"
+                                        placeholder="Phone">
+                                </div>
+                            </div>
+                            <div class="form__column">
+                                <div class="form__item">
+                                    <label for="post-code" class="form__label">
+                                        Postal Code*
+                                    </label>
+                                    <input name="post-code" required id="post-code" type="number" class="form__input"
+                                        placeholder="Postal Code">
+                                </div>
+                            </div>
+                            <div class="form__column form__column--textarea">
+                                <div class="form__item">
+                                    <label for="delivery" class="form__label">
+                                        Delivery Instruction
+                                    </label>
+                                    <textarea name="message-delivery" id="delivery" class="form__textarea"
+                                        placeholder="Delivery Instruction"></textarea>
                                 </div>
                             </div>
                         </div>
-                        <div class="form__column form__column--hide">
-                            <div class="form__button">
-                                <button form="form-info" class="form__btn form__btn--submit" type="submit">
-                                    Save
-                                </button>
-                                <button form="form-info" class="form__btn form__btn--reset" type="reset">
-                                    Cancel
-                                </button>
+                        <div class="form__checkbox checkbox">
+                            <div class="checkbox__block">
+                                <input name="shipping-address" id="shipping" class="checkbox__input" type="checkbox">
+                                <label for="shipping" class="checkbox__label">
+                                    Set as default shipping address
+                                </label>
                             </div>
+                            <div class="checkbox__block">
+                                <input name="billing-address" id="billing" class="checkbox__input" type="checkbox">
+                                <label for="billing" class="checkbox__label">
+                                    Set as default billing address
+                                </label>
+                            </div>
+
                         </div>
+
+                        <div class="form__button">
+                            <button form="form-info" class="form__btn form__btn--submit" type="submit">
+                                Save
+                            </button>
+                            <button form="form-info" class="form__btn form__btn--reset" type="reset">
+                                Cancel
+                            </button>
+                        </div>
+
                     </form>
                 </div>
             </div>
@@ -229,109 +231,109 @@
                     </h3>
                     <form action="https://jsonplaceholder.typicode.com/posts" class="check__form form" id="check"
                         method="POST">
-                        <div class="form__column">
-                            <div class="form__item">
-                                <label for="name-first" class="form__label">
-                                    First Name*
-                                </label>
-                                <input name="First Name" required id="name-first" type="text" class="form__input"
-                                    placeholder="First Name">
+                        <div class="form__frame">
+                            <div class="form__column">
+                                <div class="form__item">
+                                    <label for="name-first" class="form__label">
+                                        First Name*
+                                    </label>
+                                    <input name="First Name" required id="name-first" type="text" class="form__input"
+                                        placeholder="First Name">
+                                </div>
+                            </div>
+                            <div class="form__column">
+                                <div class="form__item">
+                                    <label for="name-last" class="form__label">
+                                        Last Name*
+                                    </label>
+                                    <input name="Last Name" required id="name-last" type="text" class="form__input"
+                                        placeholder="Last Name">
+                                </div>
+                            </div>
+                            <div class="form__column">
+                                <div class="form__item">
+                                    <label for="country-region" class="form__label">
+                                        Country / Region*
+                                    </label>
+                                    <input name="Country" required id="country-region" type="text" class="form__input"
+                                        placeholder="Country / Region">
+                                </div>
+                            </div>
+                            <div class="form__column">
+                                <div class="form__item">
+                                    <label for="company" class="form__label">
+                                        Company Name
+                                    </label>
+                                    <input name="Company" id="company-optimal" type="text" class="form__input"
+                                        placeholder="Company (optional)">
+                                </div>
+                            </div>
+                            <div class="form__column">
+                                <div class="form__item">
+                                    <label for="adrress-name" class="form__label">
+                                        Street Address*
+                                    </label>
+                                    <input name="address" required id="adrress-name" type="text" class="form__input"
+                                        placeholder="House number and street name">
+                                </div>
+                            </div>
+                            <div class="form__column">
+                                <div class="form__item">
+                                    <label for="apartment" class="form__label">
+                                        Apt, suite, unit
+                                    </label>
+                                    <input name="apartment" id="apartment" type="text" class="form__input"
+                                        placeholder="apartment, suite, unit, etc. (optional)">
+                                </div>
+                            </div>
+                            <div class="form__column form__column--flex-hide">
+                                <div class="form__item">
+                                    <label for="city-town" class="form__label">
+                                        City*
+                                    </label>
+                                    <input name="City" required id="city-town" type="text" class="form__input"
+                                        placeholder="Town / City">
+                                </div>
+                                <div class="form__item">
+                                    <label for="state-me" class="form__label">
+                                        State*
+                                    </label>
+                                    <select required name="state" id="state-me" class="form__select">
+                                        <option value="" class="form__option">
+                                            State
+                                        </option>
+                                        <option value="State#!2" class="form__option">
+                                            State#!2
+                                        </option>
+                                        <option value="State#!3" class="form__option">
+                                            State#!3
+                                        </option>
+                                    </select>
+                                </div>
+                                <div class="form__item">
+                                    <label for="postal-code" class="form__label">
+                                        Postal Code*
+                                    </label>
+                                    <input name="post-code" required id="postal-code" type="tel" class="form__input"
+                                        placeholder="Postal Code">
+                                </div>
+                            </div>
+                            <div class="form__column">
+                                <div class="form__item">
+                                    <label for="phone-form" class="form__label">
+                                        Phone*
+                                    </label>
+                                    <input name="tel" required id="phone-form" type="tel" class="form__input"
+                                        placeholder="Phone">
+                                </div>
                             </div>
                         </div>
-                        <div class="form__column">
-                            <div class="form__item">
-                                <label for="name-last" class="form__label">
-                                    Last Name*
-                                </label>
-                                <input name="Last Name" required id="name-last" type="text" class="form__input"
-                                    placeholder="Last Name">
-                            </div>
-                        </div>
-                        <div class="form__column">
-                            <div class="form__item">
-                                <label for="country-region" class="form__label">
-                                    Country / Region*
-                                </label>
-                                <input name="Country" required id="country-region" type="text" class="form__input"
-                                    placeholder="Country / Region">
-                            </div>
-                        </div>
-                        <div class="form__column">
-                            <div class="form__item">
-                                <label for="company" class="form__label">
-                                    Company Name
-                                </label>
-                                <input name="Company" id="company-optimal" type="text" class="form__input"
-                                    placeholder="Company (optional)">
-                            </div>
-                        </div>
-                        <div class="form__column">
-                            <div class="form__item">
-                                <label for="adrress-name" class="form__label">
-                                    Street Address*
-                                </label>
-                                <input name="address" required id="adrress-name" type="text" class="form__input"
-                                    placeholder="House number and street name">
-                            </div>
-                        </div>
-                        <div class="form__column">
-                            <div class="form__item">
-                                <label for="apartment" class="form__label">
-                                    Apt, suite, unit
-                                </label>
-                                <input name="apartment" id="apartment" type="text" class="form__input"
-                                    placeholder="apartment, suite, unit, etc. (optional)">
-                            </div>
-                        </div>
-                        <div class="form__column form__column--flex-hide">
-                            <div class="form__item">
-                                <label for="city-town" class="form__label">
-                                    City*
-                                </label>
-                                <input name="City" required id="city-town" type="text" class="form__input"
-                                    placeholder="Town / City">
-                            </div>
-                            <div class="form__item">
-                                <label for="state-me" class="form__label">
-                                    State*
-                                </label>
-                                <select required name="state" id="state-me" class="form__select">
-                                    <option value="" class="form__option">
-                                        State
-                                    </option>
-                                    <option value="State#!2" class="form__option">
-                                        State#!2
-                                    </option>
-                                    <option value="State#!3" class="form__option">
-                                        State#!3
-                                    </option>
-                                </select>
-                            </div>
-                            <div class="form__item">
-                                <label for="postal-code" class="form__label">
-                                    Postal Code*
-                                </label>
-                                <input name="post-code" required id="postal-code" type="tel" class="form__input"
-                                    placeholder="Postal Code">
-                            </div>
-                        </div>
-                        <div class="form__column">
-                            <div class="form__item">
-                                <label for="phone-form" class="form__label">
-                                    Phone*
-                                </label>
-                                <input name="tel" required id="phone-form" type="tel" class="form__input"
-                                    placeholder="Phone">
-                            </div>
-                        </div>
-                        <div class="form__column form__column--hide">
-                            <div class="form__item">
-                                <button class="form__btn form__btn--continue" type="submit">
-                                    Continue to delivery
-                                </button>
-                            </div>
-                        </div>
-                        <div class="form__column form__column--hide checkbox">
+
+                        <button class="form__btn form__btn--continue" type="submit">
+                            Continue to delivery
+                        </button>
+
+                        <div class="form__checkbox checkbox checkbox--margin">
                             <div class="checkbox__item">
                                 <input name="save-info" id="save-info" class="checkbox__input" type="checkbox">
                                 <label for="save-info" class="checkbox__label">
@@ -340,150 +342,138 @@
                             </div>
                         </div>
 
-
-                        <div class="form__column form__column--hide">
-                            <div class="form__item radio">
-                                <h3 class="label radio__title">
-                                    Shipping Address
-                                </h3>
-                                <h4 class="sub-title radio__sub-title">
-                                    Select the address that matches your card or payment method.
-                                </h4>
-                                <div class="radio__item">
-                                    <input name="address" id="some-billing" type="radio" class="radio__input">
-                                    <label for="some-billing" class="radio__label r">
-                                        Same as Billing address
-                                    </label>
-                                    <input name="address" id="use-shipping" type="radio" class="radio__input">
-                                    <label for="use-shipping" class="radio__label">
-                                        Use a different shipping address
-                                    </label>
-                                </div>
+                        <div class="form__item radio">
+                            <h3 class="label radio__title">
+                                Shipping Address
+                            </h3>
+                            <h4 class="sub-title radio__sub-title">
+                                Select the address that matches your card or payment method.
+                            </h4>
+                            <div class="radio__item">
+                                <input name="address" id="some-billing" type="radio" class="radio__input">
+                                <label for="some-billing" class="radio__label r">
+                                    Same as Billing address
+                                </label>
+                                <input name="address" id="use-shipping" type="radio" class="radio__input">
+                                <label for="use-shipping" class="radio__label">
+                                    Use a different shipping address
+                                </label>
                             </div>
                         </div>
-                        <div class="form__column form__column--hide">
-                            <div class="form__item method">
-                                <h3 class="method__label label">
-                                    Shipping Method
-                                </h3>
-                                <div class="method__item">
-                                    <h5 class="method__main-title">
-                                        Arrives by Monday, June 7
-                                    </h5>
-                                    <div class="method__body">
-                                        <div class="method__top">
-                                            <h5 class="method__title">
-                                                Delivery Charges
-                                            </h5>
-                                            <div class="method__price">
-                                                $5.00
-                                            </div>
+                        <div class="form__item method">
+                            <h3 class="method__label label">
+                                Shipping Method
+                            </h3>
+                            <div class="method__item">
+                                <h5 class="method__main-title">
+                                    Arrives by Monday, June 7
+                                </h5>
+                                <div class="method__body">
+                                    <div class="method__top">
+                                        <h5 class="method__title">
+                                            Delivery Charges
+                                        </h5>
+                                        <div class="method__price">
+                                            $5.00
                                         </div>
-                                        <h6 class="method__sub-title">
-                                            Additional fess may apply
-                                        </h6>
                                     </div>
+                                    <h6 class="method__sub-title">
+                                        Additional fess may apply
+                                    </h6>
                                 </div>
-                            </div>
-                        </div>
-
-                        <div class="form__column form__column--hide">
-                            <div class="form__item radio-form">
-                                <h3 class="label radio-form__title">
-                                    Payment Method
-                                </h3>
-                                <h4 class="sub-title radio-form__sub-title">
-                                    All transactions are secure and encrypted.
-                                </h4>
-                                <div class="radio-form__inner">
-                                    <div class="radio-form__item">
-                                        <input checked id="credit" name="payment" type="radio"
-                                            class="radio-form__input">
-                                        <label for="credit" class="radio-form__label">
-                                            Credit Card
-                                        </label>
-
-                                        <h6 class="radio-form__text">
-                                            We accept all major credit cards
-                                        </h6>
-                                        <fieldset class="radio-form__payment payment">
-                                            <legend class="payment__icon-pay">
-                                                <a href="#!" class="payment__link">
-                                                    <img src="img/payment/g-pay.svg" alt="g-pay">
-                                                </a>
-                                                <a href="#!" class="payment__link">
-                                                    <img src="img/payment/visa.svg" alt="g-pay">
-                                                </a>
-                                                <a href="#!" class="payment__link">
-                                                    <img src="img/payment/paypal.svg" alt="paypal">
-                                                </a>
-                                                <a href="#!" class="payment__link">
-                                                    <img src="img/payment/paypass.svg" alt="paypass">
-                                                </a>
-                                            </legend>
-                                            <div class="payment__card">
-                                                <div class="payment__column">
-                                                    <div class="payment__item">
-                                                        <input required type="number" class="payment__input"
-                                                            placeholder="Card number">
-                                                    </div>
-                                                </div>
-                                                <div class="payment__column">
-                                                    <div class="payment__item">
-                                                        <input required type="text" class="payment__input"
-                                                            placeholder="Name of card">
-                                                    </div>
-                                                </div>
-                                                <div class="payment__column">
-                                                    <div class="payment__item">
-                                                        <input required type="text" class="payment__input"
-                                                            placeholder="Expiration date (MM/YY)">
-                                                    </div>
-                                                </div>
-                                                <div class="payment__column">
-                                                    <div class="payment__item payment__item--eye">
-                                                        <input required type="password" class="payment__input"
-                                                            placeholder="Security Code">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </fieldset>
-                                    </div>
-                                    <div class="radio-form__item">
-                                        <input id="cash" name="payment" type="radio" class="radio-form__input">
-                                        <label for="cash" class="radio-form__label">
-                                            Cash on delivery
-                                        </label>
-
-                                        <h6 class="radio-form__text">
-                                            Pay with cash upon delivery.
-                                        </h6>
-                                    </div>
-                                    <div class="radio-form__item">
-                                        <input id="paypal" name="payment" type="radio" class="radio-form__input">
-                                        <label for="paypal" class="radio-form__label">
-                                            Paypol
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form__column form__column--hide">
-                            <div class="form__item">
-                                <button form="check" class="form__btn form__btn--pay" type="submit">
-                                    Pay Now
-                                </button>
                             </div>
                         </div>
                     </form>
+
+
+                    <form action="https://jsonplaceholder.typicode.com/posts" method="POST" class="radio-form">
+                        <h3 class="label radio-form__title">
+                            Payment Method
+                        </h3>
+                        <h4 class="sub-title radio-form__sub-title">
+                            All transactions are secure and encrypted.
+                        </h4>
+                        <div class="radio-form__inner">
+                            <div class="radio-form__item">
+                                <input checked id="credit" name="payment" type="radio" class="radio-form__input">
+                                <label for="credit" class="radio-form__label">
+                                    Credit Card
+                                </label>
+
+                                <h6 class="radio-form__text">
+                                    We accept all major credit cards
+                                </h6>
+                                <fieldset class="radio-form__payment payment">
+                                    <legend class="payment__icon-pay">
+                                        <a href="#!" class="payment__link">
+                                            <img src="img/payment/g-pay.svg" alt="g-pay">
+                                        </a>
+                                        <a href="#!" class="payment__link">
+                                            <img src="img/payment/visa.svg" alt="g-pay">
+                                        </a>
+                                        <a href="#!" class="payment__link">
+                                            <img src="img/payment/paypal.svg" alt="paypal">
+                                        </a>
+                                        <a href="#!" class="payment__link">
+                                            <img src="img/payment/paypass.svg" alt="paypass">
+                                        </a>
+                                    </legend>
+                                    <div class="payment__card">
+                                        <div class="payment__column">
+                                            <div class="payment__item">
+                                                <input required type="number" class="payment__input"
+                                                    placeholder="Card number">
+                                            </div>
+                                        </div>
+                                        <div class="payment__column">
+                                            <div class="payment__item">
+                                                <input required type="text" class="payment__input"
+                                                    placeholder="Name of card">
+                                            </div>
+                                        </div>
+                                        <div class="payment__column">
+                                            <div class="payment__item">
+                                                <input required type="text" class="payment__input"
+                                                    placeholder="Expiration date (MM/YY)">
+                                            </div>
+                                        </div>
+                                        <div class="payment__column">
+                                            <div class="payment__item payment__item--eye">
+                                                <input required type="password" class="payment__input"
+                                                    placeholder="Security Code">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+                            <div class="radio-form__item">
+                                <input id="cash" name="payment" type="radio" class="radio-form__input">
+                                <label for="cash" class="radio-form__label">
+                                    Cash on delivery
+                                </label>
+
+                                <h6 class="radio-form__text">
+                                    Pay with cash upon delivery.
+                                </h6>
+                            </div>
+                            <div class="radio-form__item">
+                                <input id="paypal" name="payment" type="radio" class="radio-form__input">
+                                <label for="paypal" class="radio-form__label">
+                                    Paypol
+                                </label>
+                            </div>
+                        </div>
+                        <button class="form__btn form__btn--pay" type="submit">
+                            Pay Now
+                        </button>
+                    </form>
+
                 </div>
             </div>
         </main>
         <footer class="footer">
             <div class="footer__container">
-                <a href="" class="link">
-                    Перейти на іншу сторінку ДЗ (Pretty)
-                </a>
+                Footer
             </div>
         </footer>
     </div>
