@@ -130,7 +130,6 @@ body {
 
 .item-product__body {
     flex-grow: 1;
-    text-align: left;
     display: flex;
     flex-direction: column;
 }
