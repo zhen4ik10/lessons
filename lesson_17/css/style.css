@@ -120,12 +120,16 @@ body {
     width: 100%;
     height: 100%;
     aspect-ratio: 271 / 270;
-    object-fit: contain;
+    object-fit: cover;
     transition: all .3s ease-in-out;
 }
 
 .item-product__image:not(:last-child) {
     margin-bottom: 17px;
+}
+
+.item-product__image--size img {
+    aspect-ratio: 270 / 270;
 }
 
 .item-product__body {
@@ -163,27 +167,69 @@ body {
 /* ----- BEAUTY ----- */
 
 .beauty {
-    background-color: #FEFBF7;
+    background-color: #0E333D;
     padding-top: 120px;
     padding-bottom: 120px;
 }
 
 .beauty__container {
     text-align: center;
+    color: #fff;
 }
 
 .beauty__title {
     font-family: "Cormorant Infant",
         serif;
-    font-size: 64px;
+    font-size: 48px;
+    line-height: 1.27;
+    color: #fff;
 }
 
 .beauty__title:not(:last-child) {
     margin-bottom: 21px;
 }
 
+.beauty__label {
+    font-family: "Raleway", sans-serif;
+    font-size: 20px;
+    line-height: 1.27;
+    color: #EBEBEB;
+}
+
 .beauty__label:not(:last-child) {
-    margin-bottom: 84px;
+    margin-bottom: 34px;
+}
+
+.beauty__item {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 41px;
+    row-gap: 10px;
+}
+
+.beauty__item:not(:last-child) {
+    margin-bottom: 77px;
+}
+
+.beauty__link-item {
+    font-family: "Raleway",
+        sans-serif;
+    font-size: 18px;
+    line-height: 1.27;
+    transition: all .3s ease-in-out;
+}
+
+.beauty__link-item--active {
+    text-decoration: underline;
+}
+
+.item-product__image--radius {
+    border-radius: 5px;
+}
+
+.item-product__image--radius img {
+    aspect-ratio: 270 / 270;
 }
 
 /* ---- PRETTY ------*/
@@ -240,7 +286,7 @@ body {
     width: 100%;
     height: 100%;
     aspect-ratio: 357 / 240;
-    object-fit: contain;
+    object-fit: cover;
     transition: all .3s ease-in-out;
 }
 
@@ -350,6 +396,10 @@ body {
     .pretty__right-arrow:hover {
         transform: translateX(10px);
     }
+
+    .beauty__link-item:hover {
+        text-decoration: underline;
+    }
 }
 
 @media (min-width: 1600px) {
@@ -415,10 +465,6 @@ body {
         padding-bottom: 60px;
     }
 
-    .beauty__label:not(:last-child) {
-        margin-bottom: 42px;
-    }
-
     .pretty {
         padding-top: 65px;
         padding-bottom: 57px;
@@ -429,6 +475,10 @@ body {
     .card__column {
         flex: 0 0 50%;
     }
+
+    .beauty__item:not(:last-child) {
+        margin-bottom: 45px;
+    }
 }
 
 @media (max-width: 580px) {
@@ -437,7 +487,7 @@ body {
     }
 
     .page__title {
-        margin-bottom: 20px;
+        margin-bottom: 25px;
     }
 
     .title {
@@ -457,14 +507,9 @@ body {
         margin-bottom: 30px;
     }
 
-    .beauty {
-        padding-top: 30px;
-        padding-bottom: 30px;
-    }
-
     .pretty {
         padding-top: 35px;
-        padding-bottom: 27px;
+        padding-bottom: 35px;
     }
 
     .card__column {
@@ -487,12 +532,17 @@ body {
         margin-bottom: 18px;
     }
 
-    .products {
-        row-gap: 25px;
+    .beauty {
+        padding-top: 40px;
+        padding-bottom: 40px;
     }
 
-    .beauty {
-        padding-bottom: 10px;
+    .beauty__label:not(:last-child) {
+        margin-bottom: 25px;
+    }
+
+    .beauty__item:not(:last-child) {
+        margin-bottom: 40px;
     }
 
     .pretty__title:not(:last-child) {
