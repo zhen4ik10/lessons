@@ -398,7 +398,7 @@ body {
     }
 
     .beauty__link-item:hover {
-        text-decoration: underline;
+        color: rgb(232, 208, 72);
     }
 }
 
