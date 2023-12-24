@@ -147,6 +147,10 @@ body {
     margin-bottom: 4px;
 }
 
+.item-product__link-title {
+    transition: all .3s ease-in-out;
+}
+
 .item-product__link-title,
 .item-product__price {
     font-family: "Cormorant Infant",
@@ -304,7 +308,7 @@ body {
 }
 
 
-.item-card__title {
+.item-card__link-title {
     font-family: "DM Serif Text",
         serif;
     font-size: 24px;
@@ -365,8 +369,13 @@ body {
         transform: scale(1.1);
     }
 
-    .item-product__title:hover>.item-product__link-title {
-        text-decoration: underline;
+    .item-product__title:hover>.item-product__link-title--color {
+        color: #FF7A49;
+    }
+
+    .item-product__title:hover .item-product__link-title--color-beauty {
+        color: #e8d048;
+
     }
 
     .gold__btn:hover {
@@ -395,20 +404,16 @@ body {
     }
 
     .beauty__link-item:hover {
-        color: rgb(232, 208, 72);
+        color: #e8d048;
     }
 
-    .item-card:hover .item-card__image img,
-    .item-card:hover .item-card__link-more {
+    .item-card__image:hover img,
+    .item-card__link-more:hover {
         transform: scale(1.1);
     }
 
-    .item-card:hover .item-card__title {
+    .item-card__title:hover>.item-card__link-title {
         color: #F55529;
-    }
-
-    .item-card:hover .item-card__read-more {
-        text-decoration: underline;
     }
 }
 
