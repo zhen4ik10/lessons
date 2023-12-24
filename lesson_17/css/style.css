@@ -114,6 +114,7 @@ body {
 
 .item-product__image {
     overflow: hidden;
+    border-radius: 5px;
 }
 
 .item-product__image img {
@@ -224,11 +225,7 @@ body {
     text-decoration: underline;
 }
 
-.item-product__image--radius {
-    border-radius: 5px;
-}
-
-.item-product__image--radius img {
+.item-product__image--size img {
     aspect-ratio: 270 / 270;
 }
 
