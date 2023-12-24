@@ -210,7 +210,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     column-gap: 41px;
-    row-gap: 10px;
+    row-gap: 15px;
 }
 
 .beauty__item:not(:last-child) {
