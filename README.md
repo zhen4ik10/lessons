@@ -1,6 +1,4 @@
-<h1 style="text-align: center;">Lessons link</h1>
-<br>
-<br>
+<h1 align="center">Lessons link</h1>
 <br>
 <br>
 <br>
