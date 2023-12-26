@@ -1,0 +1,503 @@
+/* Підключення шрифтів */
+@import url("fonts.css");
+/* Скидання стилів */
+@import url("reset.css");
+
+body {
+    font-family: "Merriweather", serif;
+    font-size: 20px;
+}
+
+.wrapper {
+    min-height: 100%;
+    overflow: clip;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper>main {
+    flex-grow: 1;
+}
+
+
+[class*="__container"] {
+    max-width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+    background-color: #fff;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    gap: 15px;
+    min-height: 100px;
+}
+
+
+.header__logo {
+    font-size: 30px;
+    font-style: italic;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 5;
+}
+
+.menu {
+    flex: 1 1 auto;
+}
+
+
+
+.menu__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 36px;
+    row-gap: 8px;
+}
+
+
+.menu__link {
+    transition: all .3s ease-in-out;
+}
+
+.menu__item--parent {
+    position: relative;
+}
+
+.menu__item--parent .menu__link {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.menu__item--parent .menu__link::after {
+    content: "";
+    height: 8px;
+    width: 16px;
+    flex: 0 0 16px;
+    background: url('../img/arrow-down.svg') center / cover no-repeat;
+    transition: all .3s ease-in-out;
+}
+
+.menu__item--active .menu__link {
+    color: #D58417;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.sub-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding-top: 5px;
+    transform: translate(0px, 10%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease-in-out;
+    pointer-events: none;
+}
+
+.sub-menu__list {
+    width: 200px;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: #ff924a;
+}
+
+.sub-menu__item:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.sub-menu__link {
+    color: #000;
+    font-size: 18px;
+}
+
+
+
+.header__actions {
+    flex-shrink: 0;
+}
+
+.actions-header {
+    display: flex;
+    align-items: center;
+    gap: 23px;
+    position: relative;
+    z-index: 5;
+}
+
+.actions-header__item {
+    flex: 0 0 32px;
+    position: relative;
+    transition: all .3s ease-in-out;
+}
+
+
+
+.actions-header__item span {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 12px;
+    height: 12px;
+    font-size: 9px;
+    line-height: 12px;
+    border-radius: 50%;
+    color: #fff;
+    text-align: center;
+    background-color: red;
+}
+
+.block-header {
+    font-family: "Cormorant Infant";
+    font-weight: 700;
+}
+
+.icon-menu {
+    display: none;
+}
+
+/* ----- HERO ------ */
+.hero {
+    background-color: #502203;
+    flex-grow: 1;
+    display: block;
+    align-items: center;
+    padding: 200px 0px 55px 0px;
+    font-family: "Cormorant Infant",
+        serif;
+    color: #fff;
+}
+
+.hero__container {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: flex-start;
+}
+
+.hero__body>* {
+    margin-bottom: 9px;
+}
+
+.hero__title {
+    font-size: 78px;
+}
+
+.hero__title,
+.content-hero__text {
+    font-weight: 700;
+    line-height: 1.29;
+}
+
+.hero__btn {
+    font-size: 24px;
+    padding: 15px 25px;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    position: relative;
+}
+
+.hero__btn::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 12px;
+    left: -8px;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.06);
+    transition: all .3s ease-in-out;
+
+}
+
+.hero__body>*:last-child {
+    margin-bottom: 0px;
+}
+
+.hero__image {
+    flex-shrink: 0;
+    flex-basis: 36.75%;
+    border-radius: 215px;
+    border: 1px solid #fff;
+    padding: 28px 20px;
+}
+
+.hero__image img {
+    width: 100%;
+    border-radius: 215px;
+}
+
+
+.content-hero {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    gap: 20px;
+}
+
+.content-hero__text {
+    font-size: 22px;
+    flex-grow: 1;
+}
+
+.content-hero__text p:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.content-hero__item {
+    font-size: 32px;
+    line-height: 1.2;
+    border-left: 1px solid #fff;
+    padding-left: 10px;
+}
+
+@media (any-hover: hover) {
+    .menu__item--parent:hover .sub-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(0px, 0px);
+        pointer-events: all;
+    }
+
+    .menu__item--parent:hover .menu__link::after {
+        transform: rotate(-180deg);
+    }
+
+    .menu__item:hover .menu__link {
+        color: #D58417;
+    }
+
+    .sub-menu__link:hover {
+        text-decoration: underline;
+        /* background-color: #0000001f; */
+    }
+
+    .actions-header__item:hover {
+        transform: scale(1.1);
+    }
+
+    .hero__btn:hover::before {
+        top: 0;
+        left: 0;
+    }
+
+}
+
+@media (min-width: 992px) {
+    .hero__body {
+        flex-basis: 31.625%;
+        flex-shrink: 0;
+        padding-top: 57px;
+        padding-right: 30px;
+    }
+
+    .hero__content {
+        flex-basis: 31.625%;
+        flex-shrink: 0;
+        padding-top: 76px;
+        padding-left: 30px;
+
+    }
+
+    .content-hero__item {
+        align-self: flex-end;
+        margin-bottom: 183px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .hero__title {
+        font-size: 64px;
+    }
+}
+
+
+@media (max-width: 991.98px) {
+    .hero {
+        padding: 150px 0px 40px 0px;
+    }
+
+    .hero__container {
+        flex-direction: column;
+        gap: 40px;
+        align-items: stretch;
+    }
+
+    .hero__body {
+        text-align: center;
+    }
+
+    .hero__image {
+        align-self: center;
+    }
+}
+
+@media (max-width: 960px) {
+    .hero {
+        padding: 90px 0px 40px 0px;
+    }
+
+    .header__container {
+        min-height: 50px;
+    }
+
+    .menu__body {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: -100%;
+        padding: 80px 15px 30px;
+        background-color: #e0bf92;
+        overflow: auto;
+        transition: all .3s ease-in-out;
+    }
+
+    .menu__body::before {
+        content: "";
+        position: fixed;
+        width: 100%;
+        height: 50px;
+        top: 0;
+        left: -100%;
+        z-index: 2;
+        background-color: #e0bf92;
+        transition: all .3s ease-in-out;
+    }
+
+    .open-menu .menu__body,
+    .open-menu .menu__body::before {
+        left: 0;
+    }
+
+    .menu__list {
+        flex-direction: column;
+        /* align-items: flex-end; */
+        text-align: right;
+        row-gap: 28px;
+    }
+
+    .menu__link {
+        font-size: 28px;
+    }
+
+    .menu__item--parent .menu__link {
+        display: block;
+    }
+
+    .menu__item--parent .menu__link::after {
+        display: none;
+    }
+
+    .sub-menu {
+        position: relative;
+        transform: translate(0px, 0px);
+        opacity: 1;
+        visibility: visible;
+        padding-top: 10px;
+    }
+
+    .sub-menu__list {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .sub-menu__item:not(:last-child) {
+        margin-bottom: 20px;
+    }
+
+    .sub-menu__link {
+        font-size: 24px;
+    }
+
+    .icon-menu {
+        display: block;
+        flex: 0 0 30px;
+        width: 30px;
+        height: 18px;
+        position: relative;
+        /* z-index: 5; */
+    }
+
+    .icon-menu::before,
+    .icon-menu::after,
+    .icon-menu span {
+        content: "";
+        height: 2px;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        background-color: #000;
+        transition: all .3s ease-in-out;
+    }
+
+    .icon-menu::before {
+        top: 0;
+    }
+
+    .icon-menu::after {
+        bottom: 0;
+    }
+
+    .icon-menu span {
+        top: 50%;
+        margin-top: -1px;
+    }
+
+    .open-menu .icon-menu span {
+        transform: scale(0);
+    }
+
+    .open-menu .icon-menu::before {
+        transform: rotate(-45deg);
+        top: 50%;
+        margin-top: -1px;
+    }
+
+    .open-menu .icon-menu::after {
+        transform: rotate(45deg);
+        bottom: 50%;
+        margin-bottom: -1px;
+    }
+
+    .hero {
+        background-color: #502203;
+        flex-grow: 1;
+    }
+}
+
+@media (max-width: 470px) {
+
+    .hero__title {
+        font-size: 46px;
+    }
+}
+
+@media (max-width: 440px) {
+    .header__logo {
+        font-size: 24px;
+    }
+
+    .actions-header {
+        gap: 10px;
+    }
+}
