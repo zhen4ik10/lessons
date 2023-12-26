@@ -779,7 +779,7 @@ body {
     }
 
     .rate-consulting__list {
-        row-gap: 16px;
+        row-gap: 20px;
     }
 
     .rate-consulting__item {
@@ -802,6 +802,10 @@ body {
         margin-bottom: 18px;
     }
 
+    .gold__btn {
+        width: 100%;
+    }
+
     .beauty {
         padding-top: 40px;
         padding-bottom: 40px;
@@ -817,9 +821,7 @@ body {
 }
 
 @media (max-width: 375px) {
-    .gold__btn {
-        width: 100%;
-    }
+
 
     .consulting__label,
     .consulting__text {
