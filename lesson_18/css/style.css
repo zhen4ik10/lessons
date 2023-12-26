@@ -1,0 +1,679 @@
+/* Підключення шрифтів */
+@import url("fonts.css");
+/* Скидання стилів */
+@import url("reset.css");
+
+body {
+    font-family: "Merriweather", serif;
+    font-size: 20px;
+}
+
+.wrapper {
+    min-height: 100%;
+    overflow: clip;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper>main {
+    flex-grow: 1;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+}
+
+[class*="__container"] {
+    max-width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+    background-color: #fff;
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    gap: 15px;
+    min-height: 100px;
+}
+
+.header__logo {
+    font-size: 30px;
+    font-weight: 700;
+    font-style: italic;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 5;
+}
+
+.menu {
+    flex: 1 1 auto;
+}
+
+.menu__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 36px;
+    row-gap: 8px;
+}
+
+.menu__link {
+    position: relative;
+    transition: all .3s ease-in-out;
+}
+
+.menu__link::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    top: 100%;
+    left: 0;
+    transform: scale(0);
+}
+
+.menu__item--parent {
+    position: relative;
+}
+
+.menu__item--parent .menu__link {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.menu__item--parent .menu__link::after {
+    content: "";
+    flex: 0 0 16px;
+    width: 16px;
+    height: 8px;
+    background: url('../img/arrow-down.svg') center / cover no-repeat;
+    transition: all .3s ease-in-out;
+}
+
+.menu__item--active>.menu__link {
+    color: #d58317;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.sub-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    /* Ось так правильно */
+    padding-top: 5px;
+    transform: translate(0, 10%);
+    opacity: 0;
+    overflow: hidden;
+    pointer-events: none;
+    /* Не забувайсф додати transition */
+    transition: all .3s ease-in-out;
+}
+
+.sub-menu__list {
+    /* не правильно потрібно задаваби батьківскьому елементу*/
+    /* padding-top: 8; */
+    width: 200px;
+    /* ось так правильно */
+    padding: 15px;
+    border-radius: 15px;
+    /* ось так правильно */
+    background-color: #ff924a;
+
+}
+
+.sub-menu__item:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.sub-menu__link {
+    font-size: 18px;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.sub-menu__link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 2px solid #000;
+    transform: scale(0);
+    transition: all .3s ease-in-out;
+}
+
+.sub-menu__link .header__actions {
+    flex-shrink: 0;
+}
+
+.actions-header {
+    display: flex;
+    align-items: center;
+    gap: 23px;
+}
+
+.actions-header__item {
+    flex: 0 0 32px;
+    position: relative;
+    transition: all .3s ease-in-out;
+}
+
+.actions-header__item span {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    width: 12px;
+    height: 12px;
+    font-size: 9px;
+    line-height: 12px;
+    border-radius: 50%;
+    color: #fff;
+    text-align: center;
+    background-color: red;
+}
+
+.icon-menu {
+    display: none;
+}
+
+/* ----- HERO ------ */
+
+.hero {
+    padding: 200px 0px 55px 0px;
+    font-family: "Cormorant Infant", serif;
+    color: #fff;
+    flex-grow: 1;
+    /* display: block; */
+    background-color: #502203;
+    /* align-items: center; */
+}
+
+.hero__container {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.hero__body>* {
+    margin-bottom: 9px;
+}
+
+.hero__title {
+    font-size: 78px;
+    line-height: 1.29;
+    font-weight: 700;
+}
+
+.hero__button {
+    padding: 15px 25px;
+    font-size: 24px;
+    border-radius: 4px;
+    border: 1px solid #FFF;
+    position: relative;
+}
+
+.hero__button::after {
+    position: absolute;
+    content: "";
+    top: 12px;
+    left: -8px;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.06);
+    transition: all .3s ease-in-out;
+}
+
+
+.hero__body>*:last-child {
+    margin-bottom: 0px;
+}
+
+.hero__image {
+    flex-shrink: 0;
+    flex-basis: 36.75%;
+    padding: 28px 20px;
+    border-radius: 215px;
+    border: 1px solid #FFF;
+}
+
+.hero__image img {
+    border-radius: 215px;
+}
+
+.content-hero {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    row-gap: 20px;
+}
+
+.content-hero__text {
+    font-size: 22px;
+    line-height: 1.48;
+    font-weight: 700;
+    flex-grow: 1;
+}
+
+.content-hero__text p:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.content-hero__item {
+    font-size: 32px;
+    line-height: 1.2;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.content-hero__item::before {
+    content: "";
+    width: 1px;
+    height: 80%;
+    background-color: #fff;
+}
+
+.hero__left-img,
+.hero__right-img {
+    display: none;
+}
+
+.footer {
+    background-color: #392207;
+    text-align: center;
+    padding: 20px;
+}
+
+.link {
+    font-size: 24px;
+    color: #fff;
+}
+
+@media (any-hover: hover) {
+    .menu__item:hover .menu__link {
+        color: #d58317;
+        /* text-decoration: underline; */
+    }
+
+    .menu__item:hover .menu__link::before {
+        transform: scale(1);
+    }
+
+    .menu__item--parent:hover .sub-menu {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
+        transform: translate(0, 0);
+    }
+
+    .menu__item--parent:hover .menu__link::after {
+        transform: rotate(-180deg);
+    }
+
+    .sub-menu__link:hover::after {
+        transform: scale(1);
+    }
+
+    .actions-header__item:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+
+    .hero__button:hover::after {
+        top: 0;
+        left: 0;
+    }
+
+    .link:hover {
+        text-decoration: underline;
+    }
+}
+
+@media (min-width: 1200px) {
+    .hero {
+        padding: 200px 0px 55px 0px;
+        background: url("../img/decor-left.svg") -192px top / 470px 374px no-repeat,
+            url("../img/decor-right.svg") 1580px 220px / 431px 560px no-repeat,
+            #502203;
+
+    }
+
+    .content-hero__text {
+        padding-right: 32px;
+    }
+
+    .content-hero__item {
+        align-self: flex-end;
+        margin-right: -31px;
+    }
+
+    .hero__container {
+        position: relative;
+        /* border: 1px solid red; */
+    }
+
+    .hero__left-img {
+        display: block;
+        position: absolute;
+        bottom: -58px;
+        left: -181px;
+        border-radius: 195px 195px 0 0;
+        border: 1px solid #fff;
+        max-width: 100%;
+    }
+
+    .hero__left-img img {
+        transform: translate(6px, 4px);
+    }
+
+    .hero__right-img {
+        position: absolute;
+        display: block;
+        bottom: 0;
+        right: -310px;
+        border: 1px solid #fff;
+        border-radius: 215px;
+        padding: 17px 12px;
+    }
+}
+
+
+@media (min-width: 992px) {
+    .hero__body {
+        flex-basis: 31.625%;
+        flex-shrink: 0;
+        padding-top: 57px;
+        padding-right: 30px;
+    }
+
+    .hero__content {
+        flex-basis: 31.625%;
+        padding-top: 76px;
+        padding-left: 23px;
+    }
+
+    .content-hero__item {
+        margin-bottom: 183px;
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .header__logo {
+        font-size: 28px;
+    }
+
+    .menu__list {
+        column-gap: 32px;
+    }
+
+
+}
+
+@media (max-width: 991.98px) {
+    .hero {
+        padding: 150px 0px 40px 0px;
+    }
+
+    .hero__container {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 30px;
+    }
+
+    .hero__body {
+        padding-top: 0;
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .hero__title {
+        font-size: 68px;
+    }
+
+    .hero__content {
+        padding-top: 0;
+        padding-left: 0;
+    }
+
+    .content-hero__item {
+        margin-bottom: 0px;
+    }
+
+    .content-hero__item::before {
+        height: 60px;
+    }
+}
+
+@media (max-width: 960px) {
+
+    .header__container {
+        min-height: 50px;
+    }
+
+    .menu__body {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: -100%;
+        padding: 80px 15px 30px;
+        background-color: #502203;
+        /* не забувайся добавити цю властивість для того щоб меню прокручувалось */
+        overflow: auto;
+        transition: all .3s ease-in-out;
+    }
+
+    /* Запобіжник для шапки */
+    .menu__body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 50px;
+        /* background-color: orange; */
+        background-color: #502203;
+
+        transition: all .3s ease-in-out;
+        z-index: 2;
+    }
+
+    .open-menu .menu__body,
+    .open-menu .menu__body::before {
+        left: 0;
+    }
+
+    .menu__list {
+        flex-direction: column;
+        text-align: right;
+        gap: 28px;
+    }
+
+    .menu__link {
+        font-size: 28px;
+    }
+
+    .menu__item--parent .menu__link {
+        display: block;
+    }
+
+    .menu__item--parent .menu__link::after {
+        display: none;
+    }
+
+    .sub-menu {
+        position: relative;
+        opacity: 1;
+        overflow: visible;
+        transform: translate(0, 0);
+        padding-top: 10px;
+    }
+
+    .sub-menu__list {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .sub-menu__item:not(:last-child) {
+        margin-bottom: 20px;
+    }
+
+    .sub-menu__link {
+        font-size: 24px;
+    }
+
+    .icon-menu {
+        display: block;
+        flex: 0 0 30px;
+        width: 30px;
+        /* не забуваємось додати висоту !!!! */
+        height: 18px;
+        /* position: relative; задаємо бем блоку цьому */
+        position: relative;
+    }
+
+    /* цей бем елемент лишній */
+    /* .icon-menu__body { */
+    /* height: 30px; */
+    /* не правильно */
+    /* position: relative; */
+    /* } */
+
+    .icon-menu::before,
+    .icon-menu::after,
+    .icon-menu span {
+        content: "";
+        height: 2px;
+        width: 100%;
+        left: 0;
+        position: absolute;
+        background-color: #000;
+        transition: all .3s ease-in-out;
+    }
+
+    .icon-menu::before {
+        top: 0;
+    }
+
+    .icon-menu::after {
+        bottom: 0;
+    }
+
+    .icon-menu span {
+        top: 50%;
+        margin-top: -1px;
+    }
+
+
+
+    .open-menu .icon-menu span {
+        transform: scale(0);
+    }
+
+    .open-menu .icon-menu::before {
+        transform: rotate(-45deg);
+        top: 50%;
+        margin-top: -1px;
+    }
+
+    .open-menu .icon-menu::after {
+        transform: rotate(45deg);
+        bottom: 50%;
+        margin-bottom: -1px;
+    }
+
+    .hero {
+        padding: 90px 0px 40px 0px;
+    }
+
+    .hero__body {
+        padding-top: 0;
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .hero__title {
+        font-size: 54px;
+    }
+
+    .hero__content {
+        padding-top: 0;
+        padding-left: 0;
+    }
+
+    .content-hero__item {
+        margin-bottom: 0px;
+    }
+
+    .content-hero__item::before {
+        height: 60px;
+    }
+
+}
+
+@media (max-width: 475px) {
+    .hero__title {
+        font-size: 42px;
+    }
+}
+
+@media (max-width: 375px) {
+    .header__logo {
+        font-size: 24px;
+    }
+
+    .hero__title {
+        font-size: 36px;
+    }
+
+    .content-hero__item {
+        font-size: 28px;
+    }
+
+}
+
+@media (max-width: 319px) {
+    .header__container {
+        flex-wrap: wrap;
+    }
+
+    .header__logo {
+        font-size: 24px;
+    }
+
+    .header__actions {
+        order: 3;
+    }
+
+    .icon-menu {
+        order: 2;
+    }
+
+    .menu__body {
+        padding: 100px 15px 30px;
+    }
+
+    .menu__body::before {
+        min-height: 90px;
+    }
+
+}
