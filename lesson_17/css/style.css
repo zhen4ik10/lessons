@@ -226,6 +226,7 @@ body {
     font-size: 18px;
     line-height: 1.27;
     transition: all .3s ease-in-out;
+
 }
 
 .beauty__link-item--active {
@@ -544,9 +545,9 @@ body {
         color: #FF7A49;
     }
 
-    .item-product__title:hover .item-product__link-title--color-beauty {
+    .item-product__title:hover .item-product__link-title--color-beauty,
+    .beauty__link-item:hover {
         color: #e8d048;
-
     }
 
     .gold__btn:hover {
@@ -572,10 +573,6 @@ body {
 
     .pretty__right-arrow:hover {
         transform: translateX(10px);
-    }
-
-    .beauty__link-item:hover {
-        color: #e8d048;
     }
 
     .item-card__image:hover img,
