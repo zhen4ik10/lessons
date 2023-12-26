@@ -245,6 +245,7 @@ body {
     padding: 28px 20px;
     border-radius: 215px;
     border: 1px solid #FFF;
+    z-index: 1;
 }
 
 .hero__image img {
@@ -450,42 +451,6 @@ body {
 }
 
 @media (max-width: 991.98px) {
-    .hero {
-        padding: 150px 0px 40px 0px;
-    }
-
-    .hero__container {
-        flex-direction: column;
-        align-items: center;
-        row-gap: 30px;
-    }
-
-    .hero__body {
-        padding-top: 0;
-        padding-right: 0;
-        text-align: center;
-    }
-
-    .hero__title {
-        font-size: 68px;
-    }
-
-    .hero__content {
-        padding-top: 0;
-        padding-left: 0;
-    }
-
-    .content-hero__item {
-        align-self: flex-start;
-        margin-bottom: 0px;
-    }
-
-    .content-hero__item::before {
-        height: 60px;
-    }
-}
-
-@media (max-width: 960px) {
 
     .header__container {
         min-height: 50px;
@@ -573,18 +538,9 @@ body {
         display: block;
         flex: 0 0 30px;
         width: 30px;
-        /* не забуваємось додати висоту !!!! */
         height: 18px;
-        /* position: relative; задаємо бем блоку цьому */
         position: relative;
     }
-
-    /* цей бем елемент лишній */
-    /* .icon-menu__body { */
-    /* height: 30px; */
-    /* не правильно */
-    /* position: relative; */
-    /* } */
 
     .icon-menu::before,
     .icon-menu::after,
@@ -633,14 +589,19 @@ body {
         padding: 90px 0px 40px 0px;
     }
 
+    .hero__container {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 40px;
+    }
+
     .hero__body {
-        padding-top: 0;
-        padding-right: 0;
         text-align: center;
     }
 
     .hero__title {
-        font-size: 54px;
+        font-size: 68px;
+        /* font-size: 54px; */
     }
 
     .hero__content {
@@ -649,40 +610,63 @@ body {
     }
 
     .content-hero__item {
+        align-self: flex-start;
         margin-bottom: 0px;
     }
 
     .content-hero__item::before {
         height: 60px;
     }
+}
 
+@media (max-width: 767.98px) {}
+
+@media (max-width: 640px) {
+    .hero__title {
+        font-size: 52px;
+    }
 }
 
 @media (max-width: 475px) {
-    .hero__title {
-        font-size: 42px;
+    .hero {
+        padding-top: 70px;
     }
 
-    .content-hero__item {
-        font-size: 26px;
+    .hero__title {
+        font-size: 42px;
     }
 }
 
 @media (max-width: 375px) {
+
+    .header__container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
     .header__logo {
-        font-size: 24px;
+        font-size: 21px;
     }
 
     .hero__title {
         font-size: 36px;
     }
 
+    .content-hero__text {
+        font-size: 18px;
+    }
+
     .content-hero__item {
-        font-size: 28px;
+        font-size: 26px;
+    }
+
+    .actions-header {
+        column-gap: 18px;
     }
 
 }
 
+/* 
 @media (max-width: 319px) {
     .header__container {
         flex-wrap: wrap;
@@ -708,4 +692,4 @@ body {
         min-height: 90px;
     }
 
-}
+} */
