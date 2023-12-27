@@ -498,7 +498,7 @@ body {
     }
 
     .header__btn {
-        padding: 12px 27px 12px 27px;
+        padding: 12px 25px 12px 25px;
         color: #fff;
         font-weight: 700;
         z-index: 5;
@@ -524,17 +524,29 @@ body {
         font-size: 18px;
     }
 
-    .hero__btn {
-        flex: 1 0 100%;
-        order: 2;
+    .hero__picture {
+        flex-wrap: wrap;
+        row-gap: 30px;
     }
 
-    .hero__link-video {
-        order: 1;
+    .hero__img {
+        flex: 1 0 100%;
     }
 
     .footer__container {
         padding-left: 0;
         padding-right: 0;
+    }
+}
+
+@media (max-width: 375px) {
+
+
+    .header__btn {
+        padding: 12px 18px 12px 18px;
+    }
+
+    .hero__btn {
+        flex: 1 0 100%;
     }
 }
