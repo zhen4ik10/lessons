@@ -83,6 +83,15 @@ body {
     top: 100%;
     left: 0;
     transform: scale(0);
+    transition: all .3s ease-in-out;
+}
+
+.menu__item:hover .menu__link {
+    color: #d58317;
+}
+
+.menu__item:hover .menu__link::before {
+    transform: scale(1);
 }
 
 .menu__item--parent {
@@ -104,6 +113,10 @@ body {
     transition: all .3s ease-in-out;
 }
 
+.menu__item--parent:hover .menu__link::after {
+    transform: rotate(-180deg);
+}
+
 .menu__item--active>.menu__link {
     color: #d58317;
     font-weight: 700;
@@ -120,6 +133,13 @@ body {
     transform: translate(0, 10%);
     pointer-events: none;
     transition: all .3s ease-in-out;
+}
+
+.menu__item--parent:hover .sub-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+    transform: translate(0, 0);
 }
 
 .sub-menu__list {
@@ -150,9 +170,14 @@ body {
     transition: all .3s ease-in-out;
 }
 
+.sub-menu__link:hover::after {
+    transform: scale(1);
+}
+
 .sub-menu__link .header__actions {
     flex-shrink: 0;
 }
+
 
 .actions-header {
     display: flex;
@@ -302,30 +327,6 @@ body {
 }
 
 @media (any-hover: hover) {
-    .menu__item:hover .menu__link {
-        color: #d58317;
-        /* text-decoration: underline; */
-    }
-
-    .menu__item:hover .menu__link::before {
-        transform: scale(1);
-    }
-
-    .menu__item--parent:hover .sub-menu {
-        opacity: 1;
-        visibility: visible;
-        pointer-events: all;
-        transform: translate(0, 0);
-    }
-
-    .menu__item--parent:hover .menu__link::after {
-        transform: rotate(-180deg);
-    }
-
-    .sub-menu__link:hover::after {
-        transform: scale(1);
-    }
-
     .actions-header__item:hover {
         transform: scale(1.1);
         cursor: pointer;
