@@ -1,0 +1,150 @@
+/* Підключення шрифтів */
+@import url("fonts.css");
+/* Скидання стилів */
+@import url("reset.css");
+
+body {
+    font-family: "Causten", sans-serif;
+    font-size: 16px;
+}
+
+.wrapper {
+    min-height: 100%;
+    overflow: clip;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper>main {
+    flex-grow: 1;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+}
+
+[class*="__container"] {
+    max-width: 1170px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+
+.header,
+.footer {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 10px;
+    background-color: #77608d;
+}
+
+.page {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.page__products {}
+
+.products {}
+
+.products__container {
+    max-width: 1270px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 atuo;
+}
+
+.products__title {
+    font-family: "CoreSansC", sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: #3C4242;
+    display: flex;
+    column-gap: 27px;
+}
+
+.products__title::before {
+    content: "";
+    width: 6px;
+    height: 28px;
+    letter-spacing: 0.56px;
+    border-radius: 10px;
+    background: #8A33FD;
+}
+
+.products__title:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.products__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    column-gap: 37px;
+    row-gap: 50px;
+}
+
+.item-product {
+    display: grid;
+}
+
+.item-product__image {
+    display: block;
+    position: relative;
+    border-radius: 12px;
+}
+
+.item-product__image img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 282 / 370;
+    object-fit: cover;
+}
+
+.item-product__image:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.item-product__favorite {}
+
+.item-product__body {
+    display: flex;
+    align-items: center;
+}
+
+.item-product__content {
+    flex-grow: 1;
+    display: grid;
+}
+
+.item-product__title {}
+
+.item-product__link-title {
+    font-family: "Causten", sans-serif;
+    font-weight: 600;
+    color: #3C4242;
+}
+
+.item-product__title:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+.item-product__label {
+    color: #807D7E;
+    font-size: 14px;
+}
+
+.item-product__price {
+    font-size: 14px;
+    font-weight: 700;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background: #F6F6F6;
+    color: #3C4242;
+
+}

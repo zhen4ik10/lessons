@@ -1,0 +1,377 @@
+/* Підключення шрифтів */
+/* @import url("fonts.css"); */
+
+/* Скидання стилів */
+@import url("reset.css");
+
+/* Стилі загальних блоків (компонентів) */
+/* @import url("common.css"); */
+
+/* Основні стилі */
+body {
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+.wrapper {
+	min-height: 100%;
+	overflow: clip;
+	display: flex;
+	flex-direction: column;
+}
+.wrapper > main {
+	flex-grow: 1;
+}
+.page {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.flex-container {
+	display: flex;
+}
+.flex-container__item {
+	flex-grow: 1;
+}
+
+/* GRID */
+
+/* GRID-контейнер */
+.grid-container {
+	background-color: #794f45;
+
+	/* Об'являємо grid-контейнер */
+	/* Блочний grid */
+	display: grid;
+	/* Блочно-рядковий grid */
+	/* display: inline-grid; */
+
+	/* Побудова явної сітки */
+	/* grid-template-columns - налаштовує колонки */
+	/* grid-template-columns: 100px 33.333% 20%; */
+	/* Повторення repeat */
+	/* grid-template-columns: repeat(3, 33.333%); */
+	/* Одиниця виміру FR(фракція, фрагмент) */
+	/* grid-template-columns: repeat(3, 1fr); */
+	/* grid-template-columns: 0.2fr 0.5fr; */
+
+	/* GAP + FR */
+	gap: 20px;
+	/* grid-template-columns: repeat(3, 1fr); */
+
+	/* Алгоритми автоматичного заповнення (перебудови) */
+	/* grid-template-columns: repeat("алгоритм заповнення", "межі розмірів"); */
+
+	/* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+
+	/* grid-template-rows - налаштовує рядки */
+
+	/*
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	*/
+
+	/* Універсальна властивість побудови явних колонок та рядків */
+	/* grid-template: rows / columns  ; */
+	/* grid-template: repeat(3, 1fr) / repeat(3, 1fr); */
+
+	/* Налаштування неявної сітки */
+
+	/* явна сітка */
+	/* grid-template-columns: repeat(3, 1fr); */
+	/* grid-template-rows: repeat(2, 1fr); */
+
+	/* grid-auto-flow - алгоритм виводу об'єктів у явну і неявну сітку  */
+	/* За замовченням row, значення column та dense змінять алгоритм виводу */
+	/* grid-auto-flow: row; */
+	/* Налаштування розміру (ширини) неявної колонки */
+	/* grid-auto-columns: auto; */
+	/* Налаштування розміру (висоти) неявного рядка  */
+	/* grid-auto-rows: auto; */
+
+	/* Вирівнювання об'єктів */
+	/* grid-template-columns: repeat(2, 0.2fr); */
+	/* grid-template-rows: repeat(4, 50px); */
+
+	/* Вирівнювання об'єктів в середені комірок вздовж горизонтальної лінії */
+	/* justify-items: stretch; */ /* За замовченням */
+	/* justify-items: start; */
+	/* justify-items: center; */
+	/* justify-items: end; */
+
+	/* Вирівнювання об'єктів в середені grid-контейнера вздовж горизонтальної лінії */
+	/* justify-content: start; */ /* За замовченням */
+	/* justify-content: stretch; */
+	/* justify-content: center; */
+	/* justify-content: end; */
+	/* justify-content: space-around; */
+	/* justify-content: space-between; */
+	/* justify-content: space-evenly; */
+
+	/* Вирівнювання об'єктів в середені комірок вздовж вертикальної лінії */
+	/* align-items: stretch; */
+	/* За замовченням  */
+	/* align-items: start; */
+	/* align-items: center; */
+	/* align-items: end; */
+
+	/* Вирівнювання об'єктів в середені grid-контейнера вздовж вертикальної лінії */
+	/* align-content: start; */ /* За замовченням */
+	/* align-content: center; */
+	/* align-content: end; */
+	/* align-content: space-around; */
+	/* align-content: space-between; */
+	/* align-content: space-evenly; */
+
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(5, 100px);
+}
+
+/* GRID-елементи */
+.grid-container__item {
+	background-color: #7a956b;
+	padding: 15px;
+	/* Управління положенням елемента */
+	/* 
+		Початкова і кінечна позиція елементу 
+		по горизонталі */
+	/* 
+	grid-column-start: ;
+	grid-column-end: ;
+	grid-column
+	*/
+
+	/* 
+	grid-row-start: ;
+	grid-row-end: ;
+	grid-row
+	*/
+}
+.grid-container__item:nth-child(1) {
+	/*
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-column: 1 / 3;
+	grid-column: span 2;
+	*/
+
+	/*
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-column: 2 / 3;
+	*/
+	/*
+	grid-column-start: 2;
+	grid-column-end: 4;
+	grid-column: 2 / 4;
+	*/
+}
+.grid-container__item:nth-child(2) {
+	grid-column: 2 / 4;
+
+	grid-row-start: 1;
+	grid-row-end: 3;
+}
+.grid-container__item:nth-child(5) {
+	grid-column: 2 / 3;
+
+	grid-row-start: 3;
+	grid-row-end: 5;
+}
+
+/* GRID-AREA  */
+/*
+.grid-area {
+	display: grid;
+	grid-template-columns: 200px auto 200px;
+	grid-template-areas:
+		"header header header"
+		"sidebar content content"
+		"footer footer footer";
+}
+.grid-area--margin {
+	margin-bottom: 50px;
+}
+.grid-area > * {
+	padding: 15px;
+}
+.grid-area__header {
+	grid-area: header;
+	background-color: #77608d;
+}
+.grid-area__sidebar {
+	grid-area: sidebar;
+	background-color: #7a956b;
+}
+.grid-area__content {
+	grid-area: content;
+	background-color: #794f45;
+}
+.grid-area__footer {
+	grid-area: footer;
+	background-color: #77608d;
+}
+
+@media (max-width: 550px) {
+	.grid-area {
+		grid-template-columns: auto;
+		grid-template-areas:
+			"header"
+			"sidebar"
+			"content"
+			"footer";
+	}
+}
+*/
+
+/* GRID-column, GRID-row  */
+.grid-area {
+	display: grid;
+	grid-template-columns: 200px 1fr 200px;
+}
+.grid-area--margin {
+	margin-bottom: 50px;
+}
+.grid-area > * {
+	padding: 15px;
+}
+.grid-area__header {
+	grid-column: span 3;
+	background-color: #77608d;
+}
+.grid-area__sidebar {
+	background-color: #7a956b;
+}
+.grid-area__content {
+	grid-column: span 2;
+	background-color: #794f45;
+}
+.grid-area__footer {
+	grid-column: span 3;
+	background-color: #77608d;
+}
+@media (max-width: 550px) {
+	.grid-area {
+		grid-template-columns: auto;
+	}
+	.grid-area__header {
+		grid-column: span 1;
+	}
+	.grid-area__content {
+		grid-column: span 1;
+	}
+	.grid-area__footer {
+		grid-column: span 1;
+	}
+}
+
+/* FLEX приклад */
+.flex-area {
+	display: flex;
+	flex-wrap: wrap;
+}
+.flex-area__header {
+	flex: 1 1 100%;
+	padding: 15px;
+	background-color: #77608d;
+}
+.flex-area__sidebar {
+	flex: 0 0 200px;
+	padding: 15px;
+	background-color: #7a956b;
+}
+.flex-area__content {
+	flex: 1 1 auto;
+	padding: 15px;
+	background-color: #794f45;
+}
+.flex-area__footer {
+	flex: 1 1 100%;
+	padding: 15px;
+	background-color: #77608d;
+}
+
+@media (min-width: 550px) {
+	.flex-area__body {
+		display: flex;
+	}
+}
+
+/* Приклад з макету */
+
+.similar-products {
+}
+.similar-products__container {
+	max-width: 1370px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin: 0 auto;
+}
+.similar-products__title {
+	font-weight: 700;
+}
+.similar-products__title:not(:last-child) {
+	margin-bottom: 30px;
+}
+
+.similar-products__items {
+	display: grid;
+	column-gap: 37px;
+	row-gap: 50px;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+.similar-products__item {
+}
+.item {
+	position: relative;
+	display: grid;
+	gap: 30px;
+}
+.item__link-image {
+	display: block;
+}
+
+.item__image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	aspect-ratio: 282 / 370;
+	border-radius: 12px;
+}
+.item__favorite {
+	position: absolute;
+	top: 26px;
+	right: 20px;
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	transition: transform 0.3s;
+	background: #fff url("../img/heart.svg") center / 14px no-repeat;
+}
+.item__favorite:hover {
+	transform: scale(1.1);
+}
+
+.item__body {
+	display: flex;
+}
+.item__content {
+	flex-grow: 1;
+	display: grid;
+	gap: 10px;
+}
+.item__link-title {
+}
+.item__link-title:hover {
+	text-decoration: underline;
+}
+.item__title {
+	font-weight: 700;
+}
+.item__text {
+	color: #666;
+}
+.item__price {
+	border-radius: 8px;
+	padding: 10px 20px;
+	font-weight: 700;
+	background-color: #f6f6f6;
+}
