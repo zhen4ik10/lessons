@@ -53,5 +53,8 @@ https://zhen4ik10.github.io/lessons/lesson_17/
 <h2>Lesson #18 Практика, закріплення матеріалу</h2>
 https://zhen4ik10.github.io/lessons/lesson_18/
 <br>
+<h2>Lesson #19 Модуль GRID</h2>
+https://zhen4ik10.github.io/lessons/lesson_19/
+<br>
 <h2>Lesson #20 Препроцесор SASS/SCSS</h2>
 https://zhen4ik10.github.io/lessons/lesson_20/
