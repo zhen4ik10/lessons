@@ -58,11 +58,16 @@ body {
 
 .deals__item {
     padding: 67px 28px 80px;
-    background-color: #333;
+    background-color: #FEBA48;
     border-radius: 12px;
     color: #fff;
     box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.40);
     position: relative;
+}
+
+.deals__item--padding {
+    padding: 67px 30px 56px;
+    background-color: #694A82;
 }
 
 .deals__img {
@@ -71,8 +76,6 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    overflow: hidden;
-    border-radius: 12px;
 }
 
 .deals__img img {
@@ -85,18 +88,18 @@ body {
 
 .deals__body {
     display: flex;
+    position: relative;
 }
 
 .deals__content {
-    position: relative;
     z-index: 10;
-    flex: 0 0 270px;
+    flex: 0 0 260px;
 }
 
 .deals__label {
     font-family: "Montserrat", sans-serif;
     font-size: 18px;
-    line-height: 1.67;
+    line-height: 1.66;
     letter-spacing: 0.251px;
 }
 
@@ -122,8 +125,13 @@ body {
     letter-spacing: 0.251px;
 }
 
+
 .deals__sale:not(:last-child) {
     margin-bottom: 42px;
+}
+
+.deals__item--padding .deals__sale:not(:last-child) {
+    margin-bottom: 30px;
 }
 
 .deals__link-item {
@@ -131,6 +139,7 @@ body {
         sans-serif;
     font-size: 20px;
     font-weight: 800;
+    line-height: 1.23;
     transition: all .3s ease-in-out;
     position: relative;
 }
@@ -240,18 +249,27 @@ body {
 }
 
 .item-zone {
-    min-height: 400px;
     border-radius: 12px;
     position: relative;
+    padding: 65px 20px 33px;
+    overflow: clip;
+}
+
+.zone__item--padding-top {
+    padding-top: 34px;
+}
+
+.zone__item--pp-big {
+    padding: 45px 100px 50px 20px;
 }
 
 .item-zone__image {
     position: absolute;
     top: 0;
     left: 0;
-    height: 100%;
-    width: 100%;
     z-index: -1;
+    width: 100%;
+    height: 100%;
 }
 
 .item-zone__image img {
@@ -264,27 +282,6 @@ body {
 .item-zone__image--big img {
     aspect-ratio: 610 / 393;
 }
-
-.item-zone:nth-child(1) {
-    padding: 65px 20px 65px 5%;
-}
-
-.item-zone:nth-child(2) {
-    padding: 34px 6.5% 41px 20px;
-}
-
-.item-zone:nth-child(3) {
-    padding: 65px 4% 65px 20px;
-}
-
-.item-zone:nth-child(4) {
-    padding: 45px 19.67% 50px 20px;
-}
-
-.item-zone:nth-child(5) {
-    padding: 45px 15.73% 50px 20px;
-}
-
 
 .item-zone__inner {
     display: grid;
