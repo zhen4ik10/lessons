@@ -205,6 +205,8 @@ body {
 }
 
 .arrival__image-link img {
+    width: 100%;
+    height: 100%;
     aspect-ratio: 263 / 263;
     object-fit: cover;
     border-radius: 12px;
