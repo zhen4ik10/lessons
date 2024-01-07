@@ -690,6 +690,7 @@ body {
         padding-top: 160px;
         margin-bottom: 160px;
 
+
         @media (max-width: $widthTablet) {
             padding-top: 80px;
             margin-bottom: 80px;
@@ -698,6 +699,20 @@ body {
         @media (max-width: $widthMobile) {
             padding-top: 40px;
             margin-bottom: 40px;
+        }
+
+        @media (min-width: $widthMobileSmall) {
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 20%;
+                right: -313px;
+                width: 407px;
+                height: 323px;
+                background: url('../img/servic/bg-left.svg') center / 407px 323px no-repeat;
+            }
         }
     }
 }
@@ -713,7 +728,6 @@ body {
     // .service__items
 
     &__items {
-        border: 1px solid red;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(290px, auto));
         column-gap: 60px;

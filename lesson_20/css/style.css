@@ -813,12 +813,25 @@ body {
     margin-bottom: 40px;
   }
 }
+@media (min-width: 480px) {
+  .page__service {
+    position: relative;
+  }
+  .page__service::after {
+    content: "";
+    position: absolute;
+    top: 20%;
+    right: -313px;
+    width: 407px;
+    height: 323px;
+    background: url("../img/servic/bg-left.svg") center/407px 323px no-repeat;
+  }
+}
 
 .service__container {
   max-width: 1100px;
 }
 .service__items {
-  border: 1px solid red;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(290px, auto));
   -webkit-column-gap: 60px;
