@@ -5,13 +5,12 @@
 
 $linkColor: #D58417;
 $heroBg: #502203;
-$widthPc: 1200px;
-$widthTabletBig: 992px;
-$widthTablet: 991.92px;
+$widthPc: 1199.98px;
+$widthTablet: 991.98px;
 $widthMobile: 767.98px;
-$widthMobileSmall: 480px;
-$widthSmall: 375px;
-$borderWhite: 1px solid #fff;
+$widthMobileSmall: 479.98px;
+$widthSmall: 374.98px;
+$WhiteColor: #fff;
 
 
 body {
@@ -24,10 +23,10 @@ body {
     overflow: clip;
     flex-direction: column;
     min-height: 100%;
-}
 
-.wrapper>main {
-    flex-grow: 1;
+    >main {
+        flex-grow: 1;
+    }
 }
 
 .page {
@@ -118,6 +117,14 @@ body {
                 transition: all .3s ease-in-out;
             }
         }
+
+        .open-menu & {
+            left: 0;
+
+            &::before {
+                left: 0;
+            }
+        }
     }
 
     // .menu__list
@@ -203,13 +210,6 @@ body {
     pointer-events: none;
     transition: all .3s ease-in-out;
 
-    .menu__item--parent:hover & {
-        opacity: 1;
-        visibility: visible;
-        transform: translate(0, 0);
-        pointer-events: all;
-    }
-
     @media (max-width: $widthTablet) {
         position: relative;
         opacity: 1;
@@ -218,6 +218,14 @@ body {
         pointer-events: all;
         padding-top: 10px;
     }
+
+    .menu__item--parent:hover & {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(0, 0);
+        pointer-events: all;
+    }
+
 
     // .sub-menu__list
     &__list {
@@ -257,6 +265,11 @@ body {
         padding-bottom: 5px;
         transition: all .3s ease-in-out;
 
+        @media (max-width: $widthTablet) {
+            font-size: 24px;
+            color: rgba(0, 0, 0, 0.7);
+        }
+
         &::after {
             content: "";
             position: absolute;
@@ -282,10 +295,6 @@ body {
             }
         }
 
-        @media (max-width: $widthTablet) {
-            font-size: 24px;
-            color: rgba(0, 0, 0, 0.7);
-        }
     }
 }
 
@@ -309,17 +318,20 @@ body {
             font-size: 9px;
             line-height: 12px;
             text-align: center;
-            color: #fff;
+            color: $WhiteColor;
             background-color: #FF3333;
             border-radius: 50%;
         }
 
-        &:hover {
-            @media (any-hover: hover) {
+        // &:hover {
+        @media (any-hover: hover) {
+            &:hover {
                 transform: scale(1.1);
                 cursor: pointer;
             }
         }
+
+        // }
     }
 }
 
@@ -382,14 +394,6 @@ body {
     body {
         overflow: hidden;
     }
-
-    .menu__body {
-        left: 0;
-
-        &::before {
-            left: 0;
-        }
-    }
 }
 
 .page {
@@ -427,7 +431,7 @@ body {
 .hero {
     padding: 200px 0px 58px;
     font-family: "Cormorant Infant", serif;
-    color: #fff;
+    color: $WhiteColor;
     background-color: $heroBg;
     flex-grow: 1;
 
@@ -436,21 +440,33 @@ body {
     }
 
     // .hero__bg-left
-    &__bg-left {
+    // .hero__bg-right
+    &__bg-left,
+    &__bg-right {
         display: none;
 
         @media (min-width: $widthPc) {
             display: block;
             position: absolute;
+            border: 1px solid $WhiteColor;
+
+            img {
+                object-fit: cover;
+            }
+        }
+    }
+
+    // .hero__bg-left
+    &__bg-left {
+
+        @media (min-width: $widthPc) {
             bottom: -56px;
             left: -181px;
             border-radius: 195px 195px 0 0;
-            border: $borderWhite;
             max-width: 239px;
 
             img {
                 aspect-ratio: 239 / 215;
-                object-fit: cover;
                 transform: translate(6px, 4px);
                 border-radius: 195px 195px 0 0;
             }
@@ -459,15 +475,11 @@ body {
     }
 
     // .hero__bg-right
-    .hero__bg-right {
-        display: none;
+    &__bg-right {
 
         @media (min-width: $widthPc) {
-            position: absolute;
-            display: block;
             bottom: 0;
             right: -310px;
-            border: $borderWhite;
             border-radius: 215px;
             padding: 17px 12px;
             z-index: 1;
@@ -475,7 +487,6 @@ body {
 
             img {
                 aspect-ratio: 237 / 337;
-                object-fit: cover;
                 border-radius: 215px;
             }
         }
@@ -510,7 +521,7 @@ body {
             }
         }
 
-        @media (min-width: $widthTabletBig) {
+        @media (min-width: $widthTablet) {
             flex-basis: 31.625%;
             flex-shrink: 0;
             padding-top: 57px;
@@ -550,7 +561,7 @@ body {
         padding: 15px 25px;
         font-size: 24px;
         border-radius: 4px;
-        border: $borderWhite;
+        border: 1px solid $WhiteColor;
         position: relative;
 
         &::after {
@@ -563,11 +574,9 @@ body {
             border-radius: 4px;
             background: rgba(255, 255, 255, 0.06);
             transition: all .3s ease-in-out;
-        }
 
-        &:hover {
             @media (any-hover: hover) {
-                &::after {
+                &:hover {
                     top: 0;
                     left: 0;
                 }
@@ -578,10 +587,15 @@ body {
     // .hero__image
     &__image {
         padding: 20px 28px;
-        border: $borderWhite;
+        border: 1px solid $WhiteColor;
         border-radius: 215px;
         z-index: 1;
         max-width: 448px;
+
+        @media (min-width: $widthTablet) {
+            flex-basis: 36.75%;
+            flex-shrink: 0;
+        }
 
         img {
             aspect-ratio: 390 / 554;
@@ -589,15 +603,11 @@ body {
             border-radius: 215px;
         }
 
-        @media (min-width: $widthTabletBig) {
-            flex-basis: 36.75%;
-            flex-shrink: 0;
-        }
     }
 
     // .hero__content
     &__content {
-        @media (min-width: $widthTabletBig) {
+        @media (min-width: $widthTablet) {
             flex-basis: 31.625%;
             padding-top: 76px;
             padding-left: 23px;
@@ -622,12 +632,6 @@ body {
         font-weight: 700;
         line-height: 1.48;
 
-        p {
-            &:not(:last-child) {
-                margin-bottom: 10px;
-            }
-        }
-
         @media (min-width: $widthPc) {
             padding-right: 32px;
         }
@@ -635,6 +639,13 @@ body {
         @media (max-width: $widthSmall) {
             font-size: 18px;
         }
+
+        p {
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+        }
+
     }
 
     // .content-hero__item
@@ -646,20 +657,13 @@ body {
         align-items: center;
         column-gap: 10px;
 
-        &::before {
-            content: "";
-            width: 1px;
-            height: 80%;
-            background: #fff;
 
+        @media (min-width: $widthTablet) {
+            margin: auto 0px;
         }
 
         @media (min-width: $widthPc) {
             margin-right: -31px;
-        }
-
-        @media (min-width: $widthTabletBig) {
-            margin: auto 0px;
         }
 
         @media (max-width: 1250px) {
@@ -670,15 +674,24 @@ body {
         @media (max-width: $widthTablet) {
             align-self: flex-start;
             margin-bottom: 0px;
-
-            &::before {
-                height: 60px;
-            }
         }
 
         @media (max-width: $widthSmall) {
             font-size: 26px;
         }
+
+        &::before {
+            content: "";
+            width: 1px;
+            height: 80%;
+            background-color: $WhiteColor;
+
+            @media (max-width: $widthTablet) {
+                height: 60px;
+
+            }
+        }
+
     }
 }
 
@@ -714,6 +727,7 @@ body {
                 background: url('../img/servic/bg-left.svg') center / 407px 323px no-repeat;
             }
         }
+
     }
 }
 
@@ -778,6 +792,10 @@ body {
         font-size: 28px;
         font-weight: 700;
 
+        @media (max-width: $widthSmall) {
+            font-size: 22px;
+        }
+
         &:not(:last-child) {
             margin-bottom: 20px;
 
@@ -786,9 +804,6 @@ body {
             }
         }
 
-        @media (max-width: $widthSmall) {
-            font-size: 22px;
-        }
     }
 
     // .item-service__text
