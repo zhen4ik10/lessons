@@ -84,6 +84,9 @@ body {
   font-family: "Merriweather", serif;
   font-size: 20px;
 }
+.open-menu body {
+  overflow: hidden;
+}
 
 .wrapper {
   display: -webkit-box;
@@ -125,7 +128,7 @@ body {
   left: 0;
   width: 100%;
   z-index: 5;
-  background-color: #FEFBF7;
+  background-color: #fefbf7;
 }
 .header__container {
   padding-bottom: 5px;
@@ -181,7 +184,7 @@ body {
     width: 100%;
     height: 100%;
     padding: 80px 15px 30px;
-    background-color: #FEFBF7;
+    background-color: #fefbf7;
     overflow: auto;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
@@ -194,7 +197,7 @@ body {
     left: -100%;
     width: 100%;
     height: 50px;
-    background-color: rgb(245, 152, 91);
+    background-color: #d58417;
     z-index: 5;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
@@ -244,11 +247,11 @@ body {
   transition: all 0.3s ease-in-out;
 }
 .menu__item:hover .menu__link {
-  color: #D58417;
+  color: #d58417;
 }
 .menu__item--active .menu__link {
   font-weight: 700;
-  color: #D58417;
+  color: #d58417;
   text-decoration: underline;
 }
 .menu__item--parent .menu__link {
@@ -326,7 +329,7 @@ body {
   width: 200px;
   padding: 15px;
   border-radius: 10px;
-  background-color: #ff934a;
+  background-color: #d58417;
 }
 @media (max-width: 991.98px) {
   .sub-menu__list {
@@ -375,17 +378,17 @@ body {
   -webkit-transform: scale(0);
       -ms-transform: scale(0);
           transform: scale(0);
-  -webkit-transition: all 0.35s ease-in-out;
-  transition: all 0.35s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 @media (max-width: 991.98px) {
   .sub-menu__link::after {
-    border-color: #D58417;
+    border-color: #d58417;
   }
 }
 @media (max-width: 991.98px) {
   .sub-menu__link:hover {
-    color: #D58417;
+    color: #d58417;
   }
 }
 .sub-menu__link:hover::after {
@@ -423,7 +426,7 @@ body {
   line-height: 12px;
   text-align: center;
   color: #fff;
-  background-color: #FF3333;
+  background-color: #ff3333;
   border-radius: 50%;
 }
 @media (any-hover: hover) {
@@ -490,10 +493,6 @@ body {
   }
 }
 
-.open-menu body {
-  overflow: hidden;
-}
-
 @media (min-width: 479.98px) {
   .page__hero {
     position: relative;
@@ -522,6 +521,7 @@ body {
 .hero {
   padding: 200px 0px 58px;
   font-family: "Cormorant Infant", serif;
+  font-weight: 700;
   color: #fff;
   background-color: #502203;
   -webkit-box-flex: 1;
@@ -559,7 +559,7 @@ body {
     -webkit-transform: translate(6px, 4px);
         -ms-transform: translate(6px, 4px);
             transform: translate(6px, 4px);
-    border-radius: 195px 195px 0 0;
+    border-radius: inherit;
   }
 }
 @media (min-width: 1199.98px) {
@@ -573,7 +573,7 @@ body {
   }
   .hero__bg-right img {
     aspect-ratio: 237/337;
-    border-radius: 215px;
+    border-radius: inherit;
   }
 }
 .hero__container {
@@ -628,7 +628,6 @@ body {
 }
 .hero__title {
   font-size: 78px;
-  font-weight: 700;
   line-height: 1.29;
 }
 @media (max-width: 991.98px) {
@@ -654,6 +653,7 @@ body {
 .hero__btn {
   padding: 15px 25px;
   font-size: 24px;
+  font-weight: 600;
   border-radius: 4px;
   border: 1px solid #fff;
   position: relative;
@@ -671,7 +671,7 @@ body {
   transition: all 0.3s ease-in-out;
 }
 @media (any-hover: hover) {
-  .hero__btn::after:hover {
+  .hero__btn:hover::after {
     top: 0;
     left: 0;
   }
@@ -726,7 +726,6 @@ body {
 }
 .content-hero__text {
   font-size: 22px;
-  font-weight: 700;
   line-height: 1.48;
 }
 @media (min-width: 1199.98px) {
@@ -746,6 +745,7 @@ body {
   -ms-flex-item-align: end;
       align-self: flex-end;
   font-size: 32px;
+  font-weight: 600;
   line-height: 1.2;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -827,78 +827,14 @@ body {
   }
 }
 
-.service__container {
-  max-width: 1100px;
-}
-.service__items {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(290px, auto));
-  -webkit-column-gap: 60px;
-     -moz-column-gap: 60px;
-          column-gap: 60px;
-  row-gap: 50px;
-}
-.item-service {
-  text-align: center;
-}
-.item-service__image {
-  display: inline-block;
-  position: relative;
-}
-.item-service__image::before {
-  content: "";
-  position: absolute;
-  top: 7px;
-  right: 29px;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background-color: rgba(255, 147, 74, 0.28);
-  z-index: -1;
-}
-.item-service__image:not(:last-child) {
-  margin-bottom: 28px;
-}
-@media (max-width: 479.98px) {
-  .item-service__image:not(:last-child) {
-    margin-bottom: 20px;
-  }
-}
-.item-service__title {
-  font-family: "Cormorant Infant", serif;
-  font-size: 28px;
-  font-weight: 700;
-}
-@media (max-width: 374.98px) {
-  .item-service__title {
-    font-size: 22px;
-  }
-}
-.item-service__title:not(:last-child) {
-  margin-bottom: 20px;
-}
-@media (max-width: 479.98px) {
-  .item-service__title:not(:last-child) {
-    margin-bottom: 10px;
-  }
-}
-.item-service__text {
-  font-family: "Inter", sans-serif;
-  font-size: 16px;
-  color: #6D6D6D;
-}
-.item-service__text:not(:last-child) {
-  margin-bottom: 15px;
-}
-
 .footer {
-  background-color: #5A2E17;
+  background-color: #5a2e17;
 }
 .footer__container {
   padding: 20px;
   font-family: "Poppins";
   font-size: 24px;
   text-transform: uppercase;
-  color: #D5842C;
+  color: #d58417;
   text-align: center;
 }
