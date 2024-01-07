@@ -5,6 +5,14 @@
 
 $linkColor: #D58417;
 $heroBg: #502203;
+$widthPc: 1200px;
+$widthTabletBig: 992px;
+$widthTablet: 991.92px;
+$widthMobile: 767.98px;
+$widthMobileSmall: 480px;
+$widthSmall: 375px;
+$borderWhite: 1px solid #fff;
+
 
 body {
     font-family: "Merriweather", serif;
@@ -22,7 +30,6 @@ body {
     flex-grow: 1;
 }
 
-// 1
 .page {
     display: flex;
     flex-direction: column;
@@ -52,7 +59,7 @@ body {
         gap: 15px;
         min-height: 100px;
 
-        @media (max-width: 991.98px) {
+        @media (max-width: $widthTablet) {
             min-height: 50px;
         }
     }
@@ -66,15 +73,11 @@ body {
         position: relative;
         z-index: 5;
 
-        @media (max-width: 991.98px) {
-            font-size: 30px;
-        }
-
-        @media (max-width: 475px) {
+        @media (max-width: $widthMobileSmall) {
             font-size: 26px;
         }
 
-        @media (max-width: 375px) {
+        @media (max-width: $widthSmall) {
             font-size: 21px;
         }
     }
@@ -90,7 +93,7 @@ body {
 
     // .menu__body
     &__body {
-        @media (max-width: 991.98px) {
+        @media (max-width: $widthTablet) {
             position: fixed;
             top: 0;
             left: -100%;
@@ -113,10 +116,8 @@ body {
                 background-color: rgb(245, 152, 91);
                 z-index: 5;
                 transition: all .3s ease-in-out;
-
             }
         }
-
     }
 
     // .menu__list
@@ -127,7 +128,7 @@ body {
         row-gap: 8px;
         column-gap: 36px;
 
-        @media (max-width: 991.98px) {
+        @media (max-width: $widthTablet) {
             display: inline-flex;
             flex-direction: column;
             align-items: flex-end;
@@ -160,6 +161,11 @@ body {
             align-items: center;
             gap: 4px;
 
+            @media (max-width: $widthTablet) {
+                font-size: 24px;
+                display: block;
+            }
+
             &::after {
                 content: "";
                 flex: 0 0 16px;
@@ -167,23 +173,20 @@ body {
                 height: 8px;
                 background: url('../img/arrow-down.svg') center / cover no-repeat;
                 transition: all .3s ease-in-out;
+
+                @media (max-width: $widthTablet) {
+                    display: none;
+                }
+
+                // .menu__item--parent:hover & {
+                //     transform: rotate(-180deg);
+
+                // }
             }
         }
 
         .menu__item--parent:hover &::after {
             transform: rotate(-180deg);
-        }
-
-        @media (max-width: 991.98px) {
-            font-size: 32px;
-
-            .menu__item--parent & {
-                display: block;
-            }
-
-            .menu__item--parent &::after {
-                display: none;
-            }
         }
     }
 
@@ -207,7 +210,7 @@ body {
         pointer-events: all;
     }
 
-    @media (max-width: 991.98px) {
+    @media (max-width: $widthTablet) {
         position: relative;
         opacity: 1;
         visibility: visible;
@@ -224,7 +227,7 @@ body {
         background-color: #ff934a;
 
 
-        @media (max-width: 991.98px) {
+        @media (max-width: $widthTablet) {
             border-radius: 0px;
             background-color: transparent;
             padding: 10px 0;
@@ -240,10 +243,8 @@ body {
 
         &:not(:last-child) {
             margin-bottom: 10px;
-        }
 
-        @media (max-width: 991.98px) {
-            &:not(:last-child) {
+            @media (max-width: $widthTablet) {
                 margin-bottom: 20px;
             }
         }
@@ -265,25 +266,25 @@ body {
             border-bottom: 2px solid #000;
             transform: scale(0);
             transition: all .35s ease-in-out;
+
+            @media (max-width: $widthTablet) {
+                border-color: $linkColor;
+            }
         }
 
         &:hover {
+            @media (max-width: $widthTablet) {
+                color: $linkColor;
+            }
+
             &::after {
                 transform: scale(1);
             }
         }
 
-        @media (max-width: 991.98px) {
+        @media (max-width: $widthTablet) {
             font-size: 24px;
             color: rgba(0, 0, 0, 0.7);
-
-            &:hover {
-                color: $linkColor;
-
-                &::after {
-                    border-color: $linkColor;
-                }
-            }
         }
     }
 }
@@ -300,13 +301,6 @@ body {
         position: relative;
         transition: all .3s ease-in-out;
 
-        &:hover {
-            @media (any-hover: hover) {
-                transform: scale(1.1);
-                cursor: pointer;
-            }
-        }
-
         span {
             position: absolute;
             top: 0;
@@ -319,13 +313,20 @@ body {
             background-color: #FF3333;
             border-radius: 50%;
         }
+
+        &:hover {
+            @media (any-hover: hover) {
+                transform: scale(1.1);
+                cursor: pointer;
+            }
+        }
     }
 }
 
 .icon-menu {
     display: none;
 
-    @media (max-width: 991.98px) {
+    @media (max-width: $widthTablet) {
         display: block;
         flex: 0 0 30px;
         width: 30px;
@@ -393,7 +394,7 @@ body {
 
 .page {
 
-    @media (min-width: 475px) {
+    @media (min-width: $widthMobileSmall) {
 
         // .page__hero
         &__hero {
@@ -424,13 +425,13 @@ body {
 }
 
 .hero {
-    padding: 200px 0px 55px;
+    padding: 200px 0px 58px;
     font-family: "Cormorant Infant", serif;
     color: #fff;
     background-color: $heroBg;
     flex-grow: 1;
 
-    @media (max-width: 991.98px) {
+    @media (max-width: $widthTablet) {
         padding: 90px 0px 40px;
     }
 
@@ -438,13 +439,13 @@ body {
     &__bg-left {
         display: none;
 
-        @media (min-width: 1200px) {
+        @media (min-width: $widthPc) {
             display: block;
             position: absolute;
-            bottom: -59px;
+            bottom: -56px;
             left: -181px;
             border-radius: 195px 195px 0 0;
-            border: 1px solid #fff;
+            border: $borderWhite;
             max-width: 239px;
 
             img {
@@ -461,12 +462,12 @@ body {
     .hero__bg-right {
         display: none;
 
-        @media (min-width: 1200px) {
+        @media (min-width: $widthPc) {
             position: absolute;
             display: block;
             bottom: 0;
             right: -310px;
-            border: 1px solid #fff;
+            border: $borderWhite;
             border-radius: 215px;
             padding: 17px 12px;
             z-index: 1;
@@ -485,11 +486,11 @@ body {
         display: flex;
         align-items: flex-start;
 
-        @media (min-width: 1200px) {
+        @media (min-width: $widthPc) {
             position: relative;
         }
 
-        @media (max-width: 991.98px) {
+        @media (max-width: $widthTablet) {
             flex-direction: column;
             align-items: center;
             row-gap: 40px;
@@ -509,14 +510,14 @@ body {
             }
         }
 
-        @media (min-width: 992px) {
+        @media (min-width: $widthTabletBig) {
             flex-basis: 31.625%;
             flex-shrink: 0;
             padding-top: 57px;
             padding-right: 30px;
         }
 
-        @media (max-width: 991.98px) {
+        @media (max-width: $widthTablet) {
             text-align: center;
         }
     }
@@ -527,7 +528,7 @@ body {
         font-weight: 700;
         line-height: 1.29;
 
-        @media (max-width: 991.98px) {
+        @media (max-width: $widthTablet) {
             font-size: 68px;
         }
 
@@ -535,11 +536,11 @@ body {
             font-size: 51px;
         }
 
-        @media (max-width: 475px) {
+        @media (max-width: $widthMobileSmall) {
             font-size: 42px;
         }
 
-        @media (max-width: 375px) {
+        @media (max-width: $widthSmall) {
             font-size: 34px;
         }
     }
@@ -549,7 +550,7 @@ body {
         padding: 15px 25px;
         font-size: 24px;
         border-radius: 4px;
-        border: 1px solid #FFF;
+        border: $borderWhite;
         position: relative;
 
         &::after {
@@ -577,7 +578,7 @@ body {
     // .hero__image
     &__image {
         padding: 20px 28px;
-        border: 1px solid #fff;
+        border: $borderWhite;
         border-radius: 215px;
         z-index: 1;
         max-width: 448px;
@@ -588,7 +589,7 @@ body {
             border-radius: 215px;
         }
 
-        @media (min-width: 992px) {
+        @media (min-width: $widthTabletBig) {
             flex-basis: 36.75%;
             flex-shrink: 0;
         }
@@ -596,7 +597,7 @@ body {
 
     // .hero__content
     &__content {
-        @media (min-width: 992px) {
+        @media (min-width: $widthTabletBig) {
             flex-basis: 31.625%;
             padding-top: 76px;
             padding-left: 23px;
@@ -610,7 +611,7 @@ body {
     align-self: stretch;
     row-gap: 20px;
 
-    @media (max-width: 991.98px) {
+    @media (max-width: $widthTablet) {
         padding-top: 0;
         padding-left: 0;
     }
@@ -627,11 +628,11 @@ body {
             }
         }
 
-        @media (min-width: 1201px) {
+        @media (min-width: $widthPc) {
             padding-right: 32px;
         }
 
-        @media (max-width: 375px) {
+        @media (max-width: $widthSmall) {
             font-size: 18px;
         }
     }
@@ -653,11 +654,11 @@ body {
 
         }
 
-        @media (min-width: 1201px) {
+        @media (min-width: $widthPc) {
             margin-right: -31px;
         }
 
-        @media (min-width: 992px) {
+        @media (min-width: $widthTabletBig) {
             margin: auto 0px;
         }
 
@@ -666,7 +667,7 @@ body {
 
         }
 
-        @media (max-width: 991.98px) {
+        @media (max-width: $widthTablet) {
             align-self: flex-start;
             margin-bottom: 0px;
 
@@ -675,11 +676,120 @@ body {
             }
         }
 
-        @media (max-width: 375px) {
+        @media (max-width: $widthSmall) {
             font-size: 26px;
         }
     }
 }
+
+.page {
+
+    // .page__service
+
+    &__service {
+        padding-top: 160px;
+        margin-bottom: 160px;
+
+        @media (max-width: $widthTablet) {
+            padding-top: 80px;
+            margin-bottom: 80px;
+        }
+
+        @media (max-width: $widthMobile) {
+            padding-top: 40px;
+            margin-bottom: 40px;
+        }
+    }
+}
+
+.service {
+
+    // .service__container
+
+    &__container {
+        max-width: 1100px;
+    }
+
+    // .service__items
+
+    &__items {
+        border: 1px solid red;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(290px, auto));
+        column-gap: 60px;
+        row-gap: 50px;
+    }
+
+    // .service__item
+
+    &__item {
+
+        // text-align: center;
+    }
+}
+
+.item-service {
+    text-align: center;
+    // .item-service__image
+
+    &__image {
+        display: inline-block;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 7px;
+            right: 29px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: rgba(255, 147, 74, 0.28);
+            z-index: -1;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 28px;
+
+            @media (max-width: $widthMobileSmall) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    // .item-service__title
+
+    &__title {
+        font-family: "Cormorant Infant", serif;
+        font-size: 28px;
+        font-weight: 700;
+
+        &:not(:last-child) {
+            margin-bottom: 20px;
+
+            @media (max-width: $widthMobileSmall) {
+                margin-bottom: 10px;
+            }
+        }
+
+        @media (max-width: $widthSmall) {
+            font-size: 22px;
+        }
+    }
+
+    // .item-service__text
+
+    &__text {
+        font-family: "Inter", sans-serif;
+        font-size: 16px;
+        color: #6D6D6D;
+
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+    }
+}
+
 
 .footer {
     background-color: #5A2E17;
