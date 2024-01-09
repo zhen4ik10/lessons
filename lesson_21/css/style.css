@@ -296,7 +296,7 @@ body {
     top: 0;
     left: -100%;
     width: 100%;
-    min-height: 60px;
+    min-height: 70px;
     background-color: #01b7dc;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
@@ -309,7 +309,7 @@ body {
 }
 @media (max-width: 991.98px) and (max-width: 479.98px) {
   .menu::before {
-    min-height: 60px;
+    min-height: 70px;
   }
 }
 @media (max-width: 991.98px) {
