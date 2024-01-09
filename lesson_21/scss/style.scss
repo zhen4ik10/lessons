@@ -127,6 +127,11 @@ body {
         // @media (max-width: $widthMobileSmall) {
         //     padding-top: 80px;
         // }
+        @media (max-width: 358.98px) {
+            .open-input & {
+                padding-top: 160px;
+            }
+        }
         &::before {
             content: "";
             position: fixed;
@@ -141,9 +146,14 @@ body {
             }
             @media (max-width: $widthMobileSmall) {
                 min-height: 70px;
+                .open-input & {
+                    min-height: 118px;
+                }
             }
             @media (max-width: 422.98px) {
                 min-height: 118px;
+            }
+            @media (max-width: 358.98px) {
                 .open-input & {
                     min-height: 150px;
                 }

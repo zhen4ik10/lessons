@@ -284,6 +284,11 @@ body {
     padding-top: 140px;
   }
 }
+@media (max-width: 991.98px) and (max-width: 358.98px) {
+  .open-input .menu {
+    padding-top: 160px;
+  }
+}
 @media (max-width: 991.98px) {
   .menu::before {
     content: "";
@@ -306,11 +311,16 @@ body {
   .menu::before {
     min-height: 70px;
   }
+  .open-input .menu::before {
+    min-height: 118px;
+  }
 }
 @media (max-width: 991.98px) and (max-width: 422.98px) {
   .menu::before {
     min-height: 118px;
   }
+}
+@media (max-width: 991.98px) and (max-width: 358.98px) {
   .open-input .menu::before {
     min-height: 150px;
   }
