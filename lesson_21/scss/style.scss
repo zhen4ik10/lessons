@@ -1,0 +1,351 @@
+/* Підключення шрифтів */
+@import "_fonts.scss";
+/* Скидання стилів */
+@import "_reset.scss";
+
+$white: #fff;
+$whiteLite: #f6f6f6;
+$yellow: #fbd103;
+$pink: #deb2b1;
+$violet: #8a33fd;
+$purple: #694a82;
+$blue: #01b7dc;
+$forestgreen: #101c1a;
+$silverThin: #7f7f7f;
+$silver: #807d7e;
+$gray: #3c4242;
+$black: #000;
+$bgYellow: #feba48;
+$widthPcBig: 1269.98px;
+$widthPc: 1199.98px;
+$widthTablet: 991.98px;
+$widthMobile: 767.98px;
+$widthMobileSmall: 479.98px;
+$widthSmall: 374.98px;
+
+body {
+    font-family: "Causten";
+    font-size: 20px;
+    color: $gray;
+    .open-menu & {
+        overflow: hidden;
+    }
+}
+
+.wrapper {
+    display: flex;
+    overflow: clip;
+    flex-direction: column;
+    min-height: 100%;
+
+    > main {
+        flex-grow: 1;
+    }
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+}
+
+[class*="__container"] {
+    max-width: 1270px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+}
+
+.header {
+    // .header__container
+
+    &__container {
+        display: flex;
+        align-items: center;
+        column-gap: 88px;
+        min-height: 118px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        @media (max-width: $widthPcBig) {
+            column-gap: 30px;
+        }
+        @media (max-width: $widthTablet) {
+            min-height: 60px;
+        }
+    }
+
+    // .header__logo
+
+    &__logo {
+        flex-shrink: 0;
+        z-index: 1;
+        @media (max-width: 645.98px) {
+            align-self: flex-start;
+        }
+    }
+
+    // .header__body
+
+    &__body {
+        flex: 1 1 auto;
+        display: flex;
+        align-items: center;
+        column-gap: 76px;
+        flex-wrap: wrap;
+        row-gap: 20px;
+        @media (max-width: $widthPcBig) {
+            column-gap: 20px;
+        }
+        @media (max-width: $widthTablet) {
+            justify-content: end;
+        }
+    }
+}
+
+.menu {
+    flex: 1 1 auto;
+    @media (max-width: $widthTablet) {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: -100%;
+        padding: 80px 15px 30px;
+        background-color: $whiteLite;
+        overflow: auto;
+        transition: all 0.3s ease-in-out;
+        @media (max-width: 645.98px) {
+            padding-top: 140px;
+        }
+        &::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            min-height: 60px;
+            background-color: $blue;
+            transition: all 0.3s ease-in-out;
+            @media (max-width: 645.98px) {
+                min-height: 118px;
+            }
+        }
+        .open-menu & {
+            left: 0;
+            &::before {
+                left: 0;
+            }
+        }
+    }
+    // .menu__list
+    &__list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 40px;
+        flex-wrap: wrap;
+        row-gap: 8px;
+        @media (max-width: $widthPc) {
+            column-gap: 20px;
+        }
+        @media (max-width: $widthTablet) {
+            flex-direction: column;
+            align-items: end;
+            row-gap: 28px;
+        }
+    }
+
+    // .menu__item
+    &__item {
+        font-weight: 500;
+        color: $silver;
+    }
+
+    // .menu__item--action
+    &__item--action {
+        font-weight: 700;
+        color: $gray;
+    }
+
+    // .memu__link
+    &__link {
+        font-size: 22px;
+        transition: all 0.3s ease-in-out;
+        position: relative;
+        padding-bottom: 3px;
+        @media (max-width: $widthPc) {
+            font-size: 20px;
+        }
+        @media (max-width: $widthTablet) {
+            font-size: 30px;
+        }
+        &::after {
+            position: absolute;
+            content: "";
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: $gray;
+            transform: scale(0);
+            transition: all 0.3s ease-in-out;
+        }
+        @media (any-hover: hover) {
+            &:hover {
+                color: $gray;
+            }
+            .menu__item:hover & {
+                &::after {
+                    transform: scale(1);
+                }
+            }
+        }
+    }
+}
+
+.form {
+    @media (max-width: 645.98px) {
+        order: 3;
+    }
+    // .form__item
+    &__item {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    // .form__button
+    &__button {
+        position: absolute;
+        left: 20px;
+    }
+
+    // .form__input
+    &__input {
+        width: 267px;
+        height: 44px;
+        border-radius: 8px;
+        padding-left: 52px;
+        background-color: $whiteLite;
+
+        &::placeholder {
+            font-size: 16px;
+            color: $silver;
+        }
+    }
+}
+
+.actions-header {
+    flex-shrink: 0;
+    display: flex;
+    column-gap: 12px;
+    z-index: 1;
+    // .actions-header__img
+    &__img {
+        width: 44px;
+        height: 44px;
+        border-radius: 8px;
+        background-color: $whiteLite;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // @media (any-hover: hover) {
+        //     &:hover {
+        //         .actions-header__heart {
+        //             path {
+        //                 stroke: red;
+        //             }
+        //         }
+        //     }
+        // }
+    }
+
+    &__heart,
+    &__user,
+    &__cart {
+        path {
+            transition: all 0.3s ease-in-out;
+        }
+    }
+    // actions-header__heart
+    &__heart {
+        .actions-header__img:hover & {
+            @media (any-hover: hover) {
+                path {
+                    stroke: red;
+                }
+            }
+        }
+    }
+    // actions-header__user
+    &__user {
+        .actions-header__img:hover & {
+            @media (any-hover: hover) {
+                path {
+                    stroke: blue;
+                }
+            }
+        }
+    }
+    // .actions-header__cart
+    &__cart {
+        .actions-header__img:hover & {
+            @media (any-hover: hover) {
+                path {
+                    stroke: green;
+                }
+            }
+        }
+    }
+}
+.icon-menu {
+    display: none;
+    @media (max-width: $widthTablet) {
+        display: block;
+        flex: 0 0 30px;
+        width: 30px;
+        height: 18px;
+        position: relative;
+        &::before,
+        &::after,
+        span {
+            content: "";
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            left: 0;
+            background-color: $gray;
+            transition: all 0.3s ease-in-out;
+        }
+        span {
+            top: 50%;
+            margin-top: -1px;
+            .open-menu & {
+                transform: scale(0);
+            }
+        }
+        &::before {
+            top: 0;
+            .open-menu & {
+                transform: rotate(-45deg);
+                top: 50%;
+                margin-top: -1px;
+            }
+        }
+        &::after {
+            bottom: 0;
+            .open-menu & {
+                transform: rotate(45deg);
+                bottom: 50%;
+                margin-bottom: -1px;
+            }
+        }
+    }
+}
