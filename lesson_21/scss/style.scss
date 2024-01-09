@@ -254,7 +254,13 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
+        border-radius: 8px;
         background-color: $whiteLite;
+        @media (max-width: $widthMobileSmall) {
+            .open-input & {
+                border-radius: 8px 0 0 8px;
+            }
+        }
     }
 
     // .form__input
@@ -263,6 +269,7 @@ body {
         height: 44px;
         background-color: $whiteLite;
         transition: all 0.3s ease-in-out;
+        border-radius: 0 8px 8px 0;
         &::placeholder {
             font-size: 16px;
             color: $silver;
@@ -295,6 +302,9 @@ body {
     }
     @media (max-width: 422.98px) {
         order: 3;
+        .open-input & {
+            order: 2;
+        }
     }
     // .actions-header__img
     &__img {
@@ -405,5 +415,8 @@ body {
     }
     @media (max-width: 422.98px) {
         order: 2;
+        .open-input & {
+            order: 3;
+        }
     }
 }
