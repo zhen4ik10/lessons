@@ -58,6 +58,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
+    background-color: $white;
     z-index: 5;
     border-bottom: 1px solid #bebcbd;
     // .header__container
@@ -433,6 +434,7 @@ body {
     }
 }
 .footer {
+    margin-top: 200px;
     background-color: $gray;
     color: $whiteLite;
     font-size: 18px;
@@ -460,15 +462,23 @@ body {
 
     &__items {
         line-height: 2.17;
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(4, auto);
         column-gap: 80px;
-        flex-wrap: wrap;
-        row-gap: 50px;
+        row-gap: 30px;
+        @media (max-width: $widthTablet) {
+        }
     }
 
     // .content-footer__item
 
     &__item {
+        @media (max-width: $widthTablet) {
+            grid-column: span 2;
+        }
+        @media (max-width: $widthMobileSmall) {
+            grid-column: span 4;
+        }
     }
 }
 .item-footer {
@@ -477,8 +487,12 @@ body {
     &__tile {
         font-size: 29px;
         font-weight: 700;
+        list-style: none;
         &:not(:last-child) {
             margin-bottom: 15px;
+        }
+        &::webkit-details-market {
+            display: none;
         }
     }
 
@@ -499,13 +513,14 @@ body {
 
     &__link {
         font-size: 18px;
+        font-weight: 500;
         transition: all 0.3s ease-in-out;
         text-decoration: $gray;
         @media (any-hover: hover) {
             &:hover {
-                color: $silverThin;
+                color: $white;
                 text-decoration: underline;
-                text-decoration-color: $silverThin;
+                text-decoration-color: $white;
             }
         }
     }
