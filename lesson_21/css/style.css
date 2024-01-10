@@ -134,7 +134,8 @@ select {
 input[type=text],
 input[type=email],
 input[type=tel],
-textarea {
+textarea,
+summary {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -152,7 +153,7 @@ summary::-webkit-details-market {
 }
 
 body {
-  font-family: "Causten";
+  font-family: "Causten", sans-serif;
   font-size: 20px;
   color: #3c4242;
 }

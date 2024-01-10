@@ -24,7 +24,7 @@ $widthMobileSmall: 479.98px;
 $widthSmall: 374.98px;
 
 body {
-    font-family: "Causten";
+    font-family: "Causten", sans-serif;
     font-size: 20px;
     color: $gray;
     .open-menu & {
