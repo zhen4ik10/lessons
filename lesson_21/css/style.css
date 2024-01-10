@@ -146,7 +146,7 @@ address {
 }
 
 summary {
-    --webkit-appearance: none;
+    -webkit-appearance: none;
   list-style: none;
   list-style-type: none;
 }
