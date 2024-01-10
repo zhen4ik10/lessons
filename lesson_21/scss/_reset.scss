@@ -79,7 +79,7 @@ address {
 
 summary {
     list-style: none;
-    &::webkit-details-market {
+    &::-webkit-details-market {
         display: none;
     }
 }

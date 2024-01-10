@@ -440,22 +440,19 @@ body {
     font-size: 18px;
     padding-top: 59px;
     padding-bottom: 59px;
-    // .footer__container
-
-    &__container {
-    }
-
-    // .footer__content
-
-    &__content {
-        max-width: 1059px;
-        margin: 0 auto;
-    }
 }
 .content-footer {
+    //.content-footer__container
+    &__container {
+        max-width: 1059px;
+        padding: 0;
+        margin: 0 auto;
+    }
     // .content-footer__top
-
     &__top {
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
     }
 
     // .content-footer__items
@@ -463,36 +460,46 @@ body {
     &__items {
         line-height: 2.17;
         display: grid;
-        grid-template-columns: repeat(4, auto);
         column-gap: 80px;
         row-gap: 30px;
-        @media (max-width: $widthTablet) {
+
+        @media (min-width: $widthMobileSmall) {
+            grid-template-columns: repeat(6, auto);
         }
     }
 
     // .content-footer__item
 
     &__item {
-        @media (max-width: $widthTablet) {
+        @media (min-width: $widthMobileSmall) {
+            grid-column: span 3;
+        }
+        @media (min-width: $widthMobile) {
             grid-column: span 2;
         }
-        @media (max-width: $widthMobileSmall) {
-            grid-column: span 4;
+        @media (min-width: $widthTablet) {
+            grid-column: span 1;
         }
     }
+    &__item--big {
+        @media (min-width: $widthMobile) {
+            grid-column: span 6;
+        }
+        @media (min-width: $widthTablet) {
+            grid-column: span 3;
+        }
+    }
+}
+.footer-title {
+    font-size: 29px;
+    font-weight: 700;
 }
 .item-footer {
     // .item-footer__tile
 
     &__tile {
-        font-size: 29px;
-        font-weight: 700;
-        list-style: none;
         &:not(:last-child) {
             margin-bottom: 15px;
-        }
-        &::webkit-details-market {
-            display: none;
         }
     }
 
@@ -523,5 +530,127 @@ body {
                 text-decoration-color: $white;
             }
         }
+    }
+
+    // .item-footer__address
+
+    &__address {
+    }
+
+    // .item-footer__link
+
+    &__link {
+    }
+
+    // .item-footer__city
+
+    &__city {
+    }
+}
+
+.content-footer {
+    // .content-footer__body
+
+    &__body {
+    }
+}
+.body-footer {
+    display: flex;
+    align-items: flex-end;
+    column-gap: 50px;
+    padding-right: 64px;
+    @media (max-width: $widthMobileSmall) {
+        flex-direction: column;
+        row-gap: 30px;
+        align-items: center;
+        padding-right: 0;
+    }
+    // .body-footer__social
+
+    &__social {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+        @media (max-width: $widthMobileSmall) {
+            order: 2;
+        }
+    }
+
+    // .body-footer__link-social
+
+    &__link-social {
+        flex: 0 0 37px;
+        width: 37px;
+        height: 37px;
+        border-radius: 11px;
+        background-color: $whiteLite;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    // .body-footer__app
+
+    &__app {
+    }
+
+    // .body-footer__title
+
+    &__title {
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+        @media (max-width: $widthMobileSmall) {
+            text-align: center;
+        }
+    }
+
+    // .body-footer__items
+
+    &__items {
+        display: flex;
+        align-items: center;
+        column-gap: 21px;
+        flex-wrap: wrap;
+        row-gap: 20px;
+        @media (max-width: $widthMobileSmall) {
+            order: 1;
+        }
+    }
+
+    // .body-footer__item
+
+    &__item {
+        flex: 0 0 154px;
+        width: 154px;
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+        padding: 9px;
+        border-radius: 12px;
+        background-color: #404040;
+    }
+
+    // .body-footer__content
+
+    &__content {
+        color: $white;
+        > * {
+            margin-bottom: 7px;
+        }
+        > *:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    // .body-footer__label
+
+    &__label {
+        font-size: 10px;
+    }
+    // .body-fotoor__app-title
+    &__app-title {
+        font-size: 18px;
     }
 }
