@@ -77,15 +77,13 @@ address {
     font-style: normal;
 }
 details {
+    // cursor: pointer;
     summary {
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
         list-style: none;
         list-style-type: none;
         display: none;
         &::-webkit-details-market {
-            display: none;
+            display: none !important;
         }
     }
 }

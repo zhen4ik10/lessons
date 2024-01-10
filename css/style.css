@@ -146,15 +146,12 @@ address {
 }
 
 details summary {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
   list-style: none;
   list-style-type: none;
   display: none;
 }
 details summary::-webkit-details-market {
-  display: none;
+  display: none !important;
 }
 
 body {
@@ -933,6 +930,9 @@ body {
   padding: 0;
   margin: 0 auto;
 }
+.spoiler__block {
+  cursor: pointer;
+}
 .spoiler__title {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -951,17 +951,14 @@ body {
   right: 0;
   width: 17px;
   height: 8px;
-  -webkit-transform: rotate(-90deg);
-      -ms-transform: rotate(-90deg);
-          transform: rotate(-90deg);
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   background: url("../img/footer/arrow-down.svg") center/17px 8px no-repeat;
 }
 .spoiler__block[open] .spoiler__title::before {
-  -webkit-transform: rotate(0deg);
-      -ms-transform: rotate(0deg);
-          transform: rotate(0deg);
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
 }
 .spoiler__list {
   margin-left: 20px;

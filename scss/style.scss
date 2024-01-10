@@ -689,6 +689,7 @@ body {
     // .spoiler__block
 
     &__block {
+        cursor: pointer;
     }
 
     // .spoiler__title
@@ -706,11 +707,10 @@ body {
             right: 0;
             width: 17px;
             height: 8px;
-            transform: rotate(-90deg);
             transition: all 0.3s ease-in-out;
             background: url("../img/footer/arrow-down.svg") center / 17px 8px no-repeat;
             .spoiler__block[open] & {
-                transform: rotate(0deg);
+                transform: rotate(-90deg);
             }
         }
     }
