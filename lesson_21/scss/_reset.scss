@@ -78,7 +78,9 @@ address {
 }
 
 summary {
+    -webkit-appearance: none;
     list-style: none;
+    list-style-type: none;
     &::-webkit-details-market {
         display: none;
     }
