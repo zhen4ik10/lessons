@@ -1,0 +1,8 @@
+@mixin blockBtn ($fontSize, $color, $bg-color, $bordeRadius, $fontWeight, $padding) {
+    font-size: $fontSize;
+    color: $color;
+    padding: $padding;
+    background-color: $bg-color;
+    border-radius: $bordeRadius;
+    font-weight: $fontWeight;
+}

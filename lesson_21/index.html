@@ -12,7 +12,9 @@
     <div class="wrapper">
         <header class="header">
             <div class="header__container">
+                <div class="header__logo">
                 <img src="img/header/logo.svg" alt="logo" class="header__logo">
+                </div>
                 <div class="header__body">
                     <nav class="header__menu menu">
                         <ul class="menu__list">
@@ -47,28 +49,21 @@
                         action="https://jsonplaceholder.typicode.com/posts">
                         <div class="form__item">
                             <button type="button" class="form__button">
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M14.6363 15.697C14.9292 15.9899 15.4041 15.9899 15.697 15.697C15.9899 15.4041 15.9899 14.9292 15.697 14.6363L14.6363 15.697ZM11.9167 6.83334C11.9167 9.64078 9.64078 11.9167 6.83334 11.9167V13.4167C10.4692 13.4167 13.4167 10.4692 13.4167 6.83334H11.9167ZM6.83334 11.9167C4.02589 11.9167 1.75 9.64078 1.75 6.83334H0.25C0.25 10.4692 3.19746 13.4167 6.83334 13.4167V11.9167ZM1.75 6.83334C1.75 4.02589 4.02589 1.75 6.83334 1.75V0.25C3.19746 0.25 0.25 3.19746 0.25 6.83334H1.75ZM6.83334 1.75C9.64078 1.75 11.9167 4.02589 11.9167 6.83334H13.4167C13.4167 3.19746 10.4692 0.25 6.83334 0.25V1.75ZM10.4697 11.5303L14.6363 15.697L15.697 14.6363L11.5303 10.4697L10.4697 11.5303Z" fill="#807D7E"/>
-                                </svg>
+                                <img src="img/header/search.svg" alt="search">
                             </button>
                             <input class="form__input" name="search" type="search" placeholder="Search">
                         </div>
                     </form>
                     <div class="header__actions actions-header">
                         <a href="#!" class="actions-header__img">
-                            <svg class="actions-header__heart" width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.99486 2.93014C7.49535 1.18262 4.99481 0.712545 3.11602 2.31275C1.23723 3.91295 0.972726 6.5884 2.44815 8.48096C3.67486 10.0545 7.38733 13.3732 8.60407 14.4474C8.7402 14.5675 8.80827 14.6276 8.88766 14.6512C8.95695 14.6718 9.03277 14.6718 9.10207 14.6512C9.18146 14.6276 9.24952 14.5675 9.38565 14.4474C10.6024 13.3732 14.3149 10.0545 15.5416 8.48096C17.017 6.5884 16.7848 3.89611 14.8737 2.31275C12.9626 0.729378 10.4944 1.18262 8.99486 2.93014Z" stroke="#807D7E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
+                            <img src="img/header/heart.svg" alt="heart">
                         </a>
                         <a href="#!" class="actions-header__img">
-                            <svg class="actions-header__user" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M7.99992 9.66668C10.3011 9.66668 12.1666 7.8012 12.1666 5.50001C12.1666 3.19882 10.3011 1.33334 7.99992 1.33334C5.69873 1.33334 3.83325 3.19882 3.83325 5.50001C3.83325 7.8012 5.69873 9.66668 7.99992 9.66668ZM7.99992 9.66668C4.31802 9.66668 1.33325 11.9053 1.33325 14.6667M7.99992 9.66668C11.6818 9.66668 14.6666 11.9053 14.6666 14.6667" stroke="#807D7E" stroke-width="1.5" stroke-linecap="round"/>
-                            </svg>
+                            <img src="img/header/user.svg" alt="user">
+                    
                         </a>
                         <a href="#!" class="actions-header__img">
-                            <svg class="actions-header__cart" width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1.5 1.33334H2.00526C2.85578 1.33334 3.56986 1.97376 3.6621 2.81926L4.3379 9.01409C4.43014 9.85959 5.14422 10.5 5.99474 10.5H13.205C13.9669 10.5 14.6317 9.98341 14.82 9.24519L15.9699 4.73593C16.2387 3.68213 15.4425 2.65742 14.355 2.65742H4.5M4.52063 13.5208H5.14563M4.52063 14.1458H5.14563M13.6873 13.5208H14.3123M13.6873 14.1458H14.3123M5.66667 13.8333C5.66667 14.2936 5.29357 14.6667 4.83333 14.6667C4.3731 14.6667 4 14.2936 4 13.8333C4 13.3731 4.3731 13 4.83333 13C5.29357 13 5.66667 13.3731 5.66667 13.8333ZM14.8333 13.8333C14.8333 14.2936 14.4602 14.6667 14 14.6667C13.5398 14.6667 13.1667 14.2936 13.1667 13.8333C13.1667 13.3731 13.5398 13 14 13C14.4602 13 14.8333 13.3731 14.8333 13.8333Z" stroke="#807D7E" stroke-width="1.5" stroke-linecap="round"/>
-                            </svg>
+                            <img src="img/header/shopping.svg" alt="shopping">
                         </a>
                     </div>
                     <div class="icon-menu">
@@ -78,7 +73,55 @@
             </div>
         </header>
         <main class="page">
-            
+            <section class="page__hero hero">
+                <div class="hero__image">
+                    <img src="img/hero/hero-bg.jpg" alt="hero-bg">
+                </div>
+                
+                <div class="hero__container">
+                    <button type="button" class="hero__arrow hero__arrow--left">
+                        <img src="img/hero/arrow-left.svg" alt="arrow-left">
+                    </button>
+                    <button type="button" class="hero__arrow hero__arrow--right">
+                        <img src="img/hero/arrow-right.svg" alt="arrow-right">
+                    </button>
+                    <div class="hero__body">
+                        <div class="hero__content">
+
+                            <ul class="hero__list">
+                                <li class="hero__item">
+                                    T-shirt
+                                </li>
+                                <li class="hero__item">
+                                    Tops
+                                </li>
+                            </ul>
+                            <h1 class="hero__title">
+                                Summer 
+                                Value Pack
+                            </h1>
+                            <ul class="hero__list">
+                                <li class="hero__item">
+                                    cool
+                                </li>
+                                <li class="hero__item">
+                                    colorful
+                                </li>
+                                <li class="hero__item">
+                                    comfy
+                                </li>
+                            </ul>
+                            <a href="#!" class="hero__btn btn">
+                                Shop Now
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hero__carusel">
+                        <span class="hero__indicator hero__indicator--active"></span>
+                        <span class="hero__indicator"></span>
+                    </div>
+                </div>
+            </section>
         </main>
         <footer class="footer">
             <div class="footer__container">
@@ -216,7 +259,9 @@
                                 </h3>
                                 <div class="body-footer__items">
                                     <a href="#!" class="body-footer__item">
-                                        <img src="img/app/play-market.svg" alt="play-market">
+                                        <div class="body-footer__img">
+                                            <img src="img/app/play-market.svg" alt="play-market">
+                                        </div>
                                         <div class="body-footer__content">
                                             <h5 class="body-footer__label">
                                                 android app on
