@@ -1,0 +1,369 @@
+@charset "UTF-8";
+/* Підключення шрифтів */
+@import url("https://fonts.googleapis.com/css?family=Merriweather:800&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins:500&display=swap");
+
+@font-face {
+	font-family: "Mintaka";
+	src:
+		url("../fonts/Mintaka.woff2") format(woff2),
+		url("../fonts/Mintaka.woff") format(woff);
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Causten";
+	src:
+		url("../fonts/Causten-Light.woff2") format(woff2),
+		url("../fonts/Causten-Light.woff") format(woff);
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Causten";
+	src:
+		url("../fonts/Causten-Regular.woff2") format(woff2),
+		url("../fonts/Causten-Regular.woff") format(woff);
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Causten";
+	src:
+		url("../fonts/Causten-Medium.woff2") format(woff2),
+		url("../fonts/Causten-Medium.woff") format(woff);
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Causten";
+	src:
+		url("../fonts/causten-semi-bold.woff2") format(woff2),
+		url("../fonts/causten-semi-bold.woff") format(woff);
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Causten";
+	src:
+		url("../fonts/causten-bold.woff2") format(woff2),
+		url("../fonts/causten-bold.woff") format(woff);
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "CoreSansC";
+	src:
+		url("../fonts/CoreSansC-55Medium.woff2") format(woff2),
+		url("../fonts/CoreSansC-55Medium.woff") format(woff);
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "CoreSansC";
+	src:
+		url("../fonts/CoreSansC-65Bold.woff2") format(woff2),
+		url("../fonts/CoreSansC-65Bold.woff") format(woff);
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "CoreSansC";
+	src:
+		url("../fonts/CoreSansC-85Heavy.woff2") format(woff2),
+		url("../fonts/CoreSansC-85Heavy.woff") format(woff);
+	font-weight: 800;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* Скидання стилів */
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+*::before,
+*::after {
+	display: inline-block;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+	display: inline-block;
+}
+
+li {
+	list-style: none;
+}
+
+img {
+	max-width: 100%;
+	vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+
+html,
+body {
+	line-height: 1;
+	height: 100%;
+}
+
+/* FORM */
+input,
+button,
+textarea {
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+}
+
+button {
+	cursor: pointer;
+	color: inherit;
+	background-color: transparent;
+}
+
+select {
+	cursor: pointer;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+summary {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+address {
+	font-style: normal;
+}
+
+details summary {
+	list-style: none;
+	list-style-type: none;
+	display: none;
+}
+
+details summary::-webkit-details-market {
+	display: none !important;
+}
+
+body {
+	font-family: "Causten", sans-serif;
+	font-size: 20px;
+	color: #3c4242;
+}
+
+.open-menu body {
+	overflow: hidden;
+}
+
+.wrapper {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	overflow: clip;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	min-height: 100%;
+}
+
+.wrapper>main {
+	-webkit-box-flex: 1;
+	-ms-flex-positive: 1;
+	flex-grow: 1;
+}
+/* [class*="__container"] {
+	max-width: 1270px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin: 0 auto;
+} */
+
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: #fff;
+}
+
+.container {
+	/* width: 100%; */
+	/* background-color: #000; */
+	/* overflow: hidden; */
+	/* min-height: 100%; */
+}
+
+.switch {
+	position: relative;
+}
+
+.switch input {
+	display: none;
+}
+
+.controls {
+	position: absolute;
+	bottom: 49px;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	gap: 10px;
+	z-index: 10;
+}
+
+.controls label {
+	width: 20px;
+	height: 20px;
+	border-radius: 20px;
+	background-color: #fff;
+	cursor: pointer;
+	opacity: 0.4;
+	transition: all .3s ease-in-out;
+}
+
+.switch input:nth-child(1):checked~.controls label:nth-child(1),
+.switch input:nth-child(2):checked~.controls label:nth-child(2),
+.switch input:nth-child(3):checked~.controls label:nth-child(3) {
+	opacity: 1;
+	width: 50px;
+}
+
+
+
+
+@media (min-width: 1023.98px) {
+	.switch input:nth-child(1):checked~.bullets label:nth-child(2),
+.switch input:nth-child(2):checked~.bullets label:nth-child(3),
+.switch input:nth-child(3):checked~.bullets label:nth-child(1) {
+	background: url('../img/hero/arrow-right.svg') center no-repeat;
+	display: block;
+	width: 24px;
+	height: 44px;
+	position: absolute;
+	top: 50%;
+	right: 50px;
+	transform: translateY(-50%);
+	z-index: 10;
+}
+.switch input:nth-child(1):checked~.bullets label:nth-child(3),
+.switch input:nth-child(3):checked~.bullets label:nth-child(2),
+.switch input:nth-child(2):checked~.bullets label:nth-child(1) {
+	background: url('../img/hero/arrow-left.svg') center no-repeat;
+	display: block;
+	width: 24px;
+	height: 44px;
+	position: absolute;
+	top: 50%;
+	left: 50px;
+	transform: translateY(-50%);
+	z-index: 10;
+}
+}
+
+.inner {
+	position: relative;
+	width: 300%;
+	min-height: 100%;
+	display: flex;
+	transition: all .3s ease-in-out;
+}
+
+.inner .box {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+.box {
+	aspect-ratio: 1446 / 716;
+	/* height: 100%; */
+}
+
+.box img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.zone {
+	position: relative;
+	max-width: 1270px;
+	margin: 0 auto;
+	width: 100%;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 139px;
+	padding-bottom: 73px;
+	color: green;
+	/* display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center; */
+	border-left: 1px solid #000;
+	border-right: 1px solid #000;
+	height: 100%;
+}
+
+.content {
+	max-width: 500px;
+}
+
+.inner .box-3 {
+	background-color: blue;
+}
+
+.switch input:nth-child(1):checked ~ .inner {
+	left: 0;
+}
+.switch input:nth-child(2):checked ~ .inner{
+	left: -100%;
+}
+.switch input:nth-child(3):checked ~ .inner{
+	left: -200%;
+}
+
