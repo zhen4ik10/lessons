@@ -826,6 +826,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   margin: 0 auto;
+  padding-left: 20px;
 }
 .hero__body:not(:last-child) {
   margin-bottom: 73px;
