@@ -1415,6 +1415,12 @@ body {
         justify-content: center;
         align-items: center;
         border-radius: 12px;
+        transition: all 0.3s ease-in-out;
+        @media (any-hover: hover){
+            &:hover{
+                box-shadow: 5px 5px 10px $black;
+            }
+        }
     }
 }
 // FEEDBACK
