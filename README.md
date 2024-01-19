@@ -67,3 +67,12 @@ https://zhen4ik10.github.io/lessons/lesson_21/
       Lesson #21 Препроцесор SASS/SCSS
   </a>
 </h2>
+<br>
+<h2>Lesson #22 Препроцесор SASS/SCSS</h2>
+https://zhen4ik10.github.io/lessons/lesson_22/
+<br>
+<h2>
+  <a href="https://zhen4ik10.github.io/lessons/lesson_22">
+      Lesson #22 Препроцесор SASS/SCSS
+  </a>
+</h2>
