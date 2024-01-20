@@ -7,15 +7,14 @@
 /* Функції */
 @import "_function.scss";
 
-
 $white: #fff;
-$bgWhite: #F4F4F4;
+$bgWhite: #f4f4f4;
 $bgInput: #ddd;
 $borderColor: #f8f8f8;
-$gold: #FFB342;
-$green: #40DDB6;
-$purple: #6B77E5;
-$silver: #B9B9B9;
+$gold: #ffb342;
+$green: #40ddb6;
+$purple: #6b77e5;
+$silver: #b9b9b9;
 $silverThin: #7d7d7d;
 $gray: #37393f;
 $black: #000;
@@ -43,8 +42,8 @@ body {
 }
 [class*="__container"] {
     max-width: toRem(1250);
-    padding-left: toEm(15);
-    padding-right: toEm(15);
+    padding-left: 15px;
+    padding-right: 15px;
     margin: 0 auto;
 }
 .header {
@@ -57,8 +56,8 @@ body {
     // .header__top
     &__top {
         font-size: toRem(14);
-        padding-top: toEm(20);
-        padding-bottom: toEm(20);
+        padding-top: 20px;
+        padding-bottom: 20px;
         color: $white;
         background-color: $gray;
         position: relative;
@@ -67,17 +66,17 @@ body {
             display: none;
         }
         // .header__container--top {
-            .header__container--top {
-                display: flex;
-                align-items: center;
-                column-gap: toEm(30, 14);
-                flex-wrap: wrap;
-                row-gap: toEm(15, 14);
-            }
+        .header__container--top {
+            display: flex;
+            align-items: center;
+            column-gap: toEm(30, 14);
+            flex-wrap: wrap;
+            row-gap: toEm(15, 14);
+        }
     }
     // .header__addres
     &__addres {
-        flex: 1 0 auto;
+        flex: 1 1 auto;
         display: flex;
         align-items: center;
         column-gap: toEm(42, 14);
@@ -92,8 +91,8 @@ body {
     }
     // .header__mail
     &__mail {
-        @media (any-hover: hover){
-            &:hover{
+        @media (any-hover: hover) {
+            &:hover {
                 color: $silver;
             }
         }
@@ -107,7 +106,7 @@ body {
         flex-wrap: wrap;
         row-gap: toEm(10, 14);
     }
-    // .header__time 
+    // .header__time
     &__time {
         display: flex;
         align-items: center;
@@ -123,8 +122,8 @@ body {
     // .header__socail-link
     &__socail-link {
         transition: all 0.3s ease-in-out;
-        @media (any-hover: hover){
-            &:hover{
+        @media (any-hover: hover) {
+            &:hover {
                 transform: scale(1.1);
             }
         }
@@ -136,12 +135,11 @@ body {
         padding-bottom: toEm(33, 18);
         display: flex;
         align-items: center;
-        column-gap: toEm(10, 18);
-        @media (max-width: $widthLaptop) {
-            padding-top: toEm(15);
-            padding-bottom: toEm(15);
+        column-gap: toEm(30, 18);
+        @media (max-width: $widthTablet) {
+            font-size: toRem(16);
         }
-        @media (max-width: $widthMobileSmall) {
+        @media (max-width: toEm(470.98)) {
             flex-wrap: wrap;
             row-gap: toEm(15);
         }
@@ -149,33 +147,9 @@ body {
     // .header__logo
     &__logo {
         flex: 1 0 auto;
+        width: auto;
         position: relative;
         z-index: 1;
-        @media (max-width: $widthMobileSmall) {
-            align-self: flex-start;
-        }
-    }
-    // .header__content
-    &__content {
-        display: flex;
-        align-items: center;
-        column-gap: toEm(40, 18);
-        @media (max-width: $widthPc) {
-            font-size: toRem(16);
-        }
-        @media (max-width: $widthMobile) {
-            column-gap: toEm(30);
-        }
-        @media (max-width: $widthMobileSmall) {
-            flex-direction: column;
-            align-items: end;
-            row-gap: toEm(30);
-        }
-        @media (max-width: toEm(419.98)) {
-            flex-grow: 1;
-            flex-direction: row;
-            align-items: center;
-        }
     }
     // .header__consulting
     &__consulting {
@@ -189,36 +163,46 @@ body {
         border: toRem(1) solid transparent;
         position: relative;
         z-index: 1;
-        // @media (max-width: $widthMobile) {
-        //     display: none;
-        // }
+        @media (max-width: $widthPc) {
+            font-size: toRem(16);
+        }
         @media (max-width: $widthLaptop) {
-            order: -1;
+            order: 2;
         }
-        @media (max-width: $widthMobileSmall) {
-            order: 1;
+        @media (max-width: $widthMobile) {
+            font-size: toRem(14);
         }
-        @media (max-width: toEm(419.98)) {
-            order: -1;
-            margin-left: auto;
+        @media (max-width: toEm(470.98)) {
+            order: 3;
         }
-        @media (any-hover: hover){
-            &:hover{
+        @media (max-width: $widthSmall) {
+            width: 100%;
+            text-align: center;
+        }
+        @media (any-hover: hover) {
+            &:hover {
                 color: $purple;
                 background-color: $white;
                 border: toRem(1) solid $purple;
             }
         }
     }
-} 
+}
 .menu {
+    @media (max-width: $widthLaptop) {
+        order: 3;
+    }
+    @media (max-width: toEm(470.98)) {
+        order: 2;
+    }
     // .menu__body
     &__body {
         @media (max-width: $widthLaptop) {
+            font-size: toRem(16);
             position: fixed;
             top: 0;
             left: -100%;
-            width: 100vw;
+            width: 100%;
             height: 100vh;
             background-color: $silver;
             padding: toRem(130) toRem(15) toRem(30);
@@ -229,10 +213,16 @@ body {
                 position: fixed;
                 top: 0;
                 left: -100%;
-                width: 100vw;
-                height: toEm(91);
+                width: 100%;
+                height: toEm(123);
                 background-color: $silverThin;
                 transition: all 0.3s ease-in-out;
+                @media (max-width: $widthMobile) {
+                    font-size: toRem(14);
+                }
+                @media (max-width: toEm(470.98)) {
+                    height: toRem(163);
+                }
             }
             .open-menu & {
                 left: 0;
@@ -240,6 +230,9 @@ body {
                     left: 0;
                 }
             }
+        }
+        @media (max-width: toEm(470.98)) {
+            padding-top: toEm(183);
         }
     }
     // .menu__list
@@ -250,11 +243,14 @@ body {
         column-gap: toEm(40, 18);
         flex-wrap: wrap;
         row-gap: toEm(10, 18);
+        @media (max-width: $widthPc) {
+            font-size: toRem(16);
+        }
         @media (max-width: $widthLaptop) {
             flex-direction: column;
             align-items: end;
             font-size: toRem(30);
-            row-gap: toEm(28, 30);
+            row-gap: toEm(16);
         }
     }
     // .menu__item
@@ -273,13 +269,13 @@ body {
                     flex: 0 0 toRem(8);
                     width: toRem(8);
                     height: toRem(4);
-                    background: url('../img/header/icon/arrow-down.svg') center / cover no-repeat;
+                    background: url("../img/header/icon/arrow-down.svg") center / cover no-repeat;
                     transition: all 0.3s ease-in-out;
                 }
             }
         }
-        @media (any-hover: hover){
-            &:hover{
+        @media (any-hover: hover) {
+            &:hover {
                 &::after {
                     transform: rotate(-90deg);
                 }
@@ -288,19 +284,19 @@ body {
     }
     // .menu__link
     &__link {
-        @media (any-hover: hover){
-            .menu__item:hover &{
+        @media (any-hover: hover) {
+            .menu__item:hover & {
                 color: $purple;
             }
         }
     }
 }
 .icon-menu {
-    display: none; 
+    display: none;
     @media (max-width: $widthLaptop) {
         display: block;
-        width: toEm(30);
-        height: toEm(18);
+        width: toRem(30);
+        height: toRem(18);
         position: relative;
         cursor: pointer;
         z-index: 2;
@@ -343,9 +339,9 @@ body {
 .sub-menu {
     position: absolute;
     top: 100%;
-    left: 0;        
+    left: 0;
     font-size: toRem(16);
-    padding-top: toEm(5);
+    padding-top: toEm(5, 16);
     opacity: 0;
     visibility: hidden;
     transform: translate(0, 10%);
@@ -357,14 +353,16 @@ body {
         visibility: visible;
         transform: translate(0, 0);
         pointer-events: all;
+        font-size: toRem(22);
+        padding-top: toEm(10);
     }
-    .menu__item--parent:hover &{
+    .menu__item--parent:hover & {
         opacity: 1;
         visibility: visible;
         transform: translate(0, 0);
         pointer-events: all;
     }
-    
+
     // .sub-menu__list
     &__list {
         @media (min-width: $widthLaptop) {
@@ -375,7 +373,6 @@ body {
         }
         @media (max-width: $widthLaptop) {
             text-align: right;
-            padding-top: toEm(10);
         }
     }
     // .sub-menu__item
@@ -384,17 +381,14 @@ body {
             margin-bottom: toEm(10);
         }
         @media (max-width: $widthLaptop) {
-            font-size: toRem(20);
-            &:not(:last-child) {
-                margin-bottom: toEm(20, 20);
-            }
+            font-size: toRem(22);
         }
     }
     // .sub-menu__link
     &__link {
         transition: all 0.3s ease-in-out;
-        @media (any-hover: hover){
-            &:hover{
+        @media (any-hover: hover) {
+            &:hover {
                 color: $white;
             }
         }
