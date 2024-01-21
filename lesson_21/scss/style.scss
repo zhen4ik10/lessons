@@ -1738,6 +1738,11 @@ body {
         display: flex;
         align-items: center;
         position: relative;
+        list-style: none;
+        &::marker,
+        &::-webkit-details-marker {
+            display: none;
+        }
         &:not(:last-child) {
             margin-bottom: 20px;
         }
