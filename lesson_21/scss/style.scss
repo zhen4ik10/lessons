@@ -5,7 +5,6 @@
 /* Міксини */
 @import "_mixin.scss";
 
-
 $white: #fff;
 $whiteLite: #f6f6f6;
 $yellow: #fbd103;
@@ -281,7 +280,7 @@ body {
             .open-input & {
                 display: inline-block;
             }
-        }               
+        }
     }
     @media (any-hover: hover) {
         &:hover {
@@ -472,7 +471,7 @@ body {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        transition: all .3s ease-in-out;
+        transition: all 0.3s ease-in-out;
         @media (max-width: 1354.98px) {
             display: none;
         }
@@ -538,7 +537,7 @@ body {
     // .hero__item
     &__item {
         font-size: 32px;
-        display: flex; 
+        display: flex;
         align-items: center;
         text-transform: capitalize;
         letter-spacing: 0.157px;
@@ -559,7 +558,7 @@ body {
     // .hero__title
     &__title {
         font-size: 78px;
-        font-weight: 800;
+        font-weight: 700;
         @media (max-width: 627.98px) {
             font-size: 58px;
         }
@@ -579,14 +578,14 @@ body {
         flex: 0 0 62px;
         width: 62px;
         height: 10px;
-        background-color: rgba($white, .5);
-        transition: all .3s ease-in-out;
+        background-color: rgba($white, 0.5);
+        transition: all 0.3s ease-in-out;
         cursor: pointer;
         &:first-child {
             border-radius: 12px 0 0 12px;
         }
         &:last-child {
-        border-radius:  0 12px 12px 0;
+            border-radius: 0 12px 12px 0;
         }
         &--active {
             background-color: $white;
@@ -602,7 +601,7 @@ body {
     // @mixin blockBtn ($fontSize, $color, $bg-color, $bordeRadius, $fontWeight, $padding)
     @include blockBtn(24px, $gray, $white, 8px, 700, 16px 72px);
     font-family: "Causten", sans-serif;
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     @media (any-hover: hover) {
         &:hover {
             background-color: $gray;
@@ -626,7 +625,7 @@ body {
         background-color: $bgYellow;
         border-radius: 12px;
         color: $white;
-        box-shadow: 2px 2px 10px 0px rgba($black, 0.40);
+        box-shadow: 2px 2px 10px 0px rgba($black, 0.4);
         position: relative;
         // .deals__item--padding
         &--padding {
@@ -674,27 +673,27 @@ body {
         font-size: 18px;
         line-height: 1.66;
         letter-spacing: 0.251px;
-        &:not(:last-child)  {
+        &:not(:last-child) {
             margin-bottom: 24px;
         }
     }
     // .deals__title
     &__title {
         font-size: 34px;
-        font-weight: 800;
+        font-weight: 700;
         line-height: 1.33;
-        &:not(:last-child)  {
+        &:not(:last-child) {
             margin-bottom: 9px;
         }
         @media (max-width: $widthSmall) {
             font-size: 32px;
-        }   
+        }
     }
     // .deals__sale
     &__sale {
         line-height: 1.57;
         letter-spacing: 0.251px;
-        &:not(:last-child)  {
+        &:not(:last-child) {
             margin-bottom: 42px;
             .deals__item--padding & {
                 margin-bottom: 30px;
@@ -703,9 +702,9 @@ body {
     }
     // .deals__link-item
     &__link-item {
-        font-weight: 800;
+        font-weight: 700;
         line-height: 1.23;
-        transition: all .3s ease-in-out;
+        transition: all 0.3s ease-in-out;
         position: relative;
         &:not(:last-child) {
             margin-bottom: 15px;
@@ -718,16 +717,16 @@ body {
             width: 100%;
             border-bottom: 1px solid $white;
             transform: scale(1);
-            transition: all .3s ease-in-out;
+            transition: all 0.3s ease-in-out;
         }
         // .deals__link-item--color
         &--color.deals__link-item {
             @media (any-hover: hover) {
                 &:hover {
-                    color: #AE91C4;
+                    color: #ae91c4;
                     &::before {
                         transform: scale(0);
-                        border-color: #AE91C4;
+                        border-color: #ae91c4;
                     }
                 }
             }
@@ -789,7 +788,7 @@ body {
             top: 50%;
             transform: translateY(-50%);
             img {
-                transition: all .3s ease-in-out;
+                transition: all 0.3s ease-in-out;
             }
             // .arrival__btn--left
             &--left {
@@ -840,12 +839,12 @@ body {
             aspect-ratio: 263 / 263;
             object-fit: cover;
             border-radius: 12px;
-            transition: all .3s ease-in-out;
+            transition: all 0.3s ease-in-out;
         }
         @media (any-hover: hover) {
             &:hover {
                 img {
-                    opacity: .9;
+                    opacity: 0.9;
                 }
             }
         }
@@ -864,10 +863,10 @@ body {
         font-size: 20px;
         font-weight: 700;
         letter-spacing: 0.2px;
-        transition: all .3s ease-in-out;
+        transition: all 0.3s ease-in-out;
         @media (any-hover: hover) {
-            .arrival__title:hover &{
-                color: $violet;  
+            .arrival__title:hover & {
+                color: $violet;
             }
         }
     }
@@ -882,14 +881,14 @@ body {
             grid-template-columns: repeat(6, 1fr);
         }
     }
-    // .zone__item 
+    // .zone__item
     &__item {
         // .zone__item--padding-top
         &.zone__item--padding-top {
             padding-top: 34px;
         }
         // .zone__item--pp-big
-        &.zone__item--pp-big {    
+        &.zone__item--pp-big {
             padding: 45px 100px 50px 20px;
         }
         //.zone__item--big
@@ -938,11 +937,11 @@ body {
         }
         // .item-zone__image--bg-color
         &--bg-color {
-            background-color: #4EC4DF;
+            background-color: #4ec4df;
         }
         // .item-zone__image--color-bg
         &--color-bg {
-            background-color: #DEB2B1;
+            background-color: #deb2b1;
         }
         // .item-zone__image--big
         &--big {
@@ -982,10 +981,10 @@ body {
     }
     // .item-zone__limited
     &__limited {
-        @include blockBtn (12px, $white, $gray, 4px, 700, 10px 16px);
+        @include blockBtn(12px, $white, $gray, 4px, 700, 10px 16px);
         border: none;
         text-transform: capitalize;
-        transition: all .3s ease-in-out;
+        transition: all 0.3s ease-in-out;
         @media (any-hover: hover) {
             &:hover {
                 color: $gray;
@@ -1008,7 +1007,7 @@ body {
         font-weight: 600;
         line-height: 1.37;
         letter-spacing: 0.56px;
-        transition: all .3s ease-in-out;
+        transition: all 0.3s ease-in-out;
         // .item-zone__link-title--hover
         &.item-zone__link-title--hover {
             @media (any-hover: hover) {
@@ -1055,7 +1054,7 @@ body {
             }
         }
         svg {
-            animation: arrow .65s ease-in-out infinite alternate;
+            animation: arrow 0.65s ease-in-out infinite alternate;
             @keyframes arrow {
                 0% {
                     transform: translateY(0px);
@@ -1072,7 +1071,7 @@ body {
         @include blockBtn(12px, $gray, transparent, 4px, 500, 10px 25px);
         text-transform: uppercase;
         border: 1px solid $gray;
-        transition: all .3s ease-in-out;
+        transition: all 0.3s ease-in-out;
         @media (max-width: $widthMobileSmall) {
             border-color: $white;
             color: $white;
@@ -1103,7 +1102,7 @@ body {
                     background-color: rgba($black, 0.2);
                 }
             }
-        }    
+        }
     }
 }
 // Fashion
@@ -1141,7 +1140,7 @@ body {
                 border-radius: 12px;
             }
         }
-        // .fashion__block--gradien 
+        // .fashion__block--gradien
         &.fashion__block--gradien {
             &::after {
                 content: "";
@@ -1150,7 +1149,7 @@ body {
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background-color: rgba($black, .7);
+                background-color: rgba($black, 0.7);
                 border-radius: 12px 0px 0px 12px;
                 @media (max-width: $widthMobile) {
                     border-radius: 12px;
@@ -1177,7 +1176,7 @@ body {
     &__title {
         font-family: "CoreSansC", sans-serif;
         font-size: 34px;
-        font-weight: 800;
+        font-weight: 700;
         line-height: 1.47;
         letter-spacing: 0.208px;
         &:not(:last-child) {
@@ -1198,7 +1197,7 @@ body {
     // .fashion__link-btn
     &__link-btn {
         @include blockBtn(18px, $gray, $white, 8px, 600, 12px 44px);
-        transition: all .3s ease-in-out;
+        transition: all 0.3s ease-in-out;
         @media (any-hover: hover) {
             &:hover {
                 background-color: $gray;
@@ -1247,7 +1246,7 @@ body {
             border-radius: 10px;
             aspect-ratio: 270 / 393;
             object-fit: cover;
-            transition: all .4s ease-in-out;
+            transition: all 0.4s ease-in-out;
         }
         // .categories__image--opacity-9
         // .categories__image--opacity-14
@@ -1261,21 +1260,21 @@ body {
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background-color: rgba($black, .09);
+                background-color: rgba($black, 0.09);
                 z-index: 2;
             }
         }
         // .categories__image--opacity-14
         &.categories__image--opacity-14 {
-            background-color: rgba($black, .14);
+            background-color: rgba($black, 0.14);
         }
-        //.categories__image--big 
+        //.categories__image--big
         &.categories__image--big {
             img {
                 aspect-ratio: 282 / 370;
             }
         }
-        @media (any-hover: hover) { 
+        @media (any-hover: hover) {
             &:hover {
                 img {
                     transform: scale(1.1);
@@ -1296,7 +1295,7 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        transition: all .3s ease-in-out;
+        transition: all 0.3s ease-in-out;
         @media (any-hover: hover) {
             &:hover {
                 transform: scale(1.1);
@@ -1322,13 +1321,13 @@ body {
     }
     // .categories__link-title
     &__link-title {
-        color: #2A2F2F;
+        color: #2a2f2f;
         font-size: 18px;
         font-weight: 700;
         line-height: 1.56;
         letter-spacing: -0.715px;
-        transition: all .3s ease-in-out;
-        @media (any-hover: hover) { 
+        transition: all 0.3s ease-in-out;
+        @media (any-hover: hover) {
             &:hover {
                 color: $violet;
             }
@@ -1345,18 +1344,18 @@ body {
         flex: 0 0 18px;
         width: 18px;
         min-height: 18px;
-        transition: all .3s ease-in-out;
+        transition: all 0.3s ease-in-out;
         @media (any-hover: hover) {
             &:hover {
                 transform: translateX(5px);
             }
         }
     }
-    // .categories__price 
+    // .categories__price
     &__price {
         padding: 10px 16px;
         border-radius: 8px;
-        background: #F6F6F6;
+        background: #f6f6f6;
         color: $gray;
         font-size: 14px;
         font-weight: 700;
@@ -1381,7 +1380,7 @@ body {
     &__title {
         font-family: "CoreSansC", sans-serif;
         font-size: 50px;
-        font-weight: 800;
+        font-weight: 700;
         &:not(:last-child) {
             margin-bottom: 26px;
         }
@@ -1417,8 +1416,8 @@ body {
         align-items: center;
         border-radius: 12px;
         transition: all 0.3s ease-in-out;
-        @media (any-hover: hover){
-            &:hover{
+        @media (any-hover: hover) {
+            &:hover {
                 box-shadow: 5px 5px 10px $black;
             }
         }
@@ -1443,7 +1442,7 @@ body {
     // .feedback__item
     &__item {
         border-radius: 10px;
-        border: 2px solid #BEBCBD;
+        border: 2px solid #bebcbd;
         background: $white;
         padding: 23px;
         display: flex;
@@ -1474,14 +1473,14 @@ body {
     &__star {
         width: 23px;
         height: 23px;
-        background: url('../img/feedback/star.svg') center  no-repeat;
+        background: url("../img/feedback/star.svg") center no-repeat;
         // .feedback__star--half
         &.feedback__star--half {
-            background: url('../img/feedback/half-a-star.svg') center  no-repeat;
+            background: url("../img/feedback/half-a-star.svg") center no-repeat;
         }
         // .feedback__star--empty
         &.feedback__star--empty {
-            background: url('../img/feedback/empty-star.svg') center  no-repeat;
+            background: url("../img/feedback/empty-star.svg") center no-repeat;
         }
     }
     // .feedback__title
@@ -1501,7 +1500,7 @@ body {
             }
         }
     }
-    // .feedback__indicators 
+    // .feedback__indicators
     &__indicators {
         display: flex;
         column-gap: 4px;
@@ -1513,7 +1512,7 @@ body {
         height: 8px;
         border-radius: 50%;
         background-color: rgba(190, 188, 189, 0.302);
-        transition: all .3s ease-in-out;
+        transition: all 0.3s ease-in-out;
         // .feedback__dot--active
         &.feedback__dot--active {
             background-color: $gray;
@@ -1642,7 +1641,7 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        transition: all .3s ease-in-out;
+        transition: all 0.3s ease-in-out;
         @media (any-hover: hover) {
             &:hover {
                 background-color: $silverThin;
@@ -1673,10 +1672,10 @@ body {
         padding: 9px;
         border-radius: 12px;
         background-color: #404040;
-        transition: all .3s ease-in-out;
+        transition: all 0.3s ease-in-out;
         @media (any-hover: hover) {
             &:hover {
-                background-color: rgba($silver, .3);
+                background-color: rgba($silver, 0.3);
             }
         }
     }
@@ -1740,7 +1739,7 @@ body {
         position: relative;
         list-style: none;
         &::marker,
-        &::-webkit-details-marker {
+        &::-webkit-details-market {
             display: none;
         }
         &:not(:last-child) {

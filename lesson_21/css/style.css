@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* Підключення шрифтів */
-@import url("https://fonts.googleapis.com/css?family=Merriweather:800&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Merriweather:700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Poppins:500&display=swap");
 @font-face {
   font-family: "Causten";
@@ -896,7 +896,7 @@ body {
 }
 .hero__title {
   font-size: 78px;
-  font-weight: 800;
+  font-weight: 700;
 }
 @media (max-width: 627.98px) {
   .hero__title {
@@ -1053,7 +1053,7 @@ body {
 }
 .deals__title {
   font-size: 34px;
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1.33;
 }
 .deals__title:not(:last-child) {
@@ -1075,7 +1075,7 @@ body {
   margin-bottom: 30px;
 }
 .deals__link-item {
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1.23;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -1099,13 +1099,13 @@ body {
 }
 @media (any-hover: hover) {
   .deals__link-item--color.deals__link-item:hover {
-    color: #AE91C4;
+    color: #ae91c4;
   }
   .deals__link-item--color.deals__link-item:hover::before {
     -webkit-transform: scale(0);
         -ms-transform: scale(0);
             transform: scale(0);
-    border-color: #AE91C4;
+    border-color: #ae91c4;
   }
 }
 @media (any-hover: hover) {
@@ -1334,10 +1334,10 @@ body {
      object-fit: cover;
 }
 .item-zone__image--bg-color {
-  background-color: #4EC4DF;
+  background-color: #4ec4df;
 }
 .item-zone__image--color-bg {
-  background-color: #DEB2B1;
+  background-color: #deb2b1;
 }
 .item-zone__image--big img {
   aspect-ratio: 610/393;
@@ -1590,7 +1590,7 @@ body {
 .fashion__title {
   font-family: "CoreSansC", sans-serif;
   font-size: 34px;
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1.47;
   letter-spacing: 0.208px;
 }
@@ -1757,7 +1757,7 @@ body {
           flex-grow: 1;
 }
 .categories__link-title {
-  color: #2A2F2F;
+  color: #2a2f2f;
   font-size: 18px;
   font-weight: 700;
   line-height: 1.56;
@@ -1794,7 +1794,7 @@ body {
 .categories__price {
   padding: 10px 16px;
   border-radius: 8px;
-  background: #F6F6F6;
+  background: #f6f6f6;
   color: #3c4242;
   font-size: 14px;
   font-weight: 700;
@@ -1816,7 +1816,7 @@ body {
 .brands__title {
   font-family: "CoreSansC", sans-serif;
   font-size: 50px;
-  font-weight: 800;
+  font-weight: 700;
 }
 .brands__title:not(:last-child) {
   margin-bottom: 26px;
@@ -1896,7 +1896,7 @@ body {
 }
 .feedback__item {
   border-radius: 10px;
-  border: 2px solid #BEBCBD;
+  border: 2px solid #bebcbd;
   background: #fff;
   padding: 23px;
   display: -webkit-box;
@@ -2238,6 +2238,10 @@ body {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
+  list-style: none;
+}
+.spoiler__title::marker, .spoiler__title::-webkit-details-market {
+  display: none;
 }
 .spoiler__title:not(:last-child) {
   margin-bottom: 20px;
