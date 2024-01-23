@@ -76,3 +76,7 @@ https://zhen4ik10.github.io/lessons/lesson_22/
       Lesson #22 Препроцесор SASS/SCSS
   </a>
 </h2>
+<br>
+<h2>Area</h2>
+https://zhen4ik10.github.io/lessons/area/
+<br>
