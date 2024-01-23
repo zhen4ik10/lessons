@@ -1,0 +1,180 @@
+/* Підключення шрифтів */
+@import "_fonts.scss";
+/* Скидання стилів */
+@import "_reset.scss";
+/* Міксини */
+@import "_mixin.scss";
+/* Функції */
+@import "_function.scss";
+
+$white: #fff;
+$bgWhite: #f4f4f4;
+$bgInput: #ddd;
+$borderColor: #f8f8f8;
+$gold: #ffb342;
+$green: #40ddb6;
+$purple: #6b77e5;
+$silver: #b9b9b9;
+$silverThin: #7d7d7d;
+$gray: #37393f;
+$black: #000;
+$widthPc: toEm(1199.98);
+$widthLaptop: toEm(1023.98);
+$widthTablet: toEm(991.98);
+$widthMobile: toEm(767.98);
+$widthMobileSmall: toEm(479.98);
+$widthSmall: toEm(374.98);
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: #77608d;
+    .open-menu & {
+        overflow: hidden;
+    }
+}
+.wrapper {
+    display: flex;
+    overflow: clip;
+    flex-direction: column;
+    min-height: 100%;
+    > main {
+        flex-grow: 1;
+    }
+}
+[class*="__container"] {
+    max-width: toRem(1250);
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: $white;
+    z-index: 50;
+}
+// PAGE
+.page {
+    display: flex;
+    flex-direction: column;
+    padding-top: 200px;
+    // .page__title
+    &__title {
+        font-size: toRem(40);
+        text-align: center;
+        color: $white;
+        margin-bottom: toRem(30);
+        line-height: 1.4;
+    }
+    // .page__item
+    &__item {
+        margin-bottom: toRem(100);
+    }
+    // .page__block
+    &__block {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+        column-gap: toEm(60);
+    }
+}
+.contact {
+    color: $white;
+    font-size: toRem(20);
+    display: flex;
+    column-gap: toEm(60, 20);
+    margin-bottom: toRem(30);
+    // .contact__block
+    &__block {
+        display: flex;
+        align-items: center;
+        column-gap: toEm(10, 20);
+    }
+    // .contact__image
+    &__image {
+        flex-shrink: 0;
+        width: toRem(68);
+        height: toRem(68);
+        background: #4c4d52;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    // .contact__title
+    &__title {
+        &:not(:last-child) {
+            margin-bottom: toEm(5, 18);
+        }
+    }
+}
+// .top-footer {
+//     display: flex;
+//     align-items: center;
+//     column-gap: toEm(60);
+//     border-bottom: toEm(1) solid #6c6d72;
+//     padding-bottom: toEm(54);
+//     @media (min-width: $widthLaptop) {
+//         justify-content: space-between;
+//     }
+//     @media (max-width: $widthPc) {
+//         column-gap: toEm(30);
+//     }
+//     @media (max-width: $widthLaptop) {
+//         flex-direction: column;
+//         row-gap: toEm(40);
+//     }
+// }
+// .contact {
+//     font-size: toRem(20);
+//     display: flex;
+//     column-gap: toEm(60, 20);
+//     row-gap: toEm(30, 20);
+//     @media (max-width: $widthPc) {
+//         font-size: toRem(18);
+//     }
+//     @media (max-width: $widthLaptop) {
+//         align-self: stretch;
+//         justify-content: space-between;
+//         flex-wrap: wrap;
+//         column-gap: toEm(37);
+//     }
+//     @media (max-width: toEm(500.98)) {
+//         flex-direction: column;
+//         align-self: center;
+//     }
+//     // .contact__block
+//     &__block {
+//         display: flex;
+//         align-items: center;
+//         column-gap: toEm(10, 20);
+//     }
+//     // .contact__image
+//     &__image {
+//         flex-shrink: 0;
+//         width: toRem(68);
+//         height: toRem(68);
+//         background: #4c4d52;
+//         border-radius: 50%;
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//     }
+//     // .contact__content
+//     &__content {
+//         a {
+//             font-size: toRem(18);
+//             @media (max-width: $widthPc) {
+//                 font-size: toRem(16);
+//             }
+//         }
+//     }
+//     // .contact__title
+//     &__title {
+//         &:not(:last-child) {
+//             margin-bottom: toEm(5, 18);
+//         }
+//     }
+// }
