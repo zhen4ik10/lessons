@@ -1,0 +1,24 @@
+.header-block {
+    // .header-block__label
+    &__label {
+        display: flex;
+        align-items: center;
+        font-size: toRem(18);
+        column-gap: toEm(7);
+        font-weight: 600;
+        line-height: 1.46;
+        &::before {
+            content: "";
+            width: toRem(11);
+            height: toRem(11);
+            background-color: green;
+        }
+    }
+    // .header-block__title
+    &__title {
+        font-size: toRem(40);
+    }
+    // .header-block__text
+    &__text {
+    }
+}

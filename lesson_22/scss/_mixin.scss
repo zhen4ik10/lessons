@@ -1,16 +1,24 @@
-@mixin blockBtn ($fontSize, $color, $bg-color, $bordeRadius, $fontWeight, $padding) {
+@mixin Btn($fontSize, $color, $bg-color, $fontWeight, $padding, $anime, $borderColor) {
     font-size: $fontSize;
     color: $color;
     background-color: $bg-color;
-    border-radius: $bordeRadius;
     font-weight: $fontWeight;
     padding: $padding;
+    transition: $anime;
+    border-color: $borderColor;
 }
+
+@mixin hoverBtn($color, $bg-color, $borderColor) {
+    color: $color;
+    background-color: $bg-color;
+    border-color: $borderColor;
+}
+
 @mixin overlayImage {
     position: absolute;
     content: "";
     top: 0;
-    left: 0;            
+    left: 0;
     width: 100%;
     height: 100%;
     border-radius: 12px;
@@ -21,4 +29,15 @@
     max-width: 1059px;
     padding: 0;
     margin: 0 auto;
+}
+
+@mixin logo {
+    flex: 0 0 toRem(200);
+    width: toRem(200);
+    position: relative;
+    z-index: 1;
+    img {
+        aspect-ratio: 200 / 38;
+        object-fit: cover;
+    }
 }
