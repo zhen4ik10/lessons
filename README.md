@@ -78,7 +78,7 @@ https://zhen4ik10.github.io/lessons/lesson_22/
 </h2>
 <br>
 <h2>Lesson #24 Js v2</h2>
-https://zhen4ik10.github.io/lessons/lesson_24/
+https://zhen4ik10.github.io/lessons/lesson_24js/
 <br>
 <h2>Area</h2>
 https://zhen4ik10.github.io/lessons/area/
