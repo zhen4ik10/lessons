@@ -1,0 +1,154 @@
+@use "sass:math";
+
+// Мінімальна ширина сторінки
+$minWidth: 320;
+// Ширина полотна (макету)
+$maxWidth: 1920;
+// Ширина обмежуючого контейнера (0 = немає обмеження)
+$maxWidthContainer: 1170;
+// Загальний відступ у контейнера
+// (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
+$containerPadding: 30;
+// Ширина спрацьовування першого брейкпоінту
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+// Шрифти
+@import "_fonts.scss";
+// Обнулення
+@import "_reset.scss";
+// Компоненти
+@import "_common.scss";
+// Функції
+@import "_functions.scss";
+
+body {
+	font-family: "Inter", sans-serif;
+	background-color: #333;
+	opacity: 0;
+	line-height: 1.2;
+	&.opacity {
+		opacity: 1;
+	}
+}
+
+.wrapper {
+	overflow: clip;
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+
+.wrapper main {
+	flex-grow: 1;
+}
+
+.header {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 50;
+	cursor: pointer;
+}
+
+.header,
+.footer {
+	font-size: toRem(20);
+	padding: toRem(10);
+	font-weight: 700;
+	text-align: center;
+	background-color: #794f45;
+	color: #fff;
+}
+
+.page {
+	padding: 50px;
+	margin-top: toRem(50);
+}
+
+div {
+	.item {
+		color: #fff;
+		cursor: pointer;
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
+	}
+}
+
+.button {
+	padding: toRem(15) toRem(35);
+	font-size: toRem(20);
+	color: #fff;
+	background-color: rgb(186, 74, 186);
+	text-transform: uppercase;
+	border-radius: toRem(4);
+	cursor: pointer;
+	transform: translateY(30px);
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.8s ease-in-out;
+
+	&.show {
+		transform: translateY(0px);
+		opacity: 1;
+		visibility: visible;
+		transition: all 0.8s ease-in-out;
+	}
+
+	@media (any-hover: hover) {
+		&:hover {
+			color: rgb(186, 74, 186);
+			background-color: #fff;
+		}
+	}
+}
+
+
+
+p.item {
+	font-size: toRem(20);
+	color: yellow;
+	transform: translateX(-100px);
+	transition: all .8s ease 0s;
+	opacity: 0;
+	visibility: hidden;
+	&.show {
+		transition: all .8s ease 0s;
+		transform: translateX(0);
+		opacity: 1;
+		visibility: visible;
+	}
+	&:not(:last-child) {
+		margin-bottom: toRem(30);
+	}
+}
+
+.block-link {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: toRem(20);
+	padding-top: toRem(50);
+}
+
+.link {
+	font-size: toRem(20);
+	margin-bottom: toRem(30);
+	color: yellow;
+}
+
+.text {
+	margin-bottom: toRem(30);
+}
+// span {
+// 	@media (any-hover: hover) {
+// 		&:hover {
+// 			+ .item {
+// 				transform: translateX(0);
+// 				opacity: 1;
+// 				visibility: visible;
+// 			}
+// 		}
+// 	}
+// }
